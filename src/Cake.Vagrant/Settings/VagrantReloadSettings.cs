@@ -21,6 +21,6 @@ namespace Cake.Vagrant.Settings
         }
 
         public bool RunProvisioners { get; set; }
-        public IEnumerable<string> Provisioners { get; set; } = new string[]{}
+        public IEnumerable<string> Provisioners { get; set; } = new string[] {};
     }
 }
