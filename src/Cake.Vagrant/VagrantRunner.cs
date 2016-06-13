@@ -72,91 +72,69 @@ namespace Cake.Vagrant
             settings.GetToolArguments().Invoke(args);
             Run(Settings, args);
         }
-    }
 
-    public class VagrantBoxRunner
-    {
-        private VagrantSettings Settings { get; set; }
-        internal VagrantBoxRunner(ICakeLog log, Action<VagrantSettings, ProcessArgumentBuilder> runCallback, VagrantSettings settings)
+
+        public void SSH(string name = null)
         {
-            Log = log;
-            Runner = runCallback;
-            Settings = settings;
+            SSH(name, null);
         }
 
-        private ICakeLog Log { get; set; }
-
-        private Action<VagrantSettings, ProcessArgumentBuilder> Runner { get; set; }
-
-        public void Add(string address)
+        public void SSH(Action<VagrantSSHSettings> configure)
         {
-            Add(address, null);
+            SSH(null, configure);
         }
 
-        public void Add(string address, Action<VagrantBoxAddSettings> configure)
+        public void SSH(string name, Action<VagrantSSHSettings> configure)
         {
-            var settings = new VagrantBoxAddSettings();
+            var settings = new VagrantSSHSettings();
             configure?.Invoke(settings);
             var args = new ProcessArgumentBuilder();
-            args.Append("box");
-            args.Append("add");
-            args.Append(address);
+            args.Append("ssh");
+            if (name.HasValue()) args.Append(name);
             settings.GetToolArguments().Invoke(args);
-            Log.Information($"Adding box from {address}...");
-            Runner.Invoke(Settings, args);
+            Run(Settings, args);
         }
 
-        [Obsolete("This doesn't make sense in a scripted environment")]
-        public void List()
+        public void Destroy(string name = null, bool force = false)
         {
             var args = new ProcessArgumentBuilder();
-            args.Append("box");
-            args.Append("list");
-            Runner.Invoke(Settings, args);
+            args.Append("destroy");
+            if (name.HasValue()) args.Append(name);
+            args.Append("--force");
         }
 
-        public void Outdated(bool global = false)
+        public void Reload(string name = null)
         {
-            var args = new ProcessArgumentBuilder();
-            args.Append("box");
-            args.Append("outdated");
-            if (global) args.Append("--global");
-            Runner.Invoke(Settings, args);
+            Reload(name, null);
         }
 
-        public void Remove(string name, Action<VagrantBoxRemoveSettings> configure = null)
+        public void Reload(Action<VagrantReloadSettings> configure)
         {
-            var settings = new VagrantBoxRemoveSettings();
+            Reload(null, null);
+        }
+
+        public void Reload(string name, Action<VagrantReloadSettings> configure)
+        {
+            var settings = new VagrantReloadSettings();
             configure?.Invoke(settings);
             var args = new ProcessArgumentBuilder();
-            args.Append("box");
-            args.Append("remove");
-            args.Append(name);
+            args.Append("reload");
+            if (name.HasValue()) args.Append(name);
             settings.GetToolArguments().Invoke(args);
-            Runner.Invoke(Settings, args);
+            Run(Settings, args);
         }
 
-        public void Repackage(string name, string provider, string version)
+        public void Share(Action<VagrantShareSettings> configure = null)
         {
-            var args = new ProcessArgumentBuilder();
-            var s = new[] {"box", "repackage", name, provider, version};
-            foreach (var arg in s)
-            {
-                args.Append(arg);
-            }
-            Runner.Invoke(Settings, args);
-        }
-
-        public void Update(Action<VagrantBoxUpdateSettings> configure = null)
-        {
-            var settings = new VagrantBoxUpdateSettings();
+            var settings = new VagrantShareSettings();
             configure?.Invoke(settings);
             var args = new ProcessArgumentBuilder();
-            args.Append("box");
-            args.Append("update");
+            args.Append("share");
             settings.GetToolArguments().Invoke(args);
-            Runner.Invoke(Settings, args);
+            Run(Settings, args);
         }
 
+        //TODO: vagrant halt
+        //TODO: vagrant suspend
     }
 }

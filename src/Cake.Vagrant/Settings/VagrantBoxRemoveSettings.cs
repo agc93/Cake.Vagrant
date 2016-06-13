@@ -21,21 +21,4 @@ namespace Cake.Vagrant.Settings
         public string BoxVersion { get; set; }
         public string Provider { get; set; }
     }
-
-    public class VagrantBoxUpdateSettings : IVagrantCommandSettings
-    {
-        public Action<ProcessArgumentBuilder> GetToolArguments()
-        {
-            return args =>
-            {
-                if (!BoxName.HasValue()) return;
-                args.Add(BoxName, "box");
-                args.Add(Provider, "provider");
-            };
-        }
-        
-
-        public string BoxName { get; set; }
-        public string Provider { get; set; }
-    }
 }

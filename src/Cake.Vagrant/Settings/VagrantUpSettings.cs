@@ -12,9 +12,9 @@ namespace Cake.Vagrant.Settings
         {
             return args =>
             {
-                args.Add(DestroyOnError, "destroy-on-error");
-                args.Add(InstallProvider, "install-provider");
-                args.Add(Parallel, "parallel");
+                args.Add(DestroyOnError, "destroy-on-error", true);
+                args.Add(InstallProvider, "install-provider", true);
+                args.Add(Parallel, "parallel", true);
                 args.Add(Provider, "provider");
                 args.Add(Provision, "provision");
                 if (Provisioners.Any())
