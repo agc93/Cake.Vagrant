@@ -45,12 +45,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\VagrantCommandRunner.cs" />
+    <Compile Include="Commands\VagrantPluginRunner.cs" />
+    <Compile Include="Commands\VagrantSnapshotRunner.cs" />
     <Compile Include="CoreExtensions.cs" />
     <Compile Include="Settings\VagrantBoxAddSettings.cs" />
     <Compile Include="Settings\VagrantBoxRemoveSettings.cs" />
     <Compile Include="Settings\VagrantBoxUpdateSettings.cs" />
     <Compile Include="Settings\VagrantInitSettings.cs" />
     <Compile Include="Settings\VagrantPackageSettings.cs" />
+    <Compile Include="Settings\VagrantPluginInstallSettings.cs" />
     <Compile Include="Settings\VagrantProvisionerSettings.cs" />
     <Compile Include="Settings\VagrantShareSettings.cs" />
     <Compile Include="Settings\VagrantSnapshotRestoreSettings.cs" />

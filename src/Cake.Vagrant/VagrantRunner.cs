@@ -13,10 +13,16 @@ namespace Cake.Vagrant
     {
         private VagrantSettings Settings { get; set; } = new VagrantSettings();
         public VagrantBoxRunner Box { get; set; }
+        public VagrantSnapshotRunner Snapshot { get; set; } 
+        public VagrantDockerRunner Docker { get; set; }
+        public VagrantPluginRunner Plugin { get; set; }
         public VagrantRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner,
             IToolLocator tools, ICakeLog log) : base(fileSystem, environment, processRunner, tools)
         {
             Box = new VagrantBoxRunner(log, Run, Settings);
+            Snapshot = new VagrantSnapshotRunner(log, Run, Settings);
+            Docker = new VagrantDockerRunner(log, Run, Settings);
+            Plugin = new VagrantPluginRunner(log, Run, Settings);
         }
 
         protected override string GetToolName() => "Vagrant by Hashicorp";
@@ -31,17 +37,12 @@ namespace Cake.Vagrant
             yield return "vagrant.exe";
         }
 
-        public void Init(string name, string url = null)
-        {
-            Init(name, null, null);
-        }
-
         public void Init(string name, Action<VagrantInitSettings> configure)
         {
             Init(name, null, configure);
         }
 
-        public void Init(string name, string url, Action<VagrantInitSettings> configure)
+        public void Init(string name, string url = null, Action<VagrantInitSettings> configure = null)
         {
             var settings = new VagrantInitSettings();
             configure?.Invoke(settings);
@@ -55,7 +56,7 @@ namespace Cake.Vagrant
 
         public void Up(string name = null)
         {
-            Up((Action<VagrantUpSettings>) null);
+            Up(name, null);
         }
 
         public void Up(Action<VagrantUpSettings> configure)
