@@ -9,6 +9,7 @@ namespace Cake.Vagrant
 {
     [CakeAliasCategory("Vagrant")]
     [CakeNamespaceImport("Cake.Vagrant.Settings")]
+    [CakeNamespaceImport("Cake.Vagrant.Commands")]
     public static class VagrantAliases
     {
         [CakePropertyAlias]

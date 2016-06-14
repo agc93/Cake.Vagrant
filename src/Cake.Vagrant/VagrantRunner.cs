@@ -4,6 +4,7 @@ using Cake.Core;
 using Cake.Core.Diagnostics;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
+using Cake.Vagrant.Commands;
 using Cake.Vagrant.Settings;
 
 namespace Cake.Vagrant
@@ -89,6 +90,22 @@ namespace Cake.Vagrant
             Run(Settings, args);
         }
 
+        public void PowerShell(Action<VagrantPowerShellSettings> configure)
+        {
+            PowerShell(null, configure);
+        }
+
+        public void PowerShell(string name, Action<VagrantPowerShellSettings> configure)
+        {
+            var settings = new VagrantPowerShellSettings();
+            configure?.Invoke(settings);
+            var args = new ProcessArgumentBuilder();
+            args.Append("powershell");
+            if (name.HasValue()) args.Append(name);
+            settings.GetToolArguments().Invoke(args);
+            Run(Settings, args);
+        }
+
         public void Reload(string name = null)
         {
             Reload(name, null);
@@ -166,7 +183,25 @@ namespace Cake.Vagrant
             Run(Settings, args);
         }
 
-        
-        
+        public void Package(string name = null)
+        {
+            Package(name, null);
+        }
+
+        public void Package(Action<VagrantPackageSettings> configure)
+        {
+            Package(null, configure);
+        }
+
+        public void Package(string name, Action<VagrantPackageSettings> configure)
+        {
+            var settings = new VagrantPackageSettings();
+            configure?.Invoke(settings);
+            var args = new ProcessArgumentBuilder();
+            args.Append("package");
+            if (name.HasValue()) args.Append(name);
+            settings.GetToolArguments().Invoke(args);
+            Run(Settings, args);
+        }
     }
 }

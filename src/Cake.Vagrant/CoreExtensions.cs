@@ -56,5 +56,13 @@ namespace Cake.Vagrant
                 args.AppendSwitch(key.StartsWith("-") ? key : $"--{key}", value.Value.ToString());
             }
         }
+
+        internal static void AppendAll(this ProcessArgumentBuilder args, params string[] arguments)
+        {
+            foreach (var arg in arguments)
+            {
+                args.Append(arg);
+            }
+        }
     }
 }

@@ -4,34 +4,15 @@ using Cake.Core.Diagnostics;
 using Cake.Core.IO;
 using Cake.Vagrant.Settings;
 
-namespace Cake.Vagrant
+namespace Cake.Vagrant.Commands
 {
-    public class VagrantCommandRunner
-    {
-        internal VagrantCommandRunner(ICakeLog log, Action<VagrantSettings, ProcessArgumentBuilder> runCallback, VagrantSettings settings)
-        {
-            Log = log;
-            Runner = runCallback;
-            Settings = settings;
-        }
-
-        protected VagrantSettings Settings { get; set; }
-        protected ICakeLog Log { get; set; }
-        protected Action<VagrantSettings, ProcessArgumentBuilder> Runner { get; set; }
-    }
-
     public class VagrantBoxRunner : VagrantCommandRunner
     {
         internal VagrantBoxRunner(ICakeLog log, Action<VagrantSettings, ProcessArgumentBuilder> runCallback, VagrantSettings settings) : base(log, runCallback, settings)
         {
         }
 
-        public void Add(string address)
-        {
-            Add(address, null);
-        }
-
-        public void Add(string address, Action<VagrantBoxAddSettings> configure)
+        public void Add(string address, Action<VagrantBoxAddSettings> configure = null)
         {
             var settings = new VagrantBoxAddSettings();
             configure?.Invoke(settings);
