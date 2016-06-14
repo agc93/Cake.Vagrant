@@ -15,7 +15,7 @@ namespace Cake.Vagrant.Settings
                     throw new ArgumentOutOfRangeException(nameof(Command), "You must specify an argument when invoking the SSH command or script execution will block");
                 }
                 args.Add(Command, "command");
-                if (DoNotAuthenticate.HasValue && DoNotAuthenticate.Value) args.Append("--plain");
+                //if (DoNotAuthenticate.HasValue && DoNotAuthenticate.Value) args.Append("--plain");
                 if (ExtraSSHArguments.HasValue())
                 {
                     args.Append("--");
@@ -25,26 +25,25 @@ namespace Cake.Vagrant.Settings
         }
 
         public string Command { get; set; }
+
+        [Obsolete("this will block script execution")]
         public bool? DoNotAuthenticate { get; set; }
 
         public string ExtraSSHArguments { get; set; }
     }
 
-    public class VagrantPowerShellSettings : IVagrantCommandSettings
+    public static class VagrantSSHSettingsExtensions
     {
-        public Action<ProcessArgumentBuilder> GetToolArguments()
+        public static VagrantSSHSettings RunCommand(this VagrantSSHSettings settings, string command)
         {
-            return args =>
-            {
-                if (!Command.HasValue())
-                {
-                    throw new ArgumentOutOfRangeException(nameof(Command),
-                        "You must specify a command when invoking the PowerShell command or script execution will block!");
-                }
-                args.Add(Command, "command");
-            };
+            settings.Command = command;
+            return settings;
         }
 
-        public string Command { get; set; }
+        public static VagrantSSHSettings WithArguments(this VagrantSSHSettings settings, params string[] args)
+        {
+            settings.ExtraSSHArguments = string.Join(" ", args);
+            return settings;
+        }
     }
 }

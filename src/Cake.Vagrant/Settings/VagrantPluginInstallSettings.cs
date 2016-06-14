@@ -26,4 +26,33 @@ namespace Cake.Vagrant.Settings
         public string Source { get; set; }
         public string Version { get; set; }
     }
+
+    public static class VagrantPluginInstallSettingsExtensions
+    {
+        public static VagrantPluginInstallSettings SetEntryPoint(this VagrantPluginInstallSettings settings, string entryPoint)
+        {
+            settings.EntryPoint = entryPoint;
+            return settings;
+        }
+
+        public static VagrantPluginInstallSettings CleanFirst(this VagrantPluginInstallSettings settings,
+            bool clean = true)
+        {
+            settings.CleanSources = clean;
+            return settings;
+        }
+
+        public static VagrantPluginInstallSettings FromSource(this VagrantPluginInstallSettings settings, string source)
+        {
+            settings.Source = source;
+            return settings;
+        }
+
+        public static VagrantPluginInstallSettings ConstrainVersion(this VagrantPluginInstallSettings settings,
+            string version)
+        {
+            settings.Version = version;
+            return settings;
+        }
+    }
 }

@@ -28,4 +28,28 @@ namespace Cake.Vagrant.Settings
         public bool? RunProvisioners { get; set; }
         public bool? DoNotDelete { get; set; }
     }
+
+    public static class VagrantSnapshotRestoreSettingsExtensions
+    {
+        public static VagrantSnapshotRestoreSettings RunProvisioners(this VagrantSnapshotRestoreSettings settings,
+            bool run = true)
+        {
+            settings.RunProvisioners = run;
+            return settings;
+        }
+
+        public static VagrantSnapshotRestoreSettings DoNotDelete(this VagrantSnapshotRestoreSettings settings)
+        {
+            settings.DoNotDelete = true;
+            return settings;
+        }
+
+        public static VagrantSnapshotRestoreSettings Delete(this VagrantSnapshotRestoreSettings settings,
+            bool delete = true)
+        {
+            settings.DoNotDelete = !delete;
+            return settings;
+        }
+
+    }
 }

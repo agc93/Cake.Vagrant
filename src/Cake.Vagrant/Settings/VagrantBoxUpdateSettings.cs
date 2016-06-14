@@ -14,9 +14,24 @@ namespace Cake.Vagrant.Settings
                 args.Add(Provider, "provider");
             };
         }
-        
+
 
         public string BoxName { get; set; }
         public string Provider { get; set; }
+    }
+
+    public static class VagrantBoxUpdateSettingsExtensions
+    {
+        public static VagrantBoxUpdateSettings UseProvider(this VagrantBoxUpdateSettings settings, string provider)
+        {
+            settings.Provider = provider;
+            return settings;
+        }
+
+        public static VagrantBoxUpdateSettings OnlyUpdate(this VagrantBoxUpdateSettings settings, string name)
+        {
+            settings.BoxName = name;
+            return settings;
+        }
     }
 }

@@ -25,4 +25,31 @@ namespace Cake.Vagrant.Settings
         public string OutputFile { get; set; }
         public string VersionConstraint { get; set; }
     }
+
+    public static class VagrantInitSettingsExtensions
+    {
+        public static VagrantInitSettings Force(this VagrantInitSettings settings, bool force = true)
+        {
+            settings.Force = force;
+            return settings;
+        }
+
+        public static VagrantInitSettings CreateMinimal(this VagrantInitSettings settings)
+        {
+            settings.Minimal = true;
+            return settings;
+        }
+
+        public static VagrantInitSettings OutputToFile(this VagrantInitSettings settings, FilePath filePath)
+        {
+            settings.OutputFile = filePath.FullPath;
+            return settings;
+        }
+
+        public static VagrantInitSettings ConstrainVersion(this VagrantInitSettings settings, string version)
+        {
+            settings.VersionConstraint = version;
+            return settings;
+        }
+    }
 }

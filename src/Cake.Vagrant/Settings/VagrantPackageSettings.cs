@@ -28,4 +28,36 @@ namespace Cake.Vagrant.Settings
         public IEnumerable<string> AdditionalFilePaths { get; set; } = new string[] {};
         public string VagrantFile { get; set; }
     }
+
+    public static class VagrantPackageSettingsExtensions
+    {
+        public static VagrantPackageSettings UseBaseImage(this VagrantPackageSettings settings, string id)
+        {
+            settings.BaseImageName = id;
+            return settings;
+        }
+
+        public static VagrantPackageSettings OutputToFile(this VagrantPackageSettings settings, FilePath path)
+        {
+            settings.OutputFile = path.FullPath;
+            return settings;
+        }
+
+        public static VagrantPackageSettings IncludeInPackage(this VagrantPackageSettings settings,
+            params FilePath[] files)
+        {
+            var paths = settings.AdditionalFilePaths.ToList();
+            paths.AddRange(files.Select(f => f.FullPath));
+            settings.AdditionalFilePaths = paths;
+            return settings;
+        }
+
+        public static VagrantPackageSettings IncludeVagrantFile(this VagrantPackageSettings settings,
+            FilePath vagrantFile)
+        {
+            settings.VagrantFile = vagrantFile.FullPath;
+            return settings;
+        }
+
+    }
 }

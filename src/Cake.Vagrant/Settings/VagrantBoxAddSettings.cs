@@ -29,4 +29,56 @@ namespace Cake.Vagrant.Settings
         public bool? Insecure { get; set; }
         public string Provider { get; set; }
     }
+
+    public static class VagrantBoxAddSettingsExtensions
+    {
+        public static VagrantBoxAddSettings ConstrainVersion(this VagrantBoxAddSettings settings, string version)
+        {
+            settings.Version = version;
+            return settings;
+        }
+
+        public static VagrantBoxAddSettings UseCertificateAuthority(this VagrantBoxAddSettings settings, IDirectory caPath)
+        {
+            settings.CAPath = caPath.Path.FullPath;
+            return settings;
+        }
+
+        public static VagrantBoxAddSettings UseCertificateAuthority(this VagrantBoxAddSettings settings,
+            FilePath certPath)
+        {
+            settings.CACertificate = certPath.FullPath;
+            return settings;
+        }
+
+        public static VagrantBoxAddSettings WithClientCertificate(this VagrantBoxAddSettings settings, FilePath certFile)
+        {
+            settings.CertificatePath = certFile.FullPath;
+            return settings;
+        }
+
+        public static VagrantBoxAddSettings AllowInsecure(this VagrantBoxAddSettings settings, bool allow = true)
+        {
+            settings.Insecure = allow;
+            return settings;
+        }
+
+        public static VagrantBoxAddSettings UseProvider(this VagrantBoxAddSettings settings, string provider)
+        {
+            settings.Provider = provider;
+            return settings;
+        }
+
+        public static VagrantBoxAddSettings Force(this VagrantBoxAddSettings settings, bool force = true)
+        {
+            settings.Force = force;
+            return settings;
+        }
+
+        public static VagrantBoxAddSettings CleanFirst(this VagrantBoxAddSettings settings, bool clean = true)
+        {
+            settings.Clean = clean;
+            return settings;
+        }
+    }
 }
