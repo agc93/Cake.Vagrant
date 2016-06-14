@@ -49,13 +49,14 @@
     <Compile Include="Settings\VagrantBoxRemoveSettings.cs" />
     <Compile Include="Settings\VagrantBoxUpdateSettings.cs" />
     <Compile Include="Settings\VagrantInitSettings.cs" />
-    <Compile Include="Settings\VagrantReloadSettings.cs" />
+    <Compile Include="Settings\VagrantProvisionerSettings.cs" />
     <Compile Include="Settings\VagrantShareSettings.cs" />
     <Compile Include="Settings\VagrantSSHSettings.cs" />
     <Compile Include="Settings\VagrantUpSettings.cs" />
     <Compile Include="VagrantAliases.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VagrantBoxRunner.cs" />
+    <Compile Include="VagrantDockerRunner.cs" />
     <Compile Include="VagrantRunner.cs" />
     <Compile Include="VagrantSettings.cs" />
   </ItemGroup>

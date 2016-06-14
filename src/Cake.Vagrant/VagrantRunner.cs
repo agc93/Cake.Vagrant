@@ -73,12 +73,6 @@ namespace Cake.Vagrant
             Run(Settings, args);
         }
 
-
-        public void SSH(string name = null)
-        {
-            SSH(name, null);
-        }
-
         public void SSH(Action<VagrantSSHSettings> configure)
         {
             SSH(null, configure);
@@ -95,30 +89,43 @@ namespace Cake.Vagrant
             Run(Settings, args);
         }
 
-        public void Destroy(string name = null, bool force = false)
-        {
-            var args = new ProcessArgumentBuilder();
-            args.Append("destroy");
-            if (name.HasValue()) args.Append(name);
-            args.Append("--force");
-        }
-
         public void Reload(string name = null)
         {
             Reload(name, null);
         }
 
-        public void Reload(Action<VagrantReloadSettings> configure)
+        public void Reload(Action<VagrantProvisionerSettings> configure)
         {
-            Reload(null, null);
+            Reload(null, configure);
         }
 
-        public void Reload(string name, Action<VagrantReloadSettings> configure)
+        public void Reload(string name, Action<VagrantProvisionerSettings> configure)
         {
-            var settings = new VagrantReloadSettings();
+            var settings = new VagrantProvisionerSettings();
             configure?.Invoke(settings);
             var args = new ProcessArgumentBuilder();
             args.Append("reload");
+            if (name.HasValue()) args.Append(name);
+            settings.GetToolArguments().Invoke(args);
+            Run(Settings, args);
+        }
+
+        public void Resume(string name = null)
+        {
+            Resume(name, null);
+        }
+
+        public void Resume(Action<VagrantProvisionerSettings> configure)
+        {
+            Resume(null, configure);
+        }
+
+        public void Resume(string name, Action<VagrantProvisionerSettings> configure)
+        {
+            var settings = new VagrantProvisionerSettings();
+            configure?.Invoke(settings);
+            var args = new ProcessArgumentBuilder();
+            args.Append("resume");
             if (name.HasValue()) args.Append(name);
             settings.GetToolArguments().Invoke(args);
             Run(Settings, args);
@@ -134,7 +141,32 @@ namespace Cake.Vagrant
             Run(Settings, args);
         }
 
-        //TODO: vagrant halt
-        //TODO: vagrant suspend
+        public void Destroy(string name = null, bool force = false)
+        {
+            var args = new ProcessArgumentBuilder();
+            args.Append("destroy");
+            if (name.HasValue()) args.Append(name);
+            args.Append("--force");
+        }
+
+        public void Halt(string name = null, bool force = false)
+        {
+            var args = new ProcessArgumentBuilder();
+            args.Append("halt");
+            if (name.HasValue()) args.Append(name);
+            if (force) args.Append("--force");
+            Run(Settings, args);
+        }
+
+        public void Suspend(string name = null)
+        {
+            var args = new ProcessArgumentBuilder();
+            args.Append("suspend");
+            if (name.HasValue()) args.Append(name);
+            Run(Settings, args);
+        }
+
+        
+        
     }
 }

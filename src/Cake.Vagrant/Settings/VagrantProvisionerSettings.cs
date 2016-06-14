@@ -1,12 +1,14 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Cake.Core;
 using Cake.Core.IO;
 
 namespace Cake.Vagrant.Settings
 {
-    public class VagrantReloadSettings : IVagrantCommandSettings
+    public class VagrantProvisionerSettings
     {
         public Action<ProcessArgumentBuilder> GetToolArguments()
         {
@@ -21,6 +23,6 @@ namespace Cake.Vagrant.Settings
         }
 
         public bool RunProvisioners { get; set; }
-        public IEnumerable<string> Provisioners { get; set; } = new string[] {};
+        public IEnumerable<string> Provisioners { get; set; } = new string[] { };
     }
 }

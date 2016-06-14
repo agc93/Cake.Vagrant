@@ -6,19 +6,25 @@ using Cake.Vagrant.Settings;
 
 namespace Cake.Vagrant
 {
-    public class VagrantBoxRunner
+    public class VagrantCommandRunner
     {
-        private VagrantSettings Settings { get; set; }
-        internal VagrantBoxRunner(ICakeLog log, Action<VagrantSettings, ProcessArgumentBuilder> runCallback, VagrantSettings settings)
+        internal VagrantCommandRunner(ICakeLog log, Action<VagrantSettings, ProcessArgumentBuilder> runCallback, VagrantSettings settings)
         {
             Log = log;
             Runner = runCallback;
             Settings = settings;
         }
 
-        private ICakeLog Log { get; set; }
+        protected VagrantSettings Settings { get; set; }
+        protected ICakeLog Log { get; set; }
+        protected Action<VagrantSettings, ProcessArgumentBuilder> Runner { get; set; }
+    }
 
-        private Action<VagrantSettings, ProcessArgumentBuilder> Runner { get; set; }
+    public class VagrantBoxRunner : VagrantCommandRunner
+    {
+        internal VagrantBoxRunner(ICakeLog log, Action<VagrantSettings, ProcessArgumentBuilder> runCallback, VagrantSettings settings) : base(log, runCallback, settings)
+        {
+        }
 
         public void Add(string address)
         {

@@ -10,6 +10,10 @@ namespace Cake.Vagrant.Settings
         {
             return args =>
             {
+                if (!Command.HasValue())
+                {
+                    throw new ArgumentOutOfRangeException(nameof(Command), "You must specify an argument when invoking the SSH command or script execution will block");
+                }
                 args.Add(Command, "command");
                 if (DoNotAuthenticate.HasValue && DoNotAuthenticate.Value) args.Append("--plain");
                 if (ExtraSSHArguments.HasValue())
