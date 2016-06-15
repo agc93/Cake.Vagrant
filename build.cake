@@ -1,5 +1,7 @@
 #tool "GitVersion.CommandLine"
 #tool "xunit.runner.console"
+#addin "Cake.DocFx"
+#tool "docfx.msbuild"
 
 ///////////////////////////////////////////////////////////////////////////////
 // ARGUMENTS
@@ -79,8 +81,13 @@ Task("Build")
 			.SetConfiguration(configuration));
 });
 
-Task("Copy-Files")
+Task("Generate-Docs").Does(() => {
+	DocFx("./docfx/docfx.json");
+});
+
+Task("Post-Build")
 	.IsDependentOn("Build")
+	.IsDependentOn("Generate-Docs")
 	.Does(() =>
 {
 	CreateDirectory(artifacts + "build");
@@ -112,7 +119,7 @@ Task("Run-Unit-Tests")
 });
 
 Task("NuGet")
-	.IsDependentOn("Copy-Files")
+	.IsDependentOn("Post-Build")
 	.IsDependentOn("Run-Unit-Tests")
 	.Does(() => {
 		CreateDirectory(artifacts + "package/");

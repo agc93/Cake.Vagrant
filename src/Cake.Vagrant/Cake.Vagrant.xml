@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.Vagrant</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.Vagrant.VagrantRunner">
+            <summary>
+            Wrapper around Vagrant's CLI functionality for creating, starting and managing VMs
+            </summary>
+        </member>
+        <member name="P:Cake.Vagrant.VagrantRunner.Box">
+            <summary>
+            Provides access to `vagrant box` subcommands
+            </summary>
+        </member>
+        <member name="P:Cake.Vagrant.VagrantRunner.Snapshot">
+            <summary>
+            Provides access to `vagrant snapshot` subcommands
+            </summary>
+        </member>
+        <member name="P:Cake.Vagrant.VagrantRunner.Docker">
+            <summary>
+            Provides access to `vagrant docker` subcommands
+            </summary>
+        </member>
+        <member name="P:Cake.Vagrant.VagrantRunner.Plugin">
+            <summary>
+            Provides access to `vagrant plugin` subcommands
+            </summary>
+        </member>
+        <member name="M:Cake.Vagrant.VagrantRunner.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.IO.IProcessRunner,Cake.Core.Tooling.IToolLocator,Cake.Core.Diagnostics.ICakeLog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Vagrant.VagrantRunner"/> class
+            </summary>
+            <param name="fileSystem">The file system</param>
+            <param name="environment">The environment</param>
+            <param name="processRunner">The process runner</param>
+            <param name="tools">The tool locator</param>
+            <param name="log">Logging handler</param>
+        </member>
+        <member name="M:Cake.Vagrant.VagrantRunner.Init(System.String,System.Action{Cake.Vagrant.Settings.VagrantInitSettings})">
+            <summary>
+            This initializes the current directory to be a Vagrant environment by creating an initial Vagrantfile if one does not already exist.
+            </summary>
+            <param name="name">Will prepopulate the config.vm.box setting in the created Vagrantfile with the specified name</param>
+            <param name="configure">Settings to control the initialising process</param>
+        </member>
+        <member name="M:Cake.Vagrant.VagrantRunner.Init(System.String,System.String,System.Action{Cake.Vagrant.Settings.VagrantInitSettings})">
+            <summary>
+            Initializes the current directory for Vagrant by creating an initial Vagrantfile 
+            </summary>
+            <param name="name"></param>
+            <param name="url"></param>
+            <param name="configure"></param>
+        </member>
+    </members>
+</doc>
