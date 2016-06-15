@@ -9,13 +9,38 @@ using Cake.Vagrant.Settings;
 
 namespace Cake.Vagrant
 {
+    /// <summary>
+    /// Wrapper around Vagrant's CLI functionality for creating, starting and managing VMs
+    /// </summary>
     public class VagrantRunner : Tool<VagrantSettings>
     {
+
         private VagrantSettings Settings { get; set; } = new VagrantSettings();
-        public VagrantBoxRunner Box { get; set; }
-        public VagrantSnapshotRunner Snapshot { get; set; } 
-        public VagrantDockerRunner Docker { get; set; }
-        public VagrantPluginRunner Plugin { get; set; }
+        /// <summary>
+        /// Provides access to `vagrant box` subcommands
+        /// </summary>
+        public VagrantBoxRunner Box { get; private set; }
+        /// <summary>
+        /// Provides access to `vagrant snapshot` subcommands
+        /// </summary>
+        public VagrantSnapshotRunner Snapshot { get; private set; } 
+        /// <summary>
+        /// Provides access to `vagrant docker` subcommands
+        /// </summary>
+        public VagrantDockerRunner Docker { get; private set; }
+        /// <summary>
+        /// Provides access to `vagrant plugin` subcommands
+        /// </summary>
+        public VagrantPluginRunner Plugin { get; private set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VagrantRunner"/> class
+        /// </summary>
+        /// <param name="fileSystem">The file system</param>
+        /// <param name="environment">The environment</param>
+        /// <param name="processRunner">The process runner</param>
+        /// <param name="tools">The tool locator</param>
+        /// <param name="log">Logging handler</param>
         public VagrantRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner,
             IToolLocator tools, ICakeLog log) : base(fileSystem, environment, processRunner, tools)
         {
@@ -37,11 +62,22 @@ namespace Cake.Vagrant
             yield return "vagrant.exe";
         }
 
+        /// <summary>
+        /// This initializes the current directory to be a Vagrant environment by creating an initial Vagrantfile if one does not already exist.
+        /// </summary>
+        /// <param name="name">Will prepopulate the config.vm.box setting in the created Vagrantfile with the specified name</param>
+        /// <param name="configure">Settings to control the initialising process</param>
         public void Init(string name, Action<VagrantInitSettings> configure)
         {
             Init(name, null, configure);
         }
 
+        /// <summary>
+        /// Initializes the current directory for Vagrant by creating an initial Vagrantfile 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="url"></param>
+        /// <param name="configure"></param>
         public void Init(string name, string url = null, Action<VagrantInitSettings> configure = null)
         {
             var settings = new VagrantInitSettings();
