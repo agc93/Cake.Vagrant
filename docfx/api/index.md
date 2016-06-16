@@ -1,3 +1,3 @@
 
-# PLACEHOLDER
-TODO: Add .NET projects to *src* folder and run `docfx` to generate a **REAL** *API Documentation*!
+# Cake.Vagrant
+Cake addin to control Vagrant machines from Cake build and deploy scripts.

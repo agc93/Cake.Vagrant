@@ -33,8 +33,17 @@
         "exclude": [
           "obj/**",
           "_site/**"
+        ]
+      },
+      {
+        "files": [
+          "toc.yml",
+          "*.md"
         ],
-          "cwd": "../"
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
       }
     ],
     "resource": [
