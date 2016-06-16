@@ -25,7 +25,7 @@ namespace Cake.Vagrant
                     .WithProvisioners("chef", "shell")
                     .EnableParallel()
                     .UseProvider("hyperv"));
-            context.Vagrant().Snapshot.Save("Cake script");
+            context.Vagrant().Snapshot.Save("CakeScript");
             context.Vagrant().Suspend();
             context.Vagrant().Resume(settings => settings.WithProvisioners("shell"));
             context.Vagrant().Plugin.Install("plugin", 

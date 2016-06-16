@@ -30,6 +30,15 @@ namespace Cake.Vagrant.Commands
         /// <remarks>If the name is not a path to a file, then the plugin is installed from remote repositories, usually RubyGems.</remarks>
         /// <param name="name">Name or path of the plugin to install</param>
         /// <param name="configure">Optional settings to control the installation process</param>
+        /// <example>
+        ///     <code>
+        /// <![CDATA[
+        /// context.Vagrant().Plugin.Install("plugin", 
+        ///     s => s.CleanFirst()
+        ///             .FromSource("http://source")
+        ///             .SetEntryPoint("main.sh"));
+        /// ]]></code>
+        /// </example>
         public void Install(string name, Action<VagrantPluginInstallSettings> configure = null)
         {
             Install(new[] {name}, configure);

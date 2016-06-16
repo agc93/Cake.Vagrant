@@ -107,6 +107,14 @@ namespace Cake.Vagrant
         ///     This command creates and configures guest machines according to your Vagrantfile, using the default settings
         /// </summary>
         /// <param name="name">Optional name of the machine to start</param>
+        /// <example>
+        ///     <para>Use defaults</para>
+        ///     <code>
+        /// <![CDATA[
+        /// Vagrant.Up();
+        /// ]]>
+        /// </code>
+        /// </example>
         public void Up(string name = null)
         {
             Up(name, null);
@@ -116,6 +124,17 @@ namespace Cake.Vagrant
         ///     This command creates and configures the default machine according to your Vagrantfile, and the specified settings
         /// </summary>
         /// <param name="configure">Settings to use when starting your machine</param>
+        /// <example>
+        ///     <code>
+        /// <![CDATA[
+        /// Vagrant.Up(settings =>
+        ///             settings.DestroyOnError()
+        ///             .InstallProvider()
+        ///             .WithProvisioners("chef", "shell")
+        ///             .EnableParallel()
+        ///             .UseProvider("hyperv"));
+        /// ]]></code>
+        /// </example>
         public void Up(Action<VagrantUpSettings> configure)
         {
             Up(null, configure);
@@ -141,6 +160,11 @@ namespace Cake.Vagrant
         ///     This command opens an SSH connection to your default machine to run the provided command
         /// </summary>
         /// <param name="configure">Settings to use when connecting</param>
+        /// <example>
+        ///     <code>
+        /// <![CDATA[
+        /// SSH(s => s.RunCommand("echo echo"));]]></code>
+        /// </example>
         public void SSH(Action<VagrantSSHSettings> configure)
         {
             SSH(null, configure);
@@ -237,6 +261,11 @@ namespace Cake.Vagrant
         ///     This resumes a Vagrant managed machine that was previously suspended.
         /// </summary>
         /// <param name="configure">Settings to control the execution of provisioners</param>
+        /// <example>
+        ///     <code><![CDATA[
+        /// Vagrant.Resume(settings => settings.WithProvisioners("shell"));
+        /// ]]></code>
+        /// </example>
         public void Resume(Action<VagrantProvisionerSettings> configure)
         {
             Resume(null, configure);
@@ -293,6 +322,9 @@ namespace Cake.Vagrant
         ///     begins running immediately from that point, rather than doing a full boot.
         /// </remarks>
         /// <param name="name">Optional name of the machine to suspend</param>
+        /// <example>
+        ///     <code><![CDATA[Vagrant.Suspend();]]></code>
+        /// </example>
         public void Suspend(string name = null)
         {
             var args = new ProcessArgumentBuilder();

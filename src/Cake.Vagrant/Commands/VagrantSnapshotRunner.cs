@@ -57,6 +57,11 @@ namespace Cake.Vagrant.Commands
         /// </summary>
         /// <remarks>If this command is used, the <see cref="Push" /> and <see cref="Pop" /> subcommands cannot be safely used.</remarks>
         /// <param name="name">Name of the snapshot</param>
+        /// <example>
+        ///     <code><![CDATA[
+        /// Vagrant.Snapshot.Save("CakeScript");
+        /// ]]></code>
+        /// </example>
         public void Save(string name)
         {
             var args = new ProcessArgumentBuilder();
