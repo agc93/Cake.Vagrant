@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Cake.Core;
 using Cake.Core.Annotations;
 
 namespace Cake.Vagrant
 {
     /// <summary>
-    /// Gets a runner to control Vagrant through the CLI
+    ///     Gets a runner to control Vagrant through the CLI
     /// </summary>
     /// <remarks>Roughly equivalent to the <c>vagrant</c> command.</remarks>
     [CakeAliasCategory("Vagrant")]
@@ -17,7 +14,7 @@ namespace Cake.Vagrant
     public static class VagrantAliases
     {
         /// <summary>
-        /// Gets a runner to control Vagrant through the CLI
+        ///     Gets a runner to control Vagrant through the CLI
         /// </summary>
         /// <remarks>Roughly equivalent to the <c>vagrant</c> command.</remarks>
         [CakePropertyAlias]

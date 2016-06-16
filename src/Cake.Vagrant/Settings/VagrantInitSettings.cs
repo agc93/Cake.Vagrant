@@ -5,7 +5,7 @@ using Cake.Core.IO;
 namespace Cake.Vagrant.Settings
 {
     /// <summary>
-    /// Additional settings for the <c>vagrant init</c> command
+    ///     Additional settings for the <c>vagrant init</c> command
     /// </summary>
     public class VagrantInitSettings : IVagrantCommandSettings
     {
@@ -34,7 +34,7 @@ namespace Cake.Vagrant.Settings
         public string VersionConstraint { get; set; }
 
         /// <summary>
-        /// Gets the command arguments corresponding to the specified settings
+        ///     Gets the command arguments corresponding to the specified settings
         /// </summary>
         /// <returns>An action to add required command arguments</returns>
         public Action<ProcessArgumentBuilder> GetToolArguments()
@@ -50,7 +50,7 @@ namespace Cake.Vagrant.Settings
     }
 
     /// <summary>
-    /// Fluent extension methods for the <see cref="VagrantInitSettings"/> class
+    ///     Fluent extension methods for the <see cref="VagrantInitSettings" /> class
     /// </summary>
     public static class VagrantInitSettingsExtensions
     {

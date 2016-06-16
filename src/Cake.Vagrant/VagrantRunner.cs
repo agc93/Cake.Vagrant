@@ -10,31 +10,12 @@ using Cake.Vagrant.Settings;
 namespace Cake.Vagrant
 {
     /// <summary>
-    /// Wrapper around Vagrant's CLI functionality for creating, starting and managing VMs
+    ///     Wrapper around Vagrant's CLI functionality for creating, starting and managing VMs
     /// </summary>
     public class VagrantRunner : Tool<VagrantSettings>
     {
-
-        private VagrantSettings Settings { get; set; } = new VagrantSettings();
         /// <summary>
-        /// Provides access to `vagrant box` subcommands
-        /// </summary>
-        public VagrantBoxRunner Box { get; private set; }
-        /// <summary>
-        /// Provides access to `vagrant snapshot` subcommands
-        /// </summary>
-        public VagrantSnapshotRunner Snapshot { get; private set; } 
-        /// <summary>
-        /// Provides access to `vagrant docker` subcommands
-        /// </summary>
-        public VagrantDockerRunner Docker { get; private set; }
-        /// <summary>
-        /// Provides access to `vagrant plugin` subcommands
-        /// </summary>
-        public VagrantPluginRunner Plugin { get; private set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VagrantRunner"/> class
+        ///     Initializes a new instance of the <see cref="VagrantRunner" /> class
         /// </summary>
         /// <param name="fileSystem">The file system</param>
         /// <param name="environment">The environment</param>
@@ -50,12 +31,34 @@ namespace Cake.Vagrant
             Plugin = new VagrantPluginRunner(log, Run, Settings);
         }
 
+        private VagrantSettings Settings { get; } = new VagrantSettings();
+
+        /// <summary>
+        ///     Provides access to `vagrant box` subcommands
+        /// </summary>
+        public VagrantBoxRunner Box { get; private set; }
+
+        /// <summary>
+        ///     Provides access to `vagrant snapshot` subcommands
+        /// </summary>
+        public VagrantSnapshotRunner Snapshot { get; private set; }
+
+        /// <summary>
+        ///     Provides access to `vagrant docker` subcommands
+        /// </summary>
+        public VagrantDockerRunner Docker { get; private set; }
+
+        /// <summary>
+        ///     Provides access to `vagrant plugin` subcommands
+        /// </summary>
+        public VagrantPluginRunner Plugin { get; private set; }
+
         /// <summary>Gets the name of the tool.</summary>
         /// <returns>The name of the tool.</returns>
         protected override string GetToolName() => "Vagrant by Hashicorp";
 
         /// <summary>
-        /// Gets alternative file paths which the tool may exist in
+        ///     Gets alternative file paths which the tool may exist in
         /// </summary>
         /// <param name="settings">The settings.</param>
         /// <returns>The default tool path.</returns>
@@ -72,7 +75,8 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This initializes the current directory to be a Vagrant environment by creating an initial Vagrantfile if one does not already exist.
+        ///     This initializes the current directory to be a Vagrant environment by creating an initial Vagrantfile if one does
+        ///     not already exist.
         /// </summary>
         /// <param name="name">Will prepopulate the config.vm.box setting in the created Vagrantfile with the specified name</param>
         /// <param name="configure">Settings to control the initialising process</param>
@@ -82,7 +86,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// Initializes the current directory for Vagrant by creating an initial Vagrantfile 
+        ///     Initializes the current directory for Vagrant by creating an initial Vagrantfile
         /// </summary>
         /// <param name="name"></param>
         /// <param name="url"></param>
@@ -100,7 +104,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This command creates and configures guest machines according to your Vagrantfile, using the default settings
+        ///     This command creates and configures guest machines according to your Vagrantfile, using the default settings
         /// </summary>
         /// <param name="name">Optional name of the machine to start</param>
         public void Up(string name = null)
@@ -109,7 +113,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This command creates and configures the default machine according to your Vagrantfile, and the specified settings
+        ///     This command creates and configures the default machine according to your Vagrantfile, and the specified settings
         /// </summary>
         /// <param name="configure">Settings to use when starting your machine</param>
         public void Up(Action<VagrantUpSettings> configure)
@@ -118,7 +122,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This command creates and configures guest machines according to your Vagrantfile, and the specified settings.
+        ///     This command creates and configures guest machines according to your Vagrantfile, and the specified settings.
         /// </summary>
         /// <param name="name">Name of the machine to create</param>
         /// <param name="configure">Settings to use when creating your machine</param>
@@ -134,7 +138,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This command opens an SSH connection to your default machine to run the provided command
+        ///     This command opens an SSH connection to your default machine to run the provided command
         /// </summary>
         /// <param name="configure">Settings to use when connecting</param>
         public void SSH(Action<VagrantSSHSettings> configure)
@@ -143,7 +147,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This command opens an SSH connection to the specified machine to run the provided command
+        ///     This command opens an SSH connection to the specified machine to run the provided command
         /// </summary>
         /// <param name="name">Name of the machine to start</param>
         /// <param name="configure">Settings to use when connecting</param>
@@ -159,7 +163,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This command opens a PowerShell connection to your default machine to run the provided command
+        ///     This command opens a PowerShell connection to your default machine to run the provided command
         /// </summary>
         /// <param name="configure">Settings to use when connecting</param>
         public void PowerShell(Action<VagrantPowerShellSettings> configure)
@@ -168,7 +172,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This command opens a PowerShell connection to the specified machine to run the provided command
+        ///     This command opens a PowerShell connection to the specified machine to run the provided command
         /// </summary>
         /// <param name="name">Name of the machine to start</param>
         /// <param name="configure">Settings to use when connecting</param>
@@ -184,7 +188,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// The equivalent of running a halt followed by an up.
+        ///     The equivalent of running a halt followed by an up.
         /// </summary>
         /// <remarks>This command is usually required for changes made in the Vagrantfile to take effect.</remarks>
         /// <param name="name">Optional name of the machine to reload</param>
@@ -194,7 +198,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// The equivalent of running a halt followed by an up.
+        ///     The equivalent of running a halt followed by an up.
         /// </summary>
         /// <remarks>This command is usually required for changes made in the Vagrantfile to take effect.</remarks>
         /// <param name="configure">Settings to control the execution of provisioners</param>
@@ -204,7 +208,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// The equivalent of running a halt followed by an up.
+        ///     The equivalent of running a halt followed by an up.
         /// </summary>
         /// <remarks>This command is usually required for changes made in the Vagrantfile to take effect.</remarks>
         /// <param name="name">Name of the machine to reload</param>
@@ -221,7 +225,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This resumes a Vagrant managed machine that was previously suspended.
+        ///     This resumes a Vagrant managed machine that was previously suspended.
         /// </summary>
         /// <param name="name">Optional name of the machine to resume</param>
         public void Resume(string name = null)
@@ -230,7 +234,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This resumes a Vagrant managed machine that was previously suspended.
+        ///     This resumes a Vagrant managed machine that was previously suspended.
         /// </summary>
         /// <param name="configure">Settings to control the execution of provisioners</param>
         public void Resume(Action<VagrantProvisionerSettings> configure)
@@ -239,7 +243,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This resumes a Vagrant managed machine that was previously suspended.
+        ///     This resumes a Vagrant managed machine that was previously suspended.
         /// </summary>
         /// <param name="name">Name of the machine to resume</param>
         /// <param name="configure">Settings to control the execution of provisioners</param>
@@ -255,7 +259,8 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This command stops the running machine Vagrant is managing and destroys all resources that were created during the machine creation process.
+        ///     This command stops the running machine Vagrant is managing and destroys all resources that were created during the
+        ///     machine creation process.
         /// </summary>
         /// <param name="name">Optional name of the machine to destroy</param>
         public void Destroy(string name = null)
@@ -267,7 +272,7 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This command shuts down the running machine Vagrant is managing.
+        ///     This command shuts down the running machine Vagrant is managing.
         /// </summary>
         /// <param name="name">Optional name of the machine to halt</param>
         /// <param name="force">Whether to forcefully halt the machine (equivalent to pulling the power)</param>
@@ -281,10 +286,12 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This suspends the guest machine Vagrant is managing, rather than shutting it down
+        ///     This suspends the guest machine Vagrant is managing, rather than shutting it down
         /// </summary>
         /// <remarks>
-        /// A suspend effectively saves the exact point-in-time state of the machine, so that when you resume it later, it begins running immediately from that point, rather than doing a full boot.</remarks>
+        ///     A suspend effectively saves the exact point-in-time state of the machine, so that when you resume it later, it
+        ///     begins running immediately from that point, rather than doing a full boot.
+        /// </remarks>
         /// <param name="name">Optional name of the machine to suspend</param>
         public void Suspend(string name = null)
         {
@@ -295,9 +302,12 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This packages a currently running VirtualBox environment into a re-usable box.
+        ///     This packages a currently running VirtualBox environment into a re-usable box.
         /// </summary>
-        /// <remarks>This command can only be used with other providers based on the provider implementation and if the provider supports it.</remarks>
+        /// <remarks>
+        ///     This command can only be used with other providers based on the provider implementation and if the provider
+        ///     supports it.
+        /// </remarks>
         /// <param name="name">Optional name of the machine to package</param>
         public void Package(string name = null)
         {
@@ -305,9 +315,12 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This packages a currently running VirtualBox environment into a re-usable box.
+        ///     This packages a currently running VirtualBox environment into a re-usable box.
         /// </summary>
-        /// <remarks>This command can only be used with other providers based on the provider implementation and if the provider supports it.</remarks>
+        /// <remarks>
+        ///     This command can only be used with other providers based on the provider implementation and if the provider
+        ///     supports it.
+        /// </remarks>
         /// <param name="configure">Settings to use when packaging the box</param>
         public void Package(Action<VagrantPackageSettings> configure)
         {
@@ -315,10 +328,11 @@ namespace Cake.Vagrant
         }
 
         /// <summary>
-        /// This packages a currently running VirtualBox environment into a re-usable box.
+        ///     This packages a currently running VirtualBox environment into a re-usable box.
         /// </summary>
         /// <remarks>
-        /// This command can only be used with other providers based on the provider implementation and if the provider supports it.
+        ///     This command can only be used with other providers based on the provider implementation and if the provider
+        ///     supports it.
         /// </remarks>
         /// <param name="name">Name of the machine to package</param>
         /// <param name="configure">Settings to use when packaging the box</param>

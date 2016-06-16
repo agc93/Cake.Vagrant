@@ -1,27 +1,28 @@
 ﻿using System;
-using Cake.Core.Diagnostics;
 using Cake.Core;
+using Cake.Core.Diagnostics;
 using Cake.Core.IO;
 
 namespace Cake.Vagrant.Commands
 {
     /// <summary>
-    /// Wrapper around the <c>vagrant docker</c> subcommands
+    ///     Wrapper around the <c>vagrant docker</c> subcommands
     /// </summary>
     public class VagrantDockerRunner : VagrantCommandRunner
     {
         /// <summary>
-        /// Gets a new instance of the <see cref="VagrantDockerRunner"/> class
+        ///     Gets a new instance of the <see cref="VagrantDockerRunner" /> class
         /// </summary>
         /// <param name="log">Logging output</param>
         /// <param name="runCallback">Action to trigger invocation of the CLI</param>
         /// <param name="settings">Settings for invocation of the Vagrant CLI</param>
-        public VagrantDockerRunner(ICakeLog log, Action<VagrantSettings, ProcessArgumentBuilder> runCallback, VagrantSettings settings) : base(log, runCallback, settings)
+        public VagrantDockerRunner(ICakeLog log, Action<VagrantSettings, ProcessArgumentBuilder> runCallback,
+            VagrantSettings settings) : base(log, runCallback, settings)
         {
         }
 
         /// <summary>
-        /// Can be used to run one-off commands against a Docker container that is currently running
+        ///     Can be used to run one-off commands against a Docker container that is currently running
         /// </summary>
         /// <remarks>If the container is not running, an error will be returned.</remarks>
         /// <param name="name">Name of the container to run against</param>
@@ -39,7 +40,7 @@ namespace Cake.Vagrant.Commands
         }
 
         /// <summary>
-        /// Can be used to run one-off commands against a Docker container that is currently running
+        ///     Can be used to run one-off commands against a Docker container that is currently running
         /// </summary>
         /// <remarks>If the container is not running, an error will be returned.</remarks>
         /// <param name="name">Name of the container to run against</param>

@@ -4,12 +4,24 @@ using Cake.Core.IO;
 namespace Cake.Vagrant.Settings
 {
     /// <summary>
-    /// Additional settings for the <c>vagrant box update</c> command
+    ///     Additional settings for the <c>vagrant box update</c> command
     /// </summary>
     public class VagrantBoxUpdateSettings : IVagrantCommandSettings
     {
         /// <summary>
-        /// Gets the command arguments corresponding to the specified settings
+        ///     Name of a specific box to update.
+        /// </summary>
+        /// <remarks>If this flag is not specified, Vagrant will update the boxes for the active Vagrant environment.</remarks>
+        public string BoxName { get; set; }
+
+        /// <summary>
+        ///     When <see cref="BoxName" /> is present, this controls what provider-specific box to update.
+        /// </summary>
+        /// <remarks>This is not required unless the box has multiple providers.</remarks>
+        public string Provider { get; set; }
+
+        /// <summary>
+        ///     Gets the command arguments corresponding to the specified settings
         /// </summary>
         /// <returns>An action to add required command arguments</returns>
         public Action<ProcessArgumentBuilder> GetToolArguments()
@@ -21,27 +33,15 @@ namespace Cake.Vagrant.Settings
                 args.Add(Provider, "provider");
             };
         }
-
-        /// <summary>
-        /// Name of a specific box to update. 
-        /// </summary>
-        /// <remarks>If this flag is not specified, Vagrant will update the boxes for the active Vagrant environment.</remarks>
-
-        public string BoxName { get; set; }
-        /// <summary>
-        /// When <see cref="BoxName"/> is present, this controls what provider-specific box to update. 
-        /// </summary>
-        /// <remarks>This is not required unless the box has multiple providers.</remarks>
-        public string Provider { get; set; }
     }
 
     /// <summary>
-    /// Fluent extension methods for the <see cref="VagrantBoxUpdateSettings"/> class
+    ///     Fluent extension methods for the <see cref="VagrantBoxUpdateSettings" /> class
     /// </summary>
     public static class VagrantBoxUpdateSettingsExtensions
     {
         /// <summary>
-        /// Controls what provider-specific box to update
+        ///     Controls what provider-specific box to update
         /// </summary>
         /// <param name="settings">The settings</param>
         /// <param name="provider">The provider name to update</param>
@@ -53,7 +53,7 @@ namespace Cake.Vagrant.Settings
         }
 
         /// <summary>
-        /// Set the name of a specific box to update
+        ///     Set the name of a specific box to update
         /// </summary>
         /// <remarks>When using this option, the box does not need to be part of the active environment</remarks>
         /// <param name="settings">The settings</param>

@@ -1,20 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Cake.Core;
 using Cake.Core.IO;
 
 namespace Cake.Vagrant.Settings
 {
     /// <summary>
-    /// Additional settings for controlling provisioner execution
+    ///     Additional settings for controlling provisioner execution
     /// </summary>
     public class VagrantProvisionerSettings : IVagrantCommandSettings
     {
         /// <summary>
-        /// Gets the command arguments corresponding to the specified <see cref="IVagrantCommandSettings"/>
+        ///     Gets or sets a value controlling whether to run provisioners on reload.
+        /// </summary>
+        /// <remarks>Defaults to false</remarks>
+        /// <value><c>true</c> to run provisioners, otherwise they will not be run.</value>
+        public bool RunProvisioners { get; set; }
+
+        /// <summary>
+        ///     This will only run the given provisioners.
+        /// </summary>
+        /// <value>Providers to run. Omit the leading `:`</value>
+        public IEnumerable<string> Provisioners { get; set; } = new string[] {};
+
+        /// <summary>
+        ///     Gets the command arguments corresponding to the specified <see cref="IVagrantCommandSettings" />
         /// </summary>
         /// <returns>An action to add required command arguments</returns>
         public Action<ProcessArgumentBuilder> GetToolArguments()
@@ -28,23 +39,10 @@ namespace Cake.Vagrant.Settings
                 }
             };
         }
-
-        /// <summary>
-        /// Gets or sets a value controlling whether to run provisioners on reload.
-        /// </summary>
-        /// <remarks>Defaults to false</remarks>
-        /// <value><c>true</c> to run provisioners, otherwise they will not be run.</value>
-        public bool RunProvisioners { get; set; }
-
-        /// <summary>
-        ///     This will only run the given provisioners.
-        /// </summary>
-        /// <value>Providers to run. Omit the leading `:`</value>
-        public IEnumerable<string> Provisioners { get; set; } = new string[] { };
     }
 
     /// <summary>
-    /// Fluent extension methods to the <see cref="VagrantProvisionerSettings"/> class
+    ///     Fluent extension methods to the <see cref="VagrantProvisionerSettings" /> class
     /// </summary>
     public static class VagrantProvisionerSettingsExtensions
     {
@@ -87,7 +85,8 @@ namespace Cake.Vagrant.Settings
             return settings;
         }
 
-        private static List<string> AddProvisioners(VagrantProvisionerSettings settings, IEnumerable<string> provisioners)
+        private static List<string> AddProvisioners(VagrantProvisionerSettings settings,
+            IEnumerable<string> provisioners)
         {
             var l = settings.Provisioners.ToList();
             l.AddRange(provisioners);

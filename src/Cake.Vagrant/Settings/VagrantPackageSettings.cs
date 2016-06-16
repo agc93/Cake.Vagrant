@@ -1,19 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Cake.Core.IO;
 
 namespace Cake.Vagrant.Settings
 {
     /// <summary>
-    /// Additional settings for the <c>vagrant package</c> command
+    ///     Additional settings for the <c>vagrant package</c> command
     /// </summary>
     public class VagrantPackageSettings : IVagrantCommandSettings
     {
         /// <summary>
-        /// Gets the command arguments corresponding to the specified settings
+        ///     Name or UUID of a VirtualBox VM to package
+        /// </summary>
+        public string BaseImageName { get; set; }
+
+        /// <summary>
+        ///     File name for the output package. Defaults to <c>package.box</c>
+        /// </summary>
+        public string OutputFile { get; set; }
+
+        /// <summary>
+        ///     Additional files to be packaged with the box.
+        /// </summary>
+        /// <remarks>These can be used by a packaged <see cref="VagrantFile" /> to perform additional tasks.</remarks>
+        public IEnumerable<string> AdditionalFilePaths { get; set; } = new string[] {};
+
+        /// <summary>
+        ///     Packages a Vagrantfile with the box, that is loaded as part of the Vagrantfile load order when the resulting box is
+        ///     used.
+        /// </summary>
+        public string VagrantFile { get; set; }
+
+        /// <summary>
+        ///     Gets the command arguments corresponding to the specified settings
         /// </summary>
         /// <returns>An action to add required command arguments</returns>
         public Action<ProcessArgumentBuilder> GetToolArguments()
@@ -29,35 +49,15 @@ namespace Cake.Vagrant.Settings
                 }
             };
         }
-
-        /// <summary>
-        /// Name or UUID of a VirtualBox VM to package
-        /// </summary>
-        public string BaseImageName { get; set; }
-
-        /// <summary>
-        /// File name for the output package. Defaults to <c>package.box</c>
-        /// </summary>
-        public string OutputFile { get; set; }
-
-        /// <summary>
-        /// Additional files to be packaged with the box. 
-        /// </summary>
-        /// <remarks>These can be used by a packaged <see cref="VagrantFile"/> to perform additional tasks.</remarks>
-        public IEnumerable<string> AdditionalFilePaths { get; set; } = new string[] {};
-        /// <summary>
-        /// Packages a Vagrantfile with the box, that is loaded as part of the Vagrantfile load order when the resulting box is used.
-        /// </summary>
-        public string VagrantFile { get; set; }
     }
 
     /// <summary>
-    /// Fluent extension methods for the <see cref="VagrantPackageSettings"/> class
+    ///     Fluent extension methods for the <see cref="VagrantPackageSettings" /> class
     /// </summary>
     public static class VagrantPackageSettingsExtensions
     {
         /// <summary>
-        /// Sets the base image to use when packaging the machine
+        ///     Sets the base image to use when packaging the machine
         /// </summary>
         /// <param name="settings">The settings</param>
         /// <param name="id">VM name or UUID</param>
@@ -69,7 +69,7 @@ namespace Cake.Vagrant.Settings
         }
 
         /// <summary>
-        /// Sets the filename for the package output
+        ///     Sets the filename for the package output
         /// </summary>
         /// <param name="settings">The settings</param>
         /// <param name="path">Path to output the package to</param>
@@ -81,10 +81,10 @@ namespace Cake.Vagrant.Settings
         }
 
         /// <summary>
-        /// Adds extra files to be included with the box
+        ///     Adds extra files to be included with the box
         /// </summary>
         /// <param name="settings">The settings</param>
-        /// <param name="files">Collection of <see cref="FilePath"/> objects to add to the package</param>
+        /// <param name="files">Collection of <see cref="FilePath" /> objects to add to the package</param>
         /// <returns>The updated settings object</returns>
         public static VagrantPackageSettings IncludeInPackage(this VagrantPackageSettings settings,
             params FilePath[] files)
@@ -96,10 +96,10 @@ namespace Cake.Vagrant.Settings
         }
 
         /// <summary>
-        /// Includes an additional Vagrantfile with the packaged box
+        ///     Includes an additional Vagrantfile with the packaged box
         /// </summary>
         /// <param name="settings">The settings</param>
-        /// <param name="vagrantFile"><see cref="FilePath"/> for the Vagrantfile to include</param>
+        /// <param name="vagrantFile"><see cref="FilePath" /> for the Vagrantfile to include</param>
         /// <returns>The updated settings object</returns>
         public static VagrantPackageSettings IncludeVagrantFile(this VagrantPackageSettings settings,
             FilePath vagrantFile)

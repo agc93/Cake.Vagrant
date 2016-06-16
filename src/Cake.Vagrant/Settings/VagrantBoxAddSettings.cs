@@ -4,7 +4,7 @@ using Cake.Core.IO;
 namespace Cake.Vagrant.Settings
 {
     /// <summary>
-    /// Additional settings for <c>vagrant box add</c> command
+    ///     Additional settings for <c>vagrant box add</c> command
     /// </summary>
     public class VagrantBoxAddSettings : IVagrantCommandSettings
     {
@@ -63,7 +63,7 @@ namespace Cake.Vagrant.Settings
         public string Provider { get; set; }
 
         /// <summary>
-        /// Gets the command arguments corresponding to the specified settings
+        ///     Gets the command arguments corresponding to the specified settings
         /// </summary>
         /// <returns>An action to add required command arguments</returns>
         public Action<ProcessArgumentBuilder> GetToolArguments()

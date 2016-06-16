@@ -48,7 +48,7 @@ namespace Cake.Vagrant.Settings
         public IEnumerable<string> Provisioners { get; set; } = new string[] {};
 
         /// <summary>
-        /// Gets the command arguments corresponding to the specified <see cref="IVagrantCommandSettings"/>
+        ///     Gets the command arguments corresponding to the specified <see cref="IVagrantCommandSettings" />
         /// </summary>
         /// <returns>An action to add required command arguments</returns>
         public Action<ProcessArgumentBuilder> GetToolArguments()

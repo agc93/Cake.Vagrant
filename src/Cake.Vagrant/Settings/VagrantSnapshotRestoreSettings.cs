@@ -1,59 +1,56 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Cake.Core.IO;
 
 namespace Cake.Vagrant.Settings
 {
     /// <summary>
-    /// Additional settings for the <c>vagrant snapshot restore</c> command.
+    ///     Additional settings for the <c>vagrant snapshot restore</c> command.
     /// </summary>
     public class VagrantSnapshotRestoreSettings : IVagrantCommandSettings
     {
         /// <summary>
-        /// Creates a new instance of the <see cref="VagrantSnapshotRestoreSettings"/> class
+        ///     Creates a new instance of the <see cref="VagrantSnapshotRestoreSettings" /> class
         /// </summary>
         /// <param name="enableNoDeleteOption">Whether to include the "--no-delete" argument as a valid argument</param>
         public VagrantSnapshotRestoreSettings(bool enableNoDeleteOption = false)
         {
             EnableNoDelete = enableNoDeleteOption;
         }
-        
-        private bool EnableNoDelete { get; set; }
+
+        private bool EnableNoDelete { get; }
 
         /// <summary>
-        /// Gets the command arguments corresponding to the specified <see cref="IVagrantCommandSettings"/>
+        ///     Force the provisioners to run (or prevent them from doing so).
+        /// </summary>
+        public bool? RunProvisioners { get; set; }
+
+        /// <summary>
+        ///     Prevents deletion of the snapshot after restoring (so that you can restore to the same point again later).
+        /// </summary>
+        /// <remarks>Only supported by some commands</remarks>
+        public bool? DoNotDelete { get; set; }
+
+        /// <summary>
+        ///     Gets the command arguments corresponding to the specified <see cref="IVagrantCommandSettings" />
         /// </summary>
         /// <returns>An action to add required command arguments</returns>
         public Action<ProcessArgumentBuilder> GetToolArguments()
         {
             return args =>
             {
-                args.Add(RunProvisioners, "provision", enableNegation: true);
+                args.Add(RunProvisioners, "provision", true);
                 if (EnableNoDelete) args.Add(DoNotDelete, "no-delete");
             };
         }
-
-        /// <summary>
-        /// Force the provisioners to run (or prevent them from doing so).
-        /// </summary>
-        public bool? RunProvisioners { get; set; }
-        /// <summary>
-        /// Prevents deletion of the snapshot after restoring (so that you can restore to the same point again later).
-        /// </summary>
-        /// <remarks>Only supported by some commands</remarks>
-        public bool? DoNotDelete { get; set; }
     }
 
     /// <summary>
-    /// Fluent extension methods for the <see cref="VagrantSnapshotRestoreSettings"/> class
+    ///     Fluent extension methods for the <see cref="VagrantSnapshotRestoreSettings" /> class
     /// </summary>
     public static class VagrantSnapshotRestoreSettingsExtensions
     {
         /// <summary>
-        /// Force the provisioners to run (or prevent them from doing so).
+        ///     Force the provisioners to run (or prevent them from doing so).
         /// </summary>
         /// <param name="settings">The settings</param>
         /// <param name="run">Whether to force provisioners to run. Defaults to <c>true</c></param>
@@ -66,7 +63,7 @@ namespace Cake.Vagrant.Settings
         }
 
         /// <summary>
-        /// Prevents deletion of the snapshot after restoring (so that you can restore to the same point again later).
+        ///     Prevents deletion of the snapshot after restoring (so that you can restore to the same point again later).
         /// </summary>
         /// <param name="settings">The settings</param>
         /// <returns>The updated settings object</returns>
@@ -77,9 +74,9 @@ namespace Cake.Vagrant.Settings
         }
 
         /// <summary>
-        /// Forces deletion of the snapshot after restoring
+        ///     Forces deletion of the snapshot after restoring
         /// </summary>
-        /// <remarks>Opposite of <see cref="DoNotDelete"/>, included for more logical invocation</remarks>
+        /// <remarks>Opposite of <see cref="DoNotDelete" />, included for more logical invocation</remarks>
         /// <param name="settings">The settings</param>
         /// <param name="delete">Whether to delete the snapshot. Defaults to <c>true</c>.</param>
         /// <returns></returns>
@@ -89,6 +86,5 @@ namespace Cake.Vagrant.Settings
             settings.DoNotDelete = !delete;
             return settings;
         }
-
     }
 }

@@ -9,33 +9,34 @@ using Cake.Vagrant.Settings;
 namespace Cake.Vagrant.Commands
 {
     /// <summary>
-    /// Wrapper around the <c>vagrant plugin</c> subcommands
+    ///     Wrapper around the <c>vagrant plugin</c> subcommands
     /// </summary>
     public class VagrantPluginRunner : VagrantCommandRunner
     {
         /// <summary>
-        /// Creates a new instance of the <see cref="VagrantPluginRunner"/> class
+        ///     Creates a new instance of the <see cref="VagrantPluginRunner" /> class
         /// </summary>
         /// <param name="log">Logging output</param>
         /// <param name="runCallback">Action to trigger invocation of the CLI</param>
         /// <param name="settings">Settings for invocation of the Vagrant CLI</param>
-        public VagrantPluginRunner(ICakeLog log, Action<VagrantSettings, ProcessArgumentBuilder> runCallback, VagrantSettings settings) : base(log, runCallback, settings)
+        public VagrantPluginRunner(ICakeLog log, Action<VagrantSettings, ProcessArgumentBuilder> runCallback,
+            VagrantSettings settings) : base(log, runCallback, settings)
         {
         }
 
         /// <summary>
-        /// This installs a plugin with the given name or file path.
+        ///     This installs a plugin with the given name or file path.
         /// </summary>
         /// <remarks>If the name is not a path to a file, then the plugin is installed from remote repositories, usually RubyGems.</remarks>
         /// <param name="name">Name or path of the plugin to install</param>
         /// <param name="configure">Optional settings to control the installation process</param>
         public void Install(string name, Action<VagrantPluginInstallSettings> configure = null)
         {
-            Install(new []{name}, configure);
+            Install(new[] {name}, configure);
         }
 
         /// <summary>
-        /// This installs multiple plugins at the same time with the given names or paths
+        ///     This installs multiple plugins at the same time with the given names or paths
         /// </summary>
         /// <param name="names">A list of names of plugins to install</param>
         /// <param name="configure">Optional settings to control the installation process</param>
@@ -51,7 +52,8 @@ namespace Cake.Vagrant.Commands
         }
 
         /// <summary>
-        /// This uninstalls the plugin with the given name. If multiple plugins are given, multiple plugins will be uninstalled.
+        ///     This uninstalls the plugin with the given name. If multiple plugins are given, multiple plugins will be
+        ///     uninstalled.
         /// </summary>
         /// <remarks>Any dependencies of the plugin will also be uninstalled assuming no other plugin needs them.</remarks>
         /// <param name="names">Names of the plugins to uninstall</param>
@@ -64,9 +66,13 @@ namespace Cake.Vagrant.Commands
         }
 
         /// <summary>
-        /// This updates the plugins that are installed within Vagrant.
+        ///     This updates the plugins that are installed within Vagrant.
         /// </summary>
-        /// <remarks>If you specified version constraints when installing the plugin, this command will respect those constraints. If you want to change a version constraint, re-install the plugin using <see cref="Install(string,System.Action{Cake.Vagrant.Settings.VagrantPluginInstallSettings})"/></remarks>
+        /// <remarks>
+        ///     If you specified version constraints when installing the plugin, this command will respect those constraints.
+        ///     If you want to change a version constraint, re-install the plugin using
+        ///     <see cref="Install(string,System.Action{Cake.Vagrant.Settings.VagrantPluginInstallSettings})" />
+        /// </remarks>
         /// <param name="name">If a name is specified, only that single plugin will be updated</param>
         public void Update(string name = null)
         {
