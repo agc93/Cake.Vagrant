@@ -6,32 +6,32 @@
     <members>
         <member name="T:Cake.Vagrant.Commands.VagrantCommandRunner">
             <summary>
-            Base class for Vagrant subcommands
+                Base class for Vagrant subcommands
             </summary>
         </member>
         <member name="P:Cake.Vagrant.Commands.VagrantCommandRunner.Settings">
             <summary>
-            Settings for invocation of the Vagrant CLI
+                Settings for invocation of the Vagrant CLI
             </summary>
         </member>
         <member name="P:Cake.Vagrant.Commands.VagrantCommandRunner.Log">
             <summary>
-            Logging output
+                Logging output
             </summary>
         </member>
         <member name="P:Cake.Vagrant.Commands.VagrantCommandRunner.Runner">
             <summary>
-            Action to trigger invocation of the CLI
+                Action to trigger invocation of the CLI
             </summary>
         </member>
         <member name="T:Cake.Vagrant.Commands.VagrantPluginRunner">
             <summary>
-            Wrapper around the <c>vagrant plugin</c> subcommands
+                Wrapper around the <c>vagrant plugin</c> subcommands
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantPluginRunner.#ctor(Cake.Core.Diagnostics.ICakeLog,System.Action{Cake.Vagrant.VagrantSettings,Cake.Core.IO.ProcessArgumentBuilder},Cake.Vagrant.VagrantSettings)">
             <summary>
-            Creates a new instance of the <see cref="T:Cake.Vagrant.Commands.VagrantPluginRunner"/> class
+                Creates a new instance of the <see cref="T:Cake.Vagrant.Commands.VagrantPluginRunner" /> class
             </summary>
             <param name="log">Logging output</param>
             <param name="runCallback">Action to trigger invocation of the CLI</param>
@@ -39,7 +39,7 @@
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantPluginRunner.Install(System.String,System.Action{Cake.Vagrant.Settings.VagrantPluginInstallSettings})">
             <summary>
-            This installs a plugin with the given name or file path.
+                This installs a plugin with the given name or file path.
             </summary>
             <remarks>If the name is not a path to a file, then the plugin is installed from remote repositories, usually RubyGems.</remarks>
             <param name="name">Name or path of the plugin to install</param>
@@ -47,33 +47,38 @@
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantPluginRunner.Install(System.Collections.Generic.IEnumerable{System.String},System.Action{Cake.Vagrant.Settings.VagrantPluginInstallSettings})">
             <summary>
-            This installs multiple plugins at the same time with the given names or paths
+                This installs multiple plugins at the same time with the given names or paths
             </summary>
             <param name="names">A list of names of plugins to install</param>
             <param name="configure">Optional settings to control the installation process</param>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantPluginRunner.Uninstall(System.String[])">
             <summary>
-            This uninstalls the plugin with the given name. If multiple plugins are given, multiple plugins will be uninstalled.
+                This uninstalls the plugin with the given name. If multiple plugins are given, multiple plugins will be
+                uninstalled.
             </summary>
             <remarks>Any dependencies of the plugin will also be uninstalled assuming no other plugin needs them.</remarks>
             <param name="names">Names of the plugins to uninstall</param>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantPluginRunner.Update(System.String)">
             <summary>
-            This updates the plugins that are installed within Vagrant.
+                This updates the plugins that are installed within Vagrant.
             </summary>
-            <remarks>If you specified version constraints when installing the plugin, this command will respect those constraints. If you want to change a version constraint, re-install the plugin using <see cref="M:Cake.Vagrant.Commands.VagrantPluginRunner.Install(System.String,System.Action{Cake.Vagrant.Settings.VagrantPluginInstallSettings})"/></remarks>
+            <remarks>
+                If you specified version constraints when installing the plugin, this command will respect those constraints.
+                If you want to change a version constraint, re-install the plugin using
+                <see cref="M:Cake.Vagrant.Commands.VagrantPluginRunner.Install(System.String,System.Action{Cake.Vagrant.Settings.VagrantPluginInstallSettings})" />
+            </remarks>
             <param name="name">If a name is specified, only that single plugin will be updated</param>
         </member>
         <member name="T:Cake.Vagrant.Commands.VagrantSnapshotRunner">
             <summary>
-            Wrapper around the <c>vagrant snapshot</c> subcommands
+                Wrapper around the <c>vagrant snapshot</c> subcommands
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.#ctor(Cake.Core.Diagnostics.ICakeLog,System.Action{Cake.Vagrant.VagrantSettings,Cake.Core.IO.ProcessArgumentBuilder},Cake.Vagrant.VagrantSettings)">
             <summary>
-            Creates a new instance of the <see cref="T:Cake.Vagrant.Commands.VagrantSnapshotRunner"/> class
+                Creates a new instance of the <see cref="T:Cake.Vagrant.Commands.VagrantSnapshotRunner" /> class
             </summary>
             <param name="log">Logging output</param>
             <param name="runCallback">Action to trigger invocation of the CLI</param>
@@ -81,98 +86,105 @@
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Push">
             <summary>
-            This takes a snapshot and pushes it onto the snapshot stack.
+                This takes a snapshot and pushes it onto the snapshot stack.
             </summary>
             <remarks>
-            <para>This is a shorthand for <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Save(System.String)"/> where you do not need to specify a name.</para>
-            <para>Warning: If you are using <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Push"/> and <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Pop(System.Action{Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings})"/>, avoid using <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Save(System.String)"/> and <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Restore(System.String,System.Action{Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings})"/> which are unsafe to mix.</para>
+                <para>This is a shorthand for <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Save(System.String)" /> where you do not need to specify a name.</para>
+                <para>
+                    Warning: If you are using <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Push" /> and <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Pop(System.Action{Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings})" />, avoid using <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Save(System.String)" /> and
+                    <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Restore(System.String,System.Action{Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings})" /> which are unsafe to mix.
+                </para>
             </remarks>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Pop(System.Action{Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings})">
             <summary>
-            This command is the inverse of <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Push"/>: it will restore the pushed state.
+                This command is the inverse of <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Push" />: it will restore the pushed state.
             </summary>
             <param name="configure">Optional settings to control the restore</param>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Save(System.String)">
             <summary>
-            This command saves a new named snapshot.
+                This command saves a new named snapshot.
             </summary>
-            <remarks>If this command is used, the <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Push"/> and <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Pop(System.Action{Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings})"/> subcommands cannot be safely used.</remarks>
+            <remarks>If this command is used, the <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Push" /> and <see cref="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Pop(System.Action{Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings})" /> subcommands cannot be safely used.</remarks>
             <param name="name">Name of the snapshot</param>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Restore(System.String,System.Action{Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings})">
             <summary>
-            This command restores the named snapshot.
+                This command restores the named snapshot.
             </summary>
             <param name="name">Name of the snapshot to restore</param>
             <param name="configure">Optional settings to control the restore</param>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Delete(System.String)">
             <summary>
-            This command will delete the named snapshot.
+                This command will delete the named snapshot.
             </summary>
             <param name="name">Name of the snapshot to delete</param>
         </member>
         <member name="T:Cake.Vagrant.Commands.VagrantBoxRunner">
             <summary>
-            Wrapper around the <c>vagrant box</c> subcommands
+                Wrapper around the <c>vagrant box</c> subcommands
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantBoxRunner.Add(System.String,System.Action{Cake.Vagrant.Settings.VagrantBoxAddSettings})">
             <summary>
-            This adds a box with the given address to Vagrant.
+                This adds a box with the given address to Vagrant.
             </summary>
             <param name="address">Can be: shorthand name from Atlas, file path or URL to a box either locally or in a catalog</param>
             <param name="configure">Optional settings to use when adding the box</param>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantBoxRunner.List">
             <summary>
-            Lists all installed boxes
+                Lists all installed boxes
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantBoxRunner.Outdated(System.Boolean)">
             <summary>
-            This command tells you whether or not the box you are using in your current Vagrant environment is outdated.  
+                This command tells you whether or not the box you are using in your current Vagrant environment is outdated.
             </summary>
             <param name="global">If <c>true</c>, every installed box will be checked for updates.</param>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantBoxRunner.Remove(System.String,System.Action{Cake.Vagrant.Settings.VagrantBoxRemoveSettings})">
             <summary>
-            This command removes a box from Vagrant that matches the given name.
+                This command removes a box from Vagrant that matches the given name.
             </summary>
-            <remarks>If a box has multiple providers, the exact provider must be specified with the <see cref="P:Cake.Vagrant.Settings.VagrantBoxRemoveSettings.Provider"/> property.</remarks>
+            <remarks>
+                If a box has multiple providers, the exact provider must be specified with the
+                <see cref="P:Cake.Vagrant.Settings.VagrantBoxRemoveSettings.Provider" /> property.
+            </remarks>
             <param name="name">Name of the box to remove</param>
             <param name="configure">Optional settings for removing a box.</param>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantBoxRunner.Repackage(System.String,System.String,System.String)">
             <summary>
-            This command repackages the given box and puts it in the current directory so you can redistribute it.
+                This command repackages the given box and puts it in the current directory so you can redistribute it.
             </summary>
             <remarks>
-            This command is useful for reclaiming a *.box file from an installed Vagrant box.
+                This command is useful for reclaiming a *.box file from an installed Vagrant box.
             </remarks>
             <param name="name">Name of the machine to repackage</param>
-            <param name="provider">Name of the provider (from <see cref="M:Cake.Vagrant.Commands.VagrantBoxRunner.List"/>)</param>
-            <param name="version">Version to repackage (from <see cref="M:Cake.Vagrant.Commands.VagrantBoxRunner.List"/>)</param>
+            <param name="provider">Name of the provider (from <see cref="M:Cake.Vagrant.Commands.VagrantBoxRunner.List" />)</param>
+            <param name="version">Version to repackage (from <see cref="M:Cake.Vagrant.Commands.VagrantBoxRunner.List" />)</param>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantBoxRunner.Update(System.Action{Cake.Vagrant.Settings.VagrantBoxUpdateSettings})">
             <summary>
-            This command updates the box for the current Vagrant environment if there are updates available
+                This command updates the box for the current Vagrant environment if there are updates available
             </summary>
             <remarks>
-            Note that updating the box will not update an already-running Vagrant machine. To reflect the changes in the box, you will have to destroy and bring back up the Vagrant machine.
+                Note that updating the box will not update an already-running Vagrant machine. To reflect the changes in the box,
+                you will have to destroy and bring back up the Vagrant machine.
             </remarks>
             <param name="configure">Optional settings to use for updating</param>
         </member>
         <member name="T:Cake.Vagrant.Commands.VagrantDockerRunner">
             <summary>
-            Wrapper around the <c>vagrant docker</c> subcommands
+                Wrapper around the <c>vagrant docker</c> subcommands
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantDockerRunner.#ctor(Cake.Core.Diagnostics.ICakeLog,System.Action{Cake.Vagrant.VagrantSettings,Cake.Core.IO.ProcessArgumentBuilder},Cake.Vagrant.VagrantSettings)">
             <summary>
-            Gets a new instance of the <see cref="T:Cake.Vagrant.Commands.VagrantDockerRunner"/> class
+                Gets a new instance of the <see cref="T:Cake.Vagrant.Commands.VagrantDockerRunner" /> class
             </summary>
             <param name="log">Logging output</param>
             <param name="runCallback">Action to trigger invocation of the CLI</param>
@@ -180,7 +192,7 @@
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantDockerRunner.Exec(System.String,System.String)">
             <summary>
-            Can be used to run one-off commands against a Docker container that is currently running
+                Can be used to run one-off commands against a Docker container that is currently running
             </summary>
             <remarks>If the container is not running, an error will be returned.</remarks>
             <param name="name">Name of the container to run against</param>
@@ -188,7 +200,7 @@
         </member>
         <member name="M:Cake.Vagrant.Commands.VagrantDockerRunner.Run(System.String,System.String)">
             <summary>
-            Can be used to run one-off commands against a Docker container that is currently running
+                Can be used to run one-off commands against a Docker container that is currently running
             </summary>
             <remarks>If the container is not running, an error will be returned.</remarks>
             <param name="name">Name of the container to run against</param>
@@ -196,7 +208,7 @@
         </member>
         <member name="T:Cake.Vagrant.Settings.VagrantBoxAddSettings">
             <summary>
-            Additional settings for <c>vagrant box add</c> command
+                Additional settings for <c>vagrant box add</c> command
             </summary>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantBoxAddSettings.Version">
@@ -255,7 +267,7 @@
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantBoxAddSettings.GetToolArguments">
             <summary>
-            Gets the command arguments corresponding to the specified settings
+                Gets the command arguments corresponding to the specified settings
             </summary>
             <returns>An action to add required command arguments</returns>
         </member>
@@ -331,62 +343,64 @@
         </member>
         <member name="T:Cake.Vagrant.Settings.VagrantBoxRemoveSettings">
             <summary>
-            Additional settings for the <c>vagrant box remove</c> command
+                Additional settings for the <c>vagrant box remove</c> command
             </summary>
-        </member>
-        <member name="M:Cake.Vagrant.Settings.VagrantBoxRemoveSettings.GetToolArguments">
-            <summary>
-            Gets the command arguments corresponding to the specified settings
-            </summary>
-            <returns>An action to add required command arguments</returns>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantBoxRemoveSettings.RemoveAll">
             <summary>
-            Remove all available versions of a box.
+                Remove all available versions of a box.
             </summary>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantBoxRemoveSettings.Force">
             <summary>
-            Forces removing the box even if an active Vagrant environment is using it.
+                Forces removing the box even if an active Vagrant environment is using it.
             </summary>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantBoxRemoveSettings.BoxVersion">
             <summary>
-             Version of version constraints of the boxes to remove. See <see cref="P:Cake.Vagrant.Settings.VagrantBoxAddSettings.Version"/> for more details.
+                Version of version constraints of the boxes to remove. See <see cref="P:Cake.Vagrant.Settings.VagrantBoxAddSettings.Version" /> for more
+                details.
             </summary>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantBoxRemoveSettings.Provider">
             <summary>
-            The provider-specific box to remove with the given name.
+                The provider-specific box to remove with the given name.
             </summary>
             <remarks>
-            This is only required if a box is backed by multiple providers. If there is only a single provider, Vagrant will default to removing it.
+                This is only required if a box is backed by multiple providers. If there is only a single provider, Vagrant will
+                default to removing it.
             </remarks>
+        </member>
+        <member name="M:Cake.Vagrant.Settings.VagrantBoxRemoveSettings.GetToolArguments">
+            <summary>
+                Gets the command arguments corresponding to the specified settings
+            </summary>
+            <returns>An action to add required command arguments</returns>
         </member>
         <member name="T:Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions">
             <summary>
-            Fluent extension methods for the <see cref="T:Cake.Vagrant.Settings.VagrantBoxRemoveSettings"/> class
+                Fluent extension methods for the <see cref="T:Cake.Vagrant.Settings.VagrantBoxRemoveSettings" /> class
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.ConstrainVersion(Cake.Vagrant.Settings.VagrantBoxRemoveSettings,System.String)">
             <summary>
-            Sets the version constraint for the box to remove
+                Sets the version constraint for the box to remove
             </summary>
-            <remarks>See <see cref="P:Cake.Vagrant.Settings.VagrantBoxAddSettings.Version"/> for more information</remarks>
+            <remarks>See <see cref="P:Cake.Vagrant.Settings.VagrantBoxAddSettings.Version" /> for more information</remarks>
             <param name="settings">The settings</param>
             <param name="version">Version constraint to match against</param>
             <returns>The updated settings object</returns>
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.RemoveAll(Cake.Vagrant.Settings.VagrantBoxRemoveSettings)">
             <summary>
-            Remove all available versions of a box.
+                Remove all available versions of a box.
             </summary>
             <param name="settings">The settings</param>
             <returns>The updated settings object</returns>
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.UseProvider(Cake.Vagrant.Settings.VagrantBoxRemoveSettings,System.String)">
             <summary>
-            The provider-specific box to remove with the given name.
+                The provider-specific box to remove with the given name.
             </summary>
             <param name="settings">The settings</param>
             <param name="provider">The specific provider to remove</param>
@@ -394,7 +408,7 @@
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.Force(Cake.Vagrant.Settings.VagrantBoxRemoveSettings,System.Boolean)">
             <summary>
-            Forces removing the box even if an active Vagrant environment is using it.
+                Forces removing the box even if an active Vagrant environment is using it.
             </summary>
             <param name="settings">The settings</param>
             <param name="force"><c>true</c> to force removal. Defaults to <c>true</c></param>
@@ -402,35 +416,35 @@
         </member>
         <member name="T:Cake.Vagrant.Settings.VagrantBoxUpdateSettings">
             <summary>
-            Additional settings for the <c>vagrant box update</c> command
+                Additional settings for the <c>vagrant box update</c> command
             </summary>
-        </member>
-        <member name="M:Cake.Vagrant.Settings.VagrantBoxUpdateSettings.GetToolArguments">
-            <summary>
-            Gets the command arguments corresponding to the specified settings
-            </summary>
-            <returns>An action to add required command arguments</returns>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantBoxUpdateSettings.BoxName">
             <summary>
-            Name of a specific box to update. 
+                Name of a specific box to update.
             </summary>
             <remarks>If this flag is not specified, Vagrant will update the boxes for the active Vagrant environment.</remarks>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantBoxUpdateSettings.Provider">
             <summary>
-            When <see cref="P:Cake.Vagrant.Settings.VagrantBoxUpdateSettings.BoxName"/> is present, this controls what provider-specific box to update. 
+                When <see cref="P:Cake.Vagrant.Settings.VagrantBoxUpdateSettings.BoxName" /> is present, this controls what provider-specific box to update.
             </summary>
             <remarks>This is not required unless the box has multiple providers.</remarks>
         </member>
+        <member name="M:Cake.Vagrant.Settings.VagrantBoxUpdateSettings.GetToolArguments">
+            <summary>
+                Gets the command arguments corresponding to the specified settings
+            </summary>
+            <returns>An action to add required command arguments</returns>
+        </member>
         <member name="T:Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions">
             <summary>
-            Fluent extension methods for the <see cref="T:Cake.Vagrant.Settings.VagrantBoxUpdateSettings"/> class
+                Fluent extension methods for the <see cref="T:Cake.Vagrant.Settings.VagrantBoxUpdateSettings" /> class
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions.UseProvider(Cake.Vagrant.Settings.VagrantBoxUpdateSettings,System.String)">
             <summary>
-            Controls what provider-specific box to update
+                Controls what provider-specific box to update
             </summary>
             <param name="settings">The settings</param>
             <param name="provider">The provider name to update</param>
@@ -438,7 +452,7 @@
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions.OnlyUpdate(Cake.Vagrant.Settings.VagrantBoxUpdateSettings,System.String)">
             <summary>
-            Set the name of a specific box to update
+                Set the name of a specific box to update
             </summary>
             <remarks>When using this option, the box does not need to be part of the active environment</remarks>
             <param name="settings">The settings</param>
@@ -447,7 +461,7 @@
         </member>
         <member name="T:Cake.Vagrant.Settings.VagrantInitSettings">
             <summary>
-            Additional settings for the <c>vagrant init</c> command
+                Additional settings for the <c>vagrant init</c> command
             </summary>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantInitSettings.Force">
@@ -476,13 +490,13 @@
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantInitSettings.GetToolArguments">
             <summary>
-            Gets the command arguments corresponding to the specified settings
+                Gets the command arguments corresponding to the specified settings
             </summary>
             <returns>An action to add required command arguments</returns>
         </member>
         <member name="T:Cake.Vagrant.Settings.VagrantInitSettingsExtensions">
             <summary>
-            Fluent extension methods for the <see cref="T:Cake.Vagrant.Settings.VagrantInitSettings"/> class
+                Fluent extension methods for the <see cref="T:Cake.Vagrant.Settings.VagrantInitSettings" /> class
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantInitSettingsExtensions.Force(Cake.Vagrant.Settings.VagrantInitSettings,System.Boolean)">
@@ -518,44 +532,45 @@
         </member>
         <member name="T:Cake.Vagrant.Settings.VagrantPackageSettings">
             <summary>
-            Additional settings for the <c>vagrant package</c> command
+                Additional settings for the <c>vagrant package</c> command
             </summary>
-        </member>
-        <member name="M:Cake.Vagrant.Settings.VagrantPackageSettings.GetToolArguments">
-            <summary>
-            Gets the command arguments corresponding to the specified settings
-            </summary>
-            <returns>An action to add required command arguments</returns>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantPackageSettings.BaseImageName">
             <summary>
-            Name or UUID of a VirtualBox VM to package
+                Name or UUID of a VirtualBox VM to package
             </summary>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantPackageSettings.OutputFile">
             <summary>
-            File name for the output package. Defaults to <c>package.box</c>
+                File name for the output package. Defaults to <c>package.box</c>
             </summary>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantPackageSettings.AdditionalFilePaths">
             <summary>
-            Additional files to be packaged with the box. 
+                Additional files to be packaged with the box.
             </summary>
-            <remarks>These can be used by a packaged <see cref="P:Cake.Vagrant.Settings.VagrantPackageSettings.VagrantFile"/> to perform additional tasks.</remarks>
+            <remarks>These can be used by a packaged <see cref="P:Cake.Vagrant.Settings.VagrantPackageSettings.VagrantFile" /> to perform additional tasks.</remarks>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantPackageSettings.VagrantFile">
             <summary>
-            Packages a Vagrantfile with the box, that is loaded as part of the Vagrantfile load order when the resulting box is used.
+                Packages a Vagrantfile with the box, that is loaded as part of the Vagrantfile load order when the resulting box is
+                used.
             </summary>
+        </member>
+        <member name="M:Cake.Vagrant.Settings.VagrantPackageSettings.GetToolArguments">
+            <summary>
+                Gets the command arguments corresponding to the specified settings
+            </summary>
+            <returns>An action to add required command arguments</returns>
         </member>
         <member name="T:Cake.Vagrant.Settings.VagrantPackageSettingsExtensions">
             <summary>
-            Fluent extension methods for the <see cref="T:Cake.Vagrant.Settings.VagrantPackageSettings"/> class
+                Fluent extension methods for the <see cref="T:Cake.Vagrant.Settings.VagrantPackageSettings" /> class
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.UseBaseImage(Cake.Vagrant.Settings.VagrantPackageSettings,System.String)">
             <summary>
-            Sets the base image to use when packaging the machine
+                Sets the base image to use when packaging the machine
             </summary>
             <param name="settings">The settings</param>
             <param name="id">VM name or UUID</param>
@@ -563,7 +578,7 @@
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.OutputToFile(Cake.Vagrant.Settings.VagrantPackageSettings,Cake.Core.IO.FilePath)">
             <summary>
-            Sets the filename for the package output
+                Sets the filename for the package output
             </summary>
             <param name="settings">The settings</param>
             <param name="path">Path to output the package to</param>
@@ -571,65 +586,72 @@
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.IncludeInPackage(Cake.Vagrant.Settings.VagrantPackageSettings,Cake.Core.IO.FilePath[])">
             <summary>
-            Adds extra files to be included with the box
+                Adds extra files to be included with the box
             </summary>
             <param name="settings">The settings</param>
-            <param name="files">Collection of <see cref="T:Cake.Core.IO.FilePath"/> objects to add to the package</param>
+            <param name="files">Collection of <see cref="T:Cake.Core.IO.FilePath" /> objects to add to the package</param>
             <returns>The updated settings object</returns>
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.IncludeVagrantFile(Cake.Vagrant.Settings.VagrantPackageSettings,Cake.Core.IO.FilePath)">
             <summary>
-            Includes an additional Vagrantfile with the packaged box
+                Includes an additional Vagrantfile with the packaged box
             </summary>
             <param name="settings">The settings</param>
-            <param name="vagrantFile"><see cref="T:Cake.Core.IO.FilePath"/> for the Vagrantfile to include</param>
+            <param name="vagrantFile"><see cref="T:Cake.Core.IO.FilePath" /> for the Vagrantfile to include</param>
             <returns>The updated settings object</returns>
         </member>
         <member name="T:Cake.Vagrant.Settings.VagrantPluginInstallSettings">
             <summary>
-            Additional settings for the <c>vagrant plugin install</c> command.
+                Additional settings for the <c>vagrant plugin install</c> command.
             </summary>
-        </member>
-        <member name="M:Cake.Vagrant.Settings.VagrantPluginInstallSettings.GetToolArguments">
-            <summary>
-            Gets the command arguments corresponding to the specified <see cref="T:Cake.Vagrant.IVagrantCommandSettings"/>
-            </summary>
-            <returns>An action to add required command arguments</returns>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantPluginInstallSettings.EntryPoint">
             <summary>
-            If the plugin you are installing has another entrypoint, this flag can be used to specify it.
+                If the plugin you are installing has another entrypoint, this flag can be used to specify it.
             </summary>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantPluginInstallSettings.CleanSources">
             <summary>
-            Clears all sources that have been defined so far.
+                Clears all sources that have been defined so far.
             </summary>
             <remarks>This is an advanced feature.</remarks>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantPluginInstallSettings.Source">
             <summary>
-            Adds a source from which to fetch a plugin.
+                Adds a source from which to fetch a plugin.
             </summary>
-            <remarks>Note that this does not only affect the single plugin being installed, by all future plugin as well. This is a limitation of the underlying plugin installer Vagrant uses.</remarks>
+            <remarks>
+                Note that this does not only affect the single plugin being installed, by all future plugin as well. This is a
+                limitation of the underlying plugin installer Vagrant uses.
+            </remarks>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantPluginInstallSettings.Version">
             <summary>
-            The version of the plugin to install. By default, this command will install the latest version.
+                The version of the plugin to install. By default, this command will install the latest version.
             </summary>
             <remarks>
-            <para>You can set it to a specific version, such as "1.2.3" or you can set it to a version constraint, such as "&gt; 1.0.2". You can set it to a more complex constraint by comma-separating multiple constraints: "&gt; 1.0.2, &lt; 1.1.0"</para>
+                <para>
+                    You can set it to a specific version, such as "1.2.3" or you can set it to a version constraint, such as "
+                    &gt; 1.0.2". You can set it to a more complex constraint by comma-separating multiple constraints: "&gt; 1.0.2,
+                    &lt; 1.1.0"
+                </para>
             </remarks>
             <value>This will be automatically quoted</value>
         </member>
+        <member name="M:Cake.Vagrant.Settings.VagrantPluginInstallSettings.GetToolArguments">
+            <summary>
+                Gets the command arguments corresponding to the specified <see cref="T:Cake.Vagrant.IVagrantCommandSettings" />
+            </summary>
+            <returns>An action to add required command arguments</returns>
+        </member>
         <member name="T:Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions">
             <summary>
-            Fluent extension methods for the <see cref="T:Cake.Vagrant.Settings.VagrantPluginInstallSettings"/> class
+                Fluent extension methods for the <see cref="T:Cake.Vagrant.Settings.VagrantPluginInstallSettings" /> class
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.SetEntryPoint(Cake.Vagrant.Settings.VagrantPluginInstallSettings,System.String)">
             <summary>
-            Sets the <see cref="P:Cake.Vagrant.Settings.VagrantPluginInstallSettings.EntryPoint"/> for a plugin.
+                Sets the <see cref="P:Cake.Vagrant.Settings.VagrantPluginInstallSettings.EntryPoint" /> for a plugin.
             </summary>
             <param name="settings">The settings</param>
             <param name="entryPoint">The entry point for the plugin</param>
@@ -637,7 +659,7 @@
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.CleanFirst(Cake.Vagrant.Settings.VagrantPluginInstallSettings,System.Boolean)">
             <summary>
-            Clears all sources that have been defined so far.
+                Clears all sources that have been defined so far.
             </summary>
             <param name="settings">The settings</param>
             <param name="clean">Whether to clean sources first.</param>
@@ -645,7 +667,7 @@
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.FromSource(Cake.Vagrant.Settings.VagrantPluginInstallSettings,System.String)">
             <summary>
-            Adds a source from which to fetch a plugin.
+                Adds a source from which to fetch a plugin.
             </summary>
             <param name="settings">The settings</param>
             <param name="source">The source from which to install</param>
@@ -653,38 +675,41 @@
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.ConstrainVersion(Cake.Vagrant.Settings.VagrantPluginInstallSettings,System.String)">
             <summary>
-            The version of the plugin to install.
+                The version of the plugin to install.
             </summary>
             <param name="settings">The settings</param>
-            <param name="version">The version or version constraint to use (as per <see cref="P:Cake.Vagrant.Settings.VagrantPluginInstallSettings.Version"/>)</param>
+            <param name="version">
+                The version or version constraint to use (as per
+                <see cref="P:Cake.Vagrant.Settings.VagrantPluginInstallSettings.Version" />)
+            </param>
             <returns>The updated settings object</returns>
         </member>
         <member name="T:Cake.Vagrant.Settings.VagrantPowerShellSettings">
             <summary>
-            Additional settings for the <c>vagrant powershell</c> command.
+                Additional settings for the <c>vagrant powershell</c> command.
             </summary>
-        </member>
-        <member name="M:Cake.Vagrant.Settings.VagrantPowerShellSettings.GetToolArguments">
-            <summary>
-            Gets the command arguments corresponding to the specified settings
-            </summary>
-            <returns>An action to add required command arguments</returns>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantPowerShellSettings.Command">
             <summary>
-            The command to run on your machine.
+                The command to run on your machine.
             </summary>
             <remarks>This is mandatory! Without it, script execution will block!</remarks>
             <value>This value will be quoted when invoked.</value>
         </member>
+        <member name="M:Cake.Vagrant.Settings.VagrantPowerShellSettings.GetToolArguments">
+            <summary>
+                Gets the command arguments corresponding to the specified settings
+            </summary>
+            <returns>An action to add required command arguments</returns>
+        </member>
         <member name="T:Cake.Vagrant.Settings.VagrantPowerShellSettingsExtensions">
             <summary>
-            Fluent extensions methods to the <see cref="T:Cake.Vagrant.Settings.VagrantPowerShellSettings"/> class
+                Fluent extensions methods to the <see cref="T:Cake.Vagrant.Settings.VagrantPowerShellSettings" /> class
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantPowerShellSettingsExtensions.RunCommand(Cake.Vagrant.Settings.VagrantPowerShellSettings,System.String)">
             <summary>
-            Sets the command to run in the PowerShell session
+                Sets the command to run in the PowerShell session
             </summary>
             <param name="settings">The settings</param>
             <param name="command">REQUIRED: The command to run in the session.</param>
@@ -692,18 +717,12 @@
         </member>
         <member name="T:Cake.Vagrant.Settings.VagrantProvisionerSettings">
             <summary>
-            Additional settings for controlling provisioner execution
+                Additional settings for controlling provisioner execution
             </summary>
-        </member>
-        <member name="M:Cake.Vagrant.Settings.VagrantProvisionerSettings.GetToolArguments">
-            <summary>
-            Gets the command arguments corresponding to the specified <see cref="T:Cake.Vagrant.IVagrantCommandSettings"/>
-            </summary>
-            <returns>An action to add required command arguments</returns>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantProvisionerSettings.RunProvisioners">
             <summary>
-            Gets or sets a value controlling whether to run provisioners on reload.
+                Gets or sets a value controlling whether to run provisioners on reload.
             </summary>
             <remarks>Defaults to false</remarks>
             <value><c>true</c> to run provisioners, otherwise they will not be run.</value>
@@ -714,9 +733,15 @@
             </summary>
             <value>Providers to run. Omit the leading `:`</value>
         </member>
+        <member name="M:Cake.Vagrant.Settings.VagrantProvisionerSettings.GetToolArguments">
+            <summary>
+                Gets the command arguments corresponding to the specified <see cref="T:Cake.Vagrant.IVagrantCommandSettings" />
+            </summary>
+            <returns>An action to add required command arguments</returns>
+        </member>
         <member name="T:Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions">
             <summary>
-            Fluent extension methods to the <see cref="T:Cake.Vagrant.Settings.VagrantProvisionerSettings"/> class
+                Fluent extension methods to the <see cref="T:Cake.Vagrant.Settings.VagrantProvisionerSettings" /> class
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.RunProvisioners(Cake.Vagrant.Settings.VagrantProvisionerSettings,System.Boolean)">
@@ -745,40 +770,40 @@
         </member>
         <member name="T:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings">
             <summary>
-            Additional settings for the <c>vagrant snapshot restore</c> command.
+                Additional settings for the <c>vagrant snapshot restore</c> command.
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.#ctor(System.Boolean)">
             <summary>
-            Creates a new instance of the <see cref="T:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings"/> class
+                Creates a new instance of the <see cref="T:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings" /> class
             </summary>
             <param name="enableNoDeleteOption">Whether to include the "--no-delete" argument as a valid argument</param>
         </member>
-        <member name="M:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.GetToolArguments">
-            <summary>
-            Gets the command arguments corresponding to the specified <see cref="T:Cake.Vagrant.IVagrantCommandSettings"/>
-            </summary>
-            <returns>An action to add required command arguments</returns>
-        </member>
         <member name="P:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.RunProvisioners">
             <summary>
-            Force the provisioners to run (or prevent them from doing so).
+                Force the provisioners to run (or prevent them from doing so).
             </summary>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.DoNotDelete">
             <summary>
-            Prevents deletion of the snapshot after restoring (so that you can restore to the same point again later).
+                Prevents deletion of the snapshot after restoring (so that you can restore to the same point again later).
             </summary>
             <remarks>Only supported by some commands</remarks>
         </member>
+        <member name="M:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.GetToolArguments">
+            <summary>
+                Gets the command arguments corresponding to the specified <see cref="T:Cake.Vagrant.IVagrantCommandSettings" />
+            </summary>
+            <returns>An action to add required command arguments</returns>
+        </member>
         <member name="T:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions">
             <summary>
-            Fluent extension methods for the <see cref="T:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings"/> class
+                Fluent extension methods for the <see cref="T:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings" /> class
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.RunProvisioners(Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings,System.Boolean)">
             <summary>
-            Force the provisioners to run (or prevent them from doing so).
+                Force the provisioners to run (or prevent them from doing so).
             </summary>
             <param name="settings">The settings</param>
             <param name="run">Whether to force provisioners to run. Defaults to <c>true</c></param>
@@ -786,56 +811,56 @@
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.DoNotDelete(Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings)">
             <summary>
-            Prevents deletion of the snapshot after restoring (so that you can restore to the same point again later).
+                Prevents deletion of the snapshot after restoring (so that you can restore to the same point again later).
             </summary>
             <param name="settings">The settings</param>
             <returns>The updated settings object</returns>
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.Delete(Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings,System.Boolean)">
             <summary>
-            Forces deletion of the snapshot after restoring
+                Forces deletion of the snapshot after restoring
             </summary>
-            <remarks>Opposite of <see cref="M:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.DoNotDelete(Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings)"/>, included for more logical invocation</remarks>
+            <remarks>Opposite of <see cref="M:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.DoNotDelete(Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings)" />, included for more logical invocation</remarks>
             <param name="settings">The settings</param>
             <param name="delete">Whether to delete the snapshot. Defaults to <c>true</c>.</param>
             <returns></returns>
         </member>
         <member name="T:Cake.Vagrant.Settings.VagrantSSHSettings">
             <summary>
-            Additional settings for the <c>vagrant ssh</c> command
+                Additional settings for the <c>vagrant ssh</c> command
             </summary>
-        </member>
-        <member name="M:Cake.Vagrant.Settings.VagrantSSHSettings.GetToolArguments">
-            <summary>
-            Gets the command arguments corresponding to the specified <see cref="T:Cake.Vagrant.IVagrantCommandSettings"/>
-            </summary>
-            <returns>An action to add required command arguments</returns>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantSSHSettings.Command">
             <summary>
-            The command to run on your machine.
+                The command to run on your machine.
             </summary>
             <remarks>This is mandatory! Without it, script execution will block!</remarks>
             <value>This value will be quoted when invoked.</value>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantSSHSettings.DoNotAuthenticate">
             <summary>
-            OBSOLETE: Setting this will cause unexpected results and may block scripts.
+                OBSOLETE: Setting this will cause unexpected results and may block scripts.
             </summary>
         </member>
         <member name="P:Cake.Vagrant.Settings.VagrantSSHSettings.ExtraSSHArguments">
             <summary>
-            Extra arguments to provide directly to the SSH command
+                Extra arguments to provide directly to the SSH command
             </summary>
+        </member>
+        <member name="M:Cake.Vagrant.Settings.VagrantSSHSettings.GetToolArguments">
+            <summary>
+                Gets the command arguments corresponding to the specified <see cref="T:Cake.Vagrant.IVagrantCommandSettings" />
+            </summary>
+            <returns>An action to add required command arguments</returns>
         </member>
         <member name="T:Cake.Vagrant.Settings.VagrantSSHSettingsExtensions">
             <summary>
-            Fluent extension methods to the <see cref="T:Cake.Vagrant.Settings.VagrantSSHSettings"/> class
+                Fluent extension methods to the <see cref="T:Cake.Vagrant.Settings.VagrantSSHSettings" /> class
             </summary>
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantSSHSettingsExtensions.RunCommand(Cake.Vagrant.Settings.VagrantSSHSettings,System.String)">
             <summary>
-            Sets the command to run in the SSH session
+                Sets the command to run in the SSH session
             </summary>
             <param name="settings">The settings</param>
             <param name="command">REQUIRED: The command to run in the session.</param>
@@ -843,7 +868,7 @@
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantSSHSettingsExtensions.WithArguments(Cake.Vagrant.Settings.VagrantSSHSettings,System.String[])">
             <summary>
-            Sets any additional arguments to pass directly to the SSH invocation
+                Sets any additional arguments to pass directly to the SSH invocation
             </summary>
             <param name="settings">The settings</param>
             <param name="args">Arbitrary arguments to pass to ssh</param>
@@ -892,7 +917,7 @@
         </member>
         <member name="M:Cake.Vagrant.Settings.VagrantUpSettings.GetToolArguments">
             <summary>
-            Gets the command arguments corresponding to the specified <see cref="T:Cake.Vagrant.IVagrantCommandSettings"/>
+                Gets the command arguments corresponding to the specified <see cref="T:Cake.Vagrant.IVagrantCommandSettings" />
             </summary>
             <returns>An action to add required command arguments</returns>
         </member>
@@ -960,44 +985,24 @@
         </member>
         <member name="T:Cake.Vagrant.VagrantAliases">
             <summary>
-            Gets a runner to control Vagrant through the CLI
+                Gets a runner to control Vagrant through the CLI
             </summary>
             <remarks>Roughly equivalent to the <c>vagrant</c> command.</remarks>
         </member>
         <member name="M:Cake.Vagrant.VagrantAliases.Vagrant(Cake.Core.ICakeContext)">
             <summary>
-            Gets a runner to control Vagrant through the CLI
+                Gets a runner to control Vagrant through the CLI
             </summary>
             <remarks>Roughly equivalent to the <c>vagrant</c> command.</remarks>
         </member>
         <member name="T:Cake.Vagrant.VagrantRunner">
             <summary>
-            Wrapper around Vagrant's CLI functionality for creating, starting and managing VMs
-            </summary>
-        </member>
-        <member name="P:Cake.Vagrant.VagrantRunner.Box">
-            <summary>
-            Provides access to `vagrant box` subcommands
-            </summary>
-        </member>
-        <member name="P:Cake.Vagrant.VagrantRunner.Snapshot">
-            <summary>
-            Provides access to `vagrant snapshot` subcommands
-            </summary>
-        </member>
-        <member name="P:Cake.Vagrant.VagrantRunner.Docker">
-            <summary>
-            Provides access to `vagrant docker` subcommands
-            </summary>
-        </member>
-        <member name="P:Cake.Vagrant.VagrantRunner.Plugin">
-            <summary>
-            Provides access to `vagrant plugin` subcommands
+                Wrapper around Vagrant's CLI functionality for creating, starting and managing VMs
             </summary>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.IO.IProcessRunner,Cake.Core.Tooling.IToolLocator,Cake.Core.Diagnostics.ICakeLog)">
             <summary>
-            Initializes a new instance of the <see cref="T:Cake.Vagrant.VagrantRunner"/> class
+                Initializes a new instance of the <see cref="T:Cake.Vagrant.VagrantRunner" /> class
             </summary>
             <param name="fileSystem">The file system</param>
             <param name="environment">The environment</param>
@@ -1005,13 +1010,33 @@
             <param name="tools">The tool locator</param>
             <param name="log">Logging handler</param>
         </member>
+        <member name="P:Cake.Vagrant.VagrantRunner.Box">
+            <summary>
+                Provides access to `vagrant box` subcommands
+            </summary>
+        </member>
+        <member name="P:Cake.Vagrant.VagrantRunner.Snapshot">
+            <summary>
+                Provides access to `vagrant snapshot` subcommands
+            </summary>
+        </member>
+        <member name="P:Cake.Vagrant.VagrantRunner.Docker">
+            <summary>
+                Provides access to `vagrant docker` subcommands
+            </summary>
+        </member>
+        <member name="P:Cake.Vagrant.VagrantRunner.Plugin">
+            <summary>
+                Provides access to `vagrant plugin` subcommands
+            </summary>
+        </member>
         <member name="M:Cake.Vagrant.VagrantRunner.GetToolName">
             <summary>Gets the name of the tool.</summary>
             <returns>The name of the tool.</returns>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.GetAlternativeToolPaths(Cake.Vagrant.VagrantSettings)">
             <summary>
-            Gets alternative file paths which the tool may exist in
+                Gets alternative file paths which the tool may exist in
             </summary>
             <param name="settings">The settings.</param>
             <returns>The default tool path.</returns>
@@ -1022,14 +1047,15 @@
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Init(System.String,System.Action{Cake.Vagrant.Settings.VagrantInitSettings})">
             <summary>
-            This initializes the current directory to be a Vagrant environment by creating an initial Vagrantfile if one does not already exist.
+                This initializes the current directory to be a Vagrant environment by creating an initial Vagrantfile if one does
+                not already exist.
             </summary>
             <param name="name">Will prepopulate the config.vm.box setting in the created Vagrantfile with the specified name</param>
             <param name="configure">Settings to control the initialising process</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Init(System.String,System.String,System.Action{Cake.Vagrant.Settings.VagrantInitSettings})">
             <summary>
-            Initializes the current directory for Vagrant by creating an initial Vagrantfile 
+                Initializes the current directory for Vagrant by creating an initial Vagrantfile
             </summary>
             <param name="name"></param>
             <param name="url"></param>
@@ -1037,66 +1063,66 @@
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Up(System.String)">
             <summary>
-            This command creates and configures guest machines according to your Vagrantfile, using the default settings
+                This command creates and configures guest machines according to your Vagrantfile, using the default settings
             </summary>
             <param name="name">Optional name of the machine to start</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Up(System.Action{Cake.Vagrant.Settings.VagrantUpSettings})">
             <summary>
-            This command creates and configures the default machine according to your Vagrantfile, and the specified settings
+                This command creates and configures the default machine according to your Vagrantfile, and the specified settings
             </summary>
             <param name="configure">Settings to use when starting your machine</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Up(System.String,System.Action{Cake.Vagrant.Settings.VagrantUpSettings})">
             <summary>
-            This command creates and configures guest machines according to your Vagrantfile, and the specified settings.
+                This command creates and configures guest machines according to your Vagrantfile, and the specified settings.
             </summary>
             <param name="name">Name of the machine to create</param>
             <param name="configure">Settings to use when creating your machine</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.SSH(System.Action{Cake.Vagrant.Settings.VagrantSSHSettings})">
             <summary>
-            This command opens an SSH connection to your default machine to run the provided command
+                This command opens an SSH connection to your default machine to run the provided command
             </summary>
             <param name="configure">Settings to use when connecting</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.SSH(System.String,System.Action{Cake.Vagrant.Settings.VagrantSSHSettings})">
             <summary>
-            This command opens an SSH connection to the specified machine to run the provided command
+                This command opens an SSH connection to the specified machine to run the provided command
             </summary>
             <param name="name">Name of the machine to start</param>
             <param name="configure">Settings to use when connecting</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.PowerShell(System.Action{Cake.Vagrant.Settings.VagrantPowerShellSettings})">
             <summary>
-            This command opens a PowerShell connection to your default machine to run the provided command
+                This command opens a PowerShell connection to your default machine to run the provided command
             </summary>
             <param name="configure">Settings to use when connecting</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.PowerShell(System.String,System.Action{Cake.Vagrant.Settings.VagrantPowerShellSettings})">
             <summary>
-            This command opens a PowerShell connection to the specified machine to run the provided command
+                This command opens a PowerShell connection to the specified machine to run the provided command
             </summary>
             <param name="name">Name of the machine to start</param>
             <param name="configure">Settings to use when connecting</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Reload(System.String)">
             <summary>
-            The equivalent of running a halt followed by an up.
+                The equivalent of running a halt followed by an up.
             </summary>
             <remarks>This command is usually required for changes made in the Vagrantfile to take effect.</remarks>
             <param name="name">Optional name of the machine to reload</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Reload(System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})">
             <summary>
-            The equivalent of running a halt followed by an up.
+                The equivalent of running a halt followed by an up.
             </summary>
             <remarks>This command is usually required for changes made in the Vagrantfile to take effect.</remarks>
             <param name="configure">Settings to control the execution of provisioners</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Reload(System.String,System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})">
             <summary>
-            The equivalent of running a halt followed by an up.
+                The equivalent of running a halt followed by an up.
             </summary>
             <remarks>This command is usually required for changes made in the Vagrantfile to take effect.</remarks>
             <param name="name">Name of the machine to reload</param>
@@ -1104,76 +1130,86 @@
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Resume(System.String)">
             <summary>
-            This resumes a Vagrant managed machine that was previously suspended.
+                This resumes a Vagrant managed machine that was previously suspended.
             </summary>
             <param name="name">Optional name of the machine to resume</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Resume(System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})">
             <summary>
-            This resumes a Vagrant managed machine that was previously suspended.
+                This resumes a Vagrant managed machine that was previously suspended.
             </summary>
             <param name="configure">Settings to control the execution of provisioners</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Resume(System.String,System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})">
             <summary>
-            This resumes a Vagrant managed machine that was previously suspended.
+                This resumes a Vagrant managed machine that was previously suspended.
             </summary>
             <param name="name">Name of the machine to resume</param>
             <param name="configure">Settings to control the execution of provisioners</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Destroy(System.String)">
             <summary>
-            This command stops the running machine Vagrant is managing and destroys all resources that were created during the machine creation process.
+                This command stops the running machine Vagrant is managing and destroys all resources that were created during the
+                machine creation process.
             </summary>
             <param name="name">Optional name of the machine to destroy</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Halt(System.String,System.Boolean)">
             <summary>
-            This command shuts down the running machine Vagrant is managing.
+                This command shuts down the running machine Vagrant is managing.
             </summary>
             <param name="name">Optional name of the machine to halt</param>
             <param name="force">Whether to forcefully halt the machine (equivalent to pulling the power)</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Suspend(System.String)">
             <summary>
-            This suspends the guest machine Vagrant is managing, rather than shutting it down
+                This suspends the guest machine Vagrant is managing, rather than shutting it down
             </summary>
             <remarks>
-            A suspend effectively saves the exact point-in-time state of the machine, so that when you resume it later, it begins running immediately from that point, rather than doing a full boot.</remarks>
+                A suspend effectively saves the exact point-in-time state of the machine, so that when you resume it later, it
+                begins running immediately from that point, rather than doing a full boot.
+            </remarks>
             <param name="name">Optional name of the machine to suspend</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Package(System.String)">
             <summary>
-            This packages a currently running VirtualBox environment into a re-usable box.
+                This packages a currently running VirtualBox environment into a re-usable box.
             </summary>
-            <remarks>This command can only be used with other providers based on the provider implementation and if the provider supports it.</remarks>
+            <remarks>
+                This command can only be used with other providers based on the provider implementation and if the provider
+                supports it.
+            </remarks>
             <param name="name">Optional name of the machine to package</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Package(System.Action{Cake.Vagrant.Settings.VagrantPackageSettings})">
             <summary>
-            This packages a currently running VirtualBox environment into a re-usable box.
+                This packages a currently running VirtualBox environment into a re-usable box.
             </summary>
-            <remarks>This command can only be used with other providers based on the provider implementation and if the provider supports it.</remarks>
+            <remarks>
+                This command can only be used with other providers based on the provider implementation and if the provider
+                supports it.
+            </remarks>
             <param name="configure">Settings to use when packaging the box</param>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Package(System.String,System.Action{Cake.Vagrant.Settings.VagrantPackageSettings})">
             <summary>
-            This packages a currently running VirtualBox environment into a re-usable box.
+                This packages a currently running VirtualBox environment into a re-usable box.
             </summary>
             <remarks>
-            This command can only be used with other providers based on the provider implementation and if the provider supports it.
+                This command can only be used with other providers based on the provider implementation and if the provider
+                supports it.
             </remarks>
             <param name="name">Name of the machine to package</param>
             <param name="configure">Settings to use when packaging the box</param>
         </member>
         <member name="T:Cake.Vagrant.VagrantSettings">
             <summary>
-            Settings to invoke the Vagrant CLI
+                Settings to invoke the Vagrant CLI
             </summary>
         </member>
         <member name="M:Cake.Vagrant.IVagrantCommandSettings.GetToolArguments">
             <summary>
-            Gets the command arguments corresponding to the specified <see cref="T:Cake.Vagrant.IVagrantCommandSettings"/>
+                Gets the command arguments corresponding to the specified <see cref="T:Cake.Vagrant.IVagrantCommandSettings" />
             </summary>
             <returns>An action to add required command arguments</returns>
         </member>
