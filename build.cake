@@ -31,7 +31,9 @@ Setup(ctx =>
 {
 	// Executed BEFORE the first task.
 	Information("Running tasks...");
-	versionInfo = GitVersion();
+	versionInfo = GitVersion(new GitVersionSettings {
+		UpdateAssemblyInfo = true
+	});
 	Information("Building for version {0}", versionInfo.FullSemVer);
 });
 
