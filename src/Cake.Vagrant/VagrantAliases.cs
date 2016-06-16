@@ -7,11 +7,19 @@ using Cake.Core.Annotations;
 
 namespace Cake.Vagrant
 {
+    /// <summary>
+    /// Gets a runner to control Vagrant through the CLI
+    /// </summary>
+    /// <remarks>Roughly equivalent to the <c>vagrant</c> command.</remarks>
     [CakeAliasCategory("Vagrant")]
     [CakeNamespaceImport("Cake.Vagrant.Settings")]
     [CakeNamespaceImport("Cake.Vagrant.Commands")]
     public static class VagrantAliases
     {
+        /// <summary>
+        /// Gets a runner to control Vagrant through the CLI
+        /// </summary>
+        /// <remarks>Roughly equivalent to the <c>vagrant</c> command.</remarks>
         [CakePropertyAlias]
         [CakeAliasCategory("Vagrant")]
         public static VagrantRunner Vagrant(this ICakeContext ctx)

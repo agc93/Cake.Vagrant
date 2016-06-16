@@ -21,7 +21,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>Cake.Vagrant.xml</DocumentationFile>
-    <NoWarn>1591</NoWarn>
+    <NoWarn>
+    </NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -60,7 +61,6 @@
     <Compile Include="Settings\VagrantPluginInstallSettings.cs" />
     <Compile Include="Settings\VagrantPowerShellSettings.cs" />
     <Compile Include="Settings\VagrantProvisionerSettings.cs" />
-    <Compile Include="Settings\VagrantShareSettings.cs" />
     <Compile Include="Settings\VagrantSnapshotRestoreSettings.cs" />
     <Compile Include="Settings\VagrantSSHSettings.cs" />
     <Compile Include="Settings\VagrantUpSettings.cs" />
