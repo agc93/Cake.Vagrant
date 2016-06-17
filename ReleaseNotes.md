@@ -7,3 +7,6 @@
 
 # 0.2.2
 * Fix incorrect alias documentation
+
+# 0.2.3
+* Further fixes and improvements to documentation
