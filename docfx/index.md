@@ -1,5 +1,9 @@
 
-# This is the **HOMEPAGE**.
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
-## Quick Start Notes:
-1. Add images to *images* folder if the file is referencing an image.
+# Cake.Vagrant
+A flexible Cake addin to give you full control over Vagrant, bringing fast and simple virtual machines into your build toolchain.
+
+# Using this documentation:
+
+Click the tabs at the top of the page to navigate:
+- **Documentation**: General documentation
+- **Reference**: Full API documentation

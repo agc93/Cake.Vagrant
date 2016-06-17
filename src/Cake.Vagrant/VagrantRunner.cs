@@ -298,6 +298,7 @@ namespace Cake.Vagrant
             args.Append("destroy");
             if (name.HasValue()) args.Append(name);
             args.Append("--force");
+            Run(Settings, args);
         }
 
         /// <summary>
