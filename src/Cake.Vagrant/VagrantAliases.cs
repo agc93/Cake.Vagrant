@@ -5,8 +5,19 @@ using Cake.Core.Annotations;
 namespace Cake.Vagrant
 {
     /// <summary>
-    ///     Gets a runner to control Vagrant through the CLI
+    ///     Gets a runner to control Vagrant through the CLI. See the documentation on GitHub for a full API reference.
     /// </summary>
+    /// <example>
+    /// <code>
+    /// <![CDATA[
+    /// Vagrant.Init("hashicorp/precise64");
+    /// Vagrant.Up(s => s.UseProvider("virtualbox"));
+    /// Vagrant.Suspend();
+    /// Vagrant.Halt();
+    /// Vagrant.Destroy();
+    /// ]]>
+    /// </code>
+    /// </example>
     /// <remarks>Roughly equivalent to the <c>vagrant</c> command.</remarks>
     [CakeAliasCategory("Vagrant")]
     [CakeNamespaceImport("Cake.Vagrant.Settings")]
@@ -33,7 +44,7 @@ namespace Cake.Vagrant
         /// Task("Fluent-Init")
         /// .Does(() => {
         ///     
-        ///     context.Vagrant().Init("hashicorp/precise64", settings => 
+        ///     Vagrant.Init("hashicorp/precise64", settings => 
         ///         settings.ConstrainVersion("1.0.1")
         ///         .CreateMinimal()
         ///         .OutputToFile("base.box"));
