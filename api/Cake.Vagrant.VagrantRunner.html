@@ -1,0 +1,1261 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class VagrantRunner
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VagrantRunner
+   ">
+    <meta name="generator" content="docfx 2.0.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L15" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <h1 id="Cake_Vagrant_VagrantRunner" data-uid="Cake.Vagrant.VagrantRunner">Class VagrantRunner
+              </h1>
+              <div class="markdown level0 summary"><pre><code>Wrapper around Vagrant&#39;s CLI functionality for creating, starting and managing VMs
+</code></pre></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">Cake.Core.Tooling.Tool</span>&lt;<a class="xref" href="Cake.Vagrant.VagrantSettings.html#Cake_Vagrant_VagrantSettings">VagrantSettings</a>&gt;</div>
+                  <div class="level2"><span class="xref">VagrantRunner</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">Cake.Core.Tooling.Tool&lt;Cake.Vagrant.VagrantSettings&gt;.Run(Cake.Vagrant.VagrantSettings, Cake.Core.IO.ProcessArgumentBuilder)</span>
+                </div>
+                <div>
+                  <span class="xref">Cake.Core.Tooling.Tool&lt;Cake.Vagrant.VagrantSettings&gt;.Run(Cake.Vagrant.VagrantSettings, Cake.Core.IO.ProcessArgumentBuilder, Cake.Core.IO.ProcessSettings, System.Action&lt;Cake.Core.IO.IProcess&gt;)</span>
+                </div>
+                <div>
+                  <span class="xref">Cake.Core.Tooling.Tool&lt;Cake.Vagrant.VagrantSettings&gt;.RunProcess(Cake.Vagrant.VagrantSettings, Cake.Core.IO.ProcessArgumentBuilder)</span>
+                </div>
+                <div>
+                  <span class="xref">Cake.Core.Tooling.Tool&lt;Cake.Vagrant.VagrantSettings&gt;.RunProcess(Cake.Vagrant.VagrantSettings, Cake.Core.IO.ProcessArgumentBuilder, Cake.Core.IO.ProcessSettings)</span>
+                </div>
+                <div>
+                  <span class="xref">Cake.Core.Tooling.Tool&lt;Cake.Vagrant.VagrantSettings&gt;.GetWorkingDirectory(Cake.Vagrant.VagrantSettings)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Cake.Vagrant</h6>
+              <h6><strong>Assembly</strong>:Cake.Vagrant.dll</h6>
+              <h5 id="Cake_Vagrant_VagrantRunner_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class VagrantRunner : Tool&lt;VagrantSettings&gt;</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner__ctor_Cake_Core_IO_IFileSystem_Cake_Core_ICakeEnvironment_Cake_Core_IO_IProcessRunner_Cake_Core_Tooling_IToolLocator_Cake_Core_Diagnostics_ICakeLog_.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.%23ctor(Cake.Core.IO.IFileSystem%2CCake.Core.ICakeEnvironment%2CCake.Core.IO.IProcessRunner%2CCake.Core.Tooling.IToolLocator%2CCake.Core.Diagnostics.ICakeLog)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L25">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner__ctor_Cake_Core_IO_IFileSystem_Cake_Core_ICakeEnvironment_Cake_Core_IO_IProcessRunner_Cake_Core_Tooling_IToolLocator_Cake_Core_Diagnostics_ICakeLog_" data-uid="Cake.Vagrant.VagrantRunner.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.IO.IProcessRunner,Cake.Core.Tooling.IToolLocator,Cake.Core.Diagnostics.ICakeLog)">VagrantRunner(IFileSystem, ICakeEnvironment, IProcessRunner, IToolLocator, ICakeLog)</h4>
+              <div class="markdown level1 summary"><pre><code>Initializes a new instance of the &lt;xref href=&quot;Cake.Vagrant.VagrantRunner&quot; data-throw-if-not-resolved=&quot;false&quot;&gt;&lt;/xref&gt; class
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public VagrantRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner, IToolLocator tools, ICakeLog log)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Cake.Core.IO.IFileSystem</span></td>
+                    <td><em>fileSystem</em></td>
+                    <td><p>The file system</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Cake.Core.ICakeEnvironment</span></td>
+                    <td><em>environment</em></td>
+                    <td><p>The environment</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Cake.Core.IO.IProcessRunner</span></td>
+                    <td><em>processRunner</em></td>
+                    <td><p>The process runner</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Cake.Core.Tooling.IToolLocator</span></td>
+                    <td><em>tools</em></td>
+                    <td><p>The tool locator</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Cake.Core.Diagnostics.ICakeLog</span></td>
+                    <td><em>log</em></td>
+                    <td><p>Logging handler</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Box.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Box%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L39">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Box" data-uid="Cake.Vagrant.VagrantRunner.Box">Box</h4>
+              <div class="markdown level1 summary"><pre><code>Provides access to `vagrant box` subcommands
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public VagrantBoxRunner Box { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Cake.Vagrant.Commands.VagrantBoxRunner.html#Cake_Vagrant_Commands_VagrantBoxRunner">VagrantBoxRunner</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Docker.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Docker%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L49">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Docker" data-uid="Cake.Vagrant.VagrantRunner.Docker">Docker</h4>
+              <div class="markdown level1 summary"><pre><code>Provides access to `vagrant docker` subcommands
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public VagrantDockerRunner Docker { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Cake.Vagrant.Commands.VagrantDockerRunner.html#Cake_Vagrant_Commands_VagrantDockerRunner">VagrantDockerRunner</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Plugin.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Plugin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L54">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Plugin" data-uid="Cake.Vagrant.VagrantRunner.Plugin">Plugin</h4>
+              <div class="markdown level1 summary"><pre><code>Provides access to `vagrant plugin` subcommands
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public VagrantPluginRunner Plugin { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Cake.Vagrant.Commands.VagrantPluginRunner.html#Cake_Vagrant_Commands_VagrantPluginRunner">VagrantPluginRunner</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Snapshot.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Snapshot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L44">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Snapshot" data-uid="Cake.Vagrant.VagrantRunner.Snapshot">Snapshot</h4>
+              <div class="markdown level1 summary"><pre><code>Provides access to `vagrant snapshot` subcommands
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public VagrantSnapshotRunner Snapshot { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Cake.Vagrant.Commands.VagrantSnapshotRunner.html#Cake_Vagrant_Commands_VagrantSnapshotRunner">VagrantSnapshotRunner</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Destroy_System_String_.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Destroy(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L296">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Destroy_System_String_" data-uid="Cake.Vagrant.VagrantRunner.Destroy(System.String)">Destroy(String)</h4>
+              <div class="markdown level1 summary"><pre><code>This command stops the running machine Vagrant is managing and destroys all resources that were created during the
+machine creation process.
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Destroy(string name = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>Optional name of the machine to destroy</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_GetAlternativeToolPaths_Cake_Vagrant_VagrantSettings_.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.GetAlternativeToolPaths(Cake.Vagrant.VagrantSettings)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L65">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_GetAlternativeToolPaths_Cake_Vagrant_VagrantSettings_" data-uid="Cake.Vagrant.VagrantRunner.GetAlternativeToolPaths(Cake.Vagrant.VagrantSettings)">GetAlternativeToolPaths(VagrantSettings)</h4>
+              <div class="markdown level1 summary"><pre><code>Gets alternative file paths which the tool may exist in
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override IEnumerable&lt;FilePath&gt; GetAlternativeToolPaths(VagrantSettings settings)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Cake.Vagrant.VagrantSettings.html#Cake_Vagrant_VagrantSettings">VagrantSettings</a></td>
+                    <td><em>settings</em></td>
+                    <td><p>The settings.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">Cake.Core.IO.FilePath</span>&gt;</td>
+                    <td><p>The default tool path.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Cake.Core.Tooling.Tool&lt;Cake.Vagrant.VagrantSettings&gt;.GetAlternativeToolPaths(Cake.Vagrant.VagrantSettings)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_GetToolExecutableNames.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.GetToolExecutableNames%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L72">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_GetToolExecutableNames" data-uid="Cake.Vagrant.VagrantRunner.GetToolExecutableNames">GetToolExecutableNames()</h4>
+              <div class="markdown level1 summary"><p>Gets the possible names of the tool executable.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override IEnumerable&lt;string&gt; GetToolExecutableNames()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><p>The tool executable name.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Cake.Core.Tooling.Tool&lt;Cake.Vagrant.VagrantSettings&gt;.GetToolExecutableNames()</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_GetToolName.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.GetToolName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L58">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_GetToolName" data-uid="Cake.Vagrant.VagrantRunner.GetToolName">GetToolName()</h4>
+              <div class="markdown level1 summary"><p>Gets the name of the tool.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override string GetToolName()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><p>The name of the tool.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Cake.Core.Tooling.Tool&lt;Cake.Vagrant.VagrantSettings&gt;.GetToolName()</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Halt_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Halt(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L310">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Halt_System_String_System_Boolean_" data-uid="Cake.Vagrant.VagrantRunner.Halt(System.String,System.Boolean)">Halt(String, Boolean)</h4>
+              <div class="markdown level1 summary"><pre><code>This command shuts down the running machine Vagrant is managing.
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Halt(string name = null, bool force = false)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>Optional name of the machine to halt</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><em>force</em></td>
+                    <td><p>Whether to forcefully halt the machine (equivalent to pulling the power)</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Init_System_String_System_Action_Cake_Vagrant_Settings_VagrantInitSettings__.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Init(System.String%2CSystem.Action%7BCake.Vagrant.Settings.VagrantInitSettings%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L83">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Init_System_String_System_Action_Cake_Vagrant_Settings_VagrantInitSettings__" data-uid="Cake.Vagrant.VagrantRunner.Init(System.String,System.Action{Cake.Vagrant.Settings.VagrantInitSettings})">Init(String, Action&lt;VagrantInitSettings&gt;)</h4>
+              <div class="markdown level1 summary"><pre><code>This initializes the current directory to be a Vagrant environment by creating an initial Vagrantfile if one does
+not already exist.
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Init(string name, Action&lt;VagrantInitSettings&gt; configure)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>Will prepopulate the config.vm.box setting in the created Vagrantfile with the specified name</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Cake.Vagrant.Settings.VagrantInitSettings.html#Cake_Vagrant_Settings_VagrantInitSettings">VagrantInitSettings</a>&gt;</td>
+                    <td><em>configure</em></td>
+                    <td><p>Settings to control the initialising process</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Init_System_String_System_String_System_Action_Cake_Vagrant_Settings_VagrantInitSettings__.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Init(System.String%2CSystem.String%2CSystem.Action%7BCake.Vagrant.Settings.VagrantInitSettings%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L94">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Init_System_String_System_String_System_Action_Cake_Vagrant_Settings_VagrantInitSettings__" data-uid="Cake.Vagrant.VagrantRunner.Init(System.String,System.String,System.Action{Cake.Vagrant.Settings.VagrantInitSettings})">Init(String, String, Action&lt;VagrantInitSettings&gt;)</h4>
+              <div class="markdown level1 summary"><pre><code>Initializes the current directory for Vagrant by creating an initial Vagrantfile
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Init(string name, string url = null, Action&lt;VagrantInitSettings&gt; configure = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>url</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Cake.Vagrant.Settings.VagrantInitSettings.html#Cake_Vagrant_Settings_VagrantInitSettings">VagrantInitSettings</a>&gt;</td>
+                    <td><em>configure</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Package_System_Action_Cake_Vagrant_Settings_VagrantPackageSettings__.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Package(System.Action%7BCake.Vagrant.Settings.VagrantPackageSettings%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L359">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Package_System_Action_Cake_Vagrant_Settings_VagrantPackageSettings__" data-uid="Cake.Vagrant.VagrantRunner.Package(System.Action{Cake.Vagrant.Settings.VagrantPackageSettings})">Package(Action&lt;VagrantPackageSettings&gt;)</h4>
+              <div class="markdown level1 summary"><pre><code>This packages a currently running VirtualBox environment into a re-usable box.
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Package(Action&lt;VagrantPackageSettings&gt; configure)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Cake.Vagrant.Settings.VagrantPackageSettings.html#Cake_Vagrant_Settings_VagrantPackageSettings">VagrantPackageSettings</a>&gt;</td>
+                    <td><em>configure</em></td>
+                    <td><p>Settings to use when packaging the box</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Cake_Vagrant_VagrantRunner_Package_System_Action_Cake_Vagrant_Settings_VagrantPackageSettings___remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><pre><code>This command can only be used with other providers based on the provider implementation and if the provider
+supports it.
+</code></pre></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Package_System_String_.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Package(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L346">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Package_System_String_" data-uid="Cake.Vagrant.VagrantRunner.Package(System.String)">Package(String)</h4>
+              <div class="markdown level1 summary"><pre><code>This packages a currently running VirtualBox environment into a re-usable box.
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Package(string name = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>Optional name of the machine to package</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Cake_Vagrant_VagrantRunner_Package_System_String__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><pre><code>This command can only be used with other providers based on the provider implementation and if the provider
+supports it.
+</code></pre></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Package_System_String_System_Action_Cake_Vagrant_Settings_VagrantPackageSettings__.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Package(System.String%2CSystem.Action%7BCake.Vagrant.Settings.VagrantPackageSettings%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L373">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Package_System_String_System_Action_Cake_Vagrant_Settings_VagrantPackageSettings__" data-uid="Cake.Vagrant.VagrantRunner.Package(System.String,System.Action{Cake.Vagrant.Settings.VagrantPackageSettings})">Package(String, Action&lt;VagrantPackageSettings&gt;)</h4>
+              <div class="markdown level1 summary"><pre><code>This packages a currently running VirtualBox environment into a re-usable box.
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Package(string name, Action&lt;VagrantPackageSettings&gt; configure)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>Name of the machine to package</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Cake.Vagrant.Settings.VagrantPackageSettings.html#Cake_Vagrant_Settings_VagrantPackageSettings">VagrantPackageSettings</a>&gt;</td>
+                    <td><em>configure</em></td>
+                    <td><p>Settings to use when packaging the box</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Cake_Vagrant_VagrantRunner_Package_System_String_System_Action_Cake_Vagrant_Settings_VagrantPackageSettings___remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><pre><code>This command can only be used with other providers based on the provider implementation and if the provider
+supports it.
+</code></pre></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_PowerShell_System_Action_Cake_Vagrant_Settings_VagrantPowerShellSettings__.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.PowerShell(System.Action%7BCake.Vagrant.Settings.VagrantPowerShellSettings%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L194">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_PowerShell_System_Action_Cake_Vagrant_Settings_VagrantPowerShellSettings__" data-uid="Cake.Vagrant.VagrantRunner.PowerShell(System.Action{Cake.Vagrant.Settings.VagrantPowerShellSettings})">PowerShell(Action&lt;VagrantPowerShellSettings&gt;)</h4>
+              <div class="markdown level1 summary"><pre><code>This command opens a PowerShell connection to your default machine to run the provided command
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void PowerShell(Action&lt;VagrantPowerShellSettings&gt; configure)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Cake.Vagrant.Settings.VagrantPowerShellSettings.html#Cake_Vagrant_Settings_VagrantPowerShellSettings">VagrantPowerShellSettings</a>&gt;</td>
+                    <td><em>configure</em></td>
+                    <td><p>Settings to use when connecting</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_PowerShell_System_String_System_Action_Cake_Vagrant_Settings_VagrantPowerShellSettings__.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.PowerShell(System.String%2CSystem.Action%7BCake.Vagrant.Settings.VagrantPowerShellSettings%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L204">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_PowerShell_System_String_System_Action_Cake_Vagrant_Settings_VagrantPowerShellSettings__" data-uid="Cake.Vagrant.VagrantRunner.PowerShell(System.String,System.Action{Cake.Vagrant.Settings.VagrantPowerShellSettings})">PowerShell(String, Action&lt;VagrantPowerShellSettings&gt;)</h4>
+              <div class="markdown level1 summary"><pre><code>This command opens a PowerShell connection to the specified machine to run the provided command
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void PowerShell(string name, Action&lt;VagrantPowerShellSettings&gt; configure)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>Name of the machine to start</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Cake.Vagrant.Settings.VagrantPowerShellSettings.html#Cake_Vagrant_Settings_VagrantPowerShellSettings">VagrantPowerShellSettings</a>&gt;</td>
+                    <td><em>configure</em></td>
+                    <td><p>Settings to use when connecting</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Reload_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings__.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Reload(System.Action%7BCake.Vagrant.Settings.VagrantProvisionerSettings%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L230">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Reload_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings__" data-uid="Cake.Vagrant.VagrantRunner.Reload(System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})">Reload(Action&lt;VagrantProvisionerSettings&gt;)</h4>
+              <div class="markdown level1 summary"><pre><code>The equivalent of running a halt followed by an up.
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Reload(Action&lt;VagrantProvisionerSettings&gt; configure)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Cake.Vagrant.Settings.VagrantProvisionerSettings.html#Cake_Vagrant_Settings_VagrantProvisionerSettings">VagrantProvisionerSettings</a>&gt;</td>
+                    <td><em>configure</em></td>
+                    <td><p>Settings to control the execution of provisioners</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Cake_Vagrant_VagrantRunner_Reload_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings___remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This command is usually required for changes made in the Vagrantfile to take effect.</p>
+</div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Reload_System_String_.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Reload(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L220">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Reload_System_String_" data-uid="Cake.Vagrant.VagrantRunner.Reload(System.String)">Reload(String)</h4>
+              <div class="markdown level1 summary"><pre><code>The equivalent of running a halt followed by an up.
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Reload(string name = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>Optional name of the machine to reload</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Cake_Vagrant_VagrantRunner_Reload_System_String__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This command is usually required for changes made in the Vagrantfile to take effect.</p>
+</div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Reload_System_String_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings__.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Reload(System.String%2CSystem.Action%7BCake.Vagrant.Settings.VagrantProvisionerSettings%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L241">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Reload_System_String_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings__" data-uid="Cake.Vagrant.VagrantRunner.Reload(System.String,System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})">Reload(String, Action&lt;VagrantProvisionerSettings&gt;)</h4>
+              <div class="markdown level1 summary"><pre><code>The equivalent of running a halt followed by an up.
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Reload(string name, Action&lt;VagrantProvisionerSettings&gt; configure)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>Name of the machine to reload</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Cake.Vagrant.Settings.VagrantProvisionerSettings.html#Cake_Vagrant_Settings_VagrantProvisionerSettings">VagrantProvisionerSettings</a>&gt;</td>
+                    <td><em>configure</em></td>
+                    <td><p>Settings to control the execution of provisioners</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Cake_Vagrant_VagrantRunner_Reload_System_String_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings___remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This command is usually required for changes made in the Vagrantfile to take effect.</p>
+</div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Resume_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings__.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Resume(System.Action%7BCake.Vagrant.Settings.VagrantProvisionerSettings%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L270">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Resume_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings__" data-uid="Cake.Vagrant.VagrantRunner.Resume(System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})">Resume(Action&lt;VagrantProvisionerSettings&gt;)</h4>
+              <div class="markdown level1 summary"><pre><code>This resumes a Vagrant managed machine that was previously suspended.
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Resume(Action&lt;VagrantProvisionerSettings&gt; configure)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Cake.Vagrant.Settings.VagrantProvisionerSettings.html#Cake_Vagrant_Settings_VagrantProvisionerSettings">VagrantProvisionerSettings</a>&gt;</td>
+                    <td><em>configure</em></td>
+                    <td><p>Settings to control the execution of provisioners</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Cake_Vagrant_VagrantRunner_Resume_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings___examples">Examples</h5>
+              
+<pre><code>Vagrant.Resume(settings => settings.WithProvisioners("shell"));</code></pre>
+
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Resume_System_String_.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Resume(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L256">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Resume_System_String_" data-uid="Cake.Vagrant.VagrantRunner.Resume(System.String)">Resume(String)</h4>
+              <div class="markdown level1 summary"><pre><code>This resumes a Vagrant managed machine that was previously suspended.
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Resume(string name = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>Optional name of the machine to resume</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Resume_System_String_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings__.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Resume(System.String%2CSystem.Action%7BCake.Vagrant.Settings.VagrantProvisionerSettings%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L280">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Resume_System_String_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings__" data-uid="Cake.Vagrant.VagrantRunner.Resume(System.String,System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})">Resume(String, Action&lt;VagrantProvisionerSettings&gt;)</h4>
+              <div class="markdown level1 summary"><pre><code>This resumes a Vagrant managed machine that was previously suspended.
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Resume(string name, Action&lt;VagrantProvisionerSettings&gt; configure)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>Name of the machine to resume</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Cake.Vagrant.Settings.VagrantProvisionerSettings.html#Cake_Vagrant_Settings_VagrantProvisionerSettings">VagrantProvisionerSettings</a>&gt;</td>
+                    <td><em>configure</em></td>
+                    <td><p>Settings to control the execution of provisioners</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_SSH_System_Action_Cake_Vagrant_Settings_VagrantSSHSettings__.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.SSH(System.Action%7BCake.Vagrant.Settings.VagrantSSHSettings%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L169">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_SSH_System_Action_Cake_Vagrant_Settings_VagrantSSHSettings__" data-uid="Cake.Vagrant.VagrantRunner.SSH(System.Action{Cake.Vagrant.Settings.VagrantSSHSettings})">SSH(Action&lt;VagrantSSHSettings&gt;)</h4>
+              <div class="markdown level1 summary"><pre><code>This command opens an SSH connection to your default machine to run the provided command
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void SSH(Action&lt;VagrantSSHSettings&gt; configure)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Cake.Vagrant.Settings.VagrantSSHSettings.html#Cake_Vagrant_Settings_VagrantSSHSettings">VagrantSSHSettings</a>&gt;</td>
+                    <td><em>configure</em></td>
+                    <td><p>Settings to use when connecting</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Cake_Vagrant_VagrantRunner_SSH_System_Action_Cake_Vagrant_Settings_VagrantSSHSettings___examples">Examples</h5>
+              
+<pre><code>Vagrant.SSH(s => s.RunCommand("echo echo"));</code></pre>
+
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_SSH_System_String_System_Action_Cake_Vagrant_Settings_VagrantSSHSettings__.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.SSH(System.String%2CSystem.Action%7BCake.Vagrant.Settings.VagrantSSHSettings%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L179">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_SSH_System_String_System_Action_Cake_Vagrant_Settings_VagrantSSHSettings__" data-uid="Cake.Vagrant.VagrantRunner.SSH(System.String,System.Action{Cake.Vagrant.Settings.VagrantSSHSettings})">SSH(String, Action&lt;VagrantSSHSettings&gt;)</h4>
+              <div class="markdown level1 summary"><pre><code>This command opens an SSH connection to the specified machine to run the provided command
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void SSH(string name, Action&lt;VagrantSSHSettings&gt; configure)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>Name of the machine to start</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Cake.Vagrant.Settings.VagrantSSHSettings.html#Cake_Vagrant_Settings_VagrantSSHSettings">VagrantSSHSettings</a>&gt;</td>
+                    <td><em>configure</em></td>
+                    <td><p>Settings to use when connecting</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Suspend_System_String_.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Suspend(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L330">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Suspend_System_String_" data-uid="Cake.Vagrant.VagrantRunner.Suspend(System.String)">Suspend(String)</h4>
+              <div class="markdown level1 summary"><pre><code>This suspends the guest machine Vagrant is managing, rather than shutting it down
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Suspend(string name = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>Optional name of the machine to suspend</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Cake_Vagrant_VagrantRunner_Suspend_System_String__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><pre><code>A suspend effectively saves the exact point-in-time state of the machine, so that when you resume it later, it
+begins running immediately from that point, rather than doing a full boot.
+</code></pre></div>
+              <h5 id="Cake_Vagrant_VagrantRunner_Suspend_System_String__examples">Examples</h5>
+              
+<pre><code>Vagrant.Suspend();</code></pre>
+
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Up_System_Action_Cake_Vagrant_Settings_VagrantUpSettings__.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Up(System.Action%7BCake.Vagrant.Settings.VagrantUpSettings%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L138">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Up_System_Action_Cake_Vagrant_Settings_VagrantUpSettings__" data-uid="Cake.Vagrant.VagrantRunner.Up(System.Action{Cake.Vagrant.Settings.VagrantUpSettings})">Up(Action&lt;VagrantUpSettings&gt;)</h4>
+              <div class="markdown level1 summary"><pre><code>This command creates and configures the default machine according to your Vagrantfile, and the specified settings
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Up(Action&lt;VagrantUpSettings&gt; configure)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Cake.Vagrant.Settings.VagrantUpSettings.html#Cake_Vagrant_Settings_VagrantUpSettings">VagrantUpSettings</a>&gt;</td>
+                    <td><em>configure</em></td>
+                    <td><p>Settings to use when starting your machine</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Cake_Vagrant_VagrantRunner_Up_System_Action_Cake_Vagrant_Settings_VagrantUpSettings___examples">Examples</h5>
+              
+<pre><code>Vagrant.Up(settings =>
+        settings.DestroyOnError()
+        .InstallProvider()
+        .WithProvisioners("chef", "shell")
+        .EnableParallel()
+        .UseProvider("hyperv"));</code></pre>
+
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Up_System_String_.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Up(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L118">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Up_System_String_" data-uid="Cake.Vagrant.VagrantRunner.Up(System.String)">Up(String)</h4>
+              <div class="markdown level1 summary"><pre><code>This command creates and configures guest machines according to your Vagrantfile, using the default settings
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Up(string name = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>Optional name of the machine to start</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Cake_Vagrant_VagrantRunner_Up_System_String__examples">Examples</h5>
+              
+<p>Use defaults</p>
+<pre><code>Vagrant.Up();</code></pre>
+
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/agc93/Cake.Vagrant/new/master/docfx/apispec/new?filename=Cake_Vagrant_VagrantRunner_Up_System_String_System_Action_Cake_Vagrant_Settings_VagrantUpSettings__.md&amp;value=---%0Auid%3A%20Cake.Vagrant.VagrantRunner.Up(System.String%2CSystem.Action%7BCake.Vagrant.Settings.VagrantUpSettings%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/agc93/Cake.Vagrant/blob/master/src/Cake.Vagrant/VagrantRunner.cs/#L148">View Source</a>
+              </span>
+              <h4 id="Cake_Vagrant_VagrantRunner_Up_System_String_System_Action_Cake_Vagrant_Settings_VagrantUpSettings__" data-uid="Cake.Vagrant.VagrantRunner.Up(System.String,System.Action{Cake.Vagrant.Settings.VagrantUpSettings})">Up(String, Action&lt;VagrantUpSettings&gt;)</h4>
+              <div class="markdown level1 summary"><pre><code>This command creates and configures guest machines according to your Vagrantfile, and the specified settings.
+</code></pre></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Up(string name, Action&lt;VagrantUpSettings&gt; configure)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>Name of the machine to create</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Cake.Vagrant.Settings.VagrantUpSettings.html#Cake_Vagrant_Settings_VagrantUpSettings">VagrantUpSettings</a>&gt;</td>
+                    <td><em>configure</em></td>
+                    <td><p>Settings to use when creating your machine</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

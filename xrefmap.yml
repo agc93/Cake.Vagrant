@@ -1,0 +1,1009 @@
+sorted: true
+references:
+- uid: Cake.Vagrant
+  name: Cake.Vagrant
+  href: api/Cake.Vagrant.html#Cake_Vagrant
+  commentId: N:Cake.Vagrant
+  fullName: Cake.Vagrant
+- uid: Cake.Vagrant.Commands
+  name: Cake.Vagrant.Commands
+  href: api/Cake.Vagrant.Commands.html#Cake_Vagrant_Commands
+  commentId: N:Cake.Vagrant.Commands
+  fullName: Cake.Vagrant.Commands
+- uid: Cake.Vagrant.Commands.VagrantBoxRunner
+  name: VagrantBoxRunner
+  href: api/Cake.Vagrant.Commands.VagrantBoxRunner.html#Cake_Vagrant_Commands_VagrantBoxRunner
+  commentId: T:Cake.Vagrant.Commands.VagrantBoxRunner
+  fullName: Cake.Vagrant.Commands.VagrantBoxRunner
+- uid: Cake.Vagrant.Commands.VagrantBoxRunner.Add(System.String,System.Action{Cake.Vagrant.Settings.VagrantBoxAddSettings})
+  name: Add(String, Action<VagrantBoxAddSettings>)
+  href: api/Cake.Vagrant.Commands.VagrantBoxRunner.html#Cake_Vagrant_Commands_VagrantBoxRunner_Add_System_String_System_Action_Cake_Vagrant_Settings_VagrantBoxAddSettings__
+  commentId: M:Cake.Vagrant.Commands.VagrantBoxRunner.Add(System.String,System.Action{Cake.Vagrant.Settings.VagrantBoxAddSettings})
+  name.vb: Add(String, Action(Of VagrantBoxAddSettings))
+  fullName: Cake.Vagrant.Commands.VagrantBoxRunner.Add(System.String, System.Action<Cake.Vagrant.Settings.VagrantBoxAddSettings>)
+  fullName.vb: Cake.Vagrant.Commands.VagrantBoxRunner.Add(System.String, System.Action(Of Cake.Vagrant.Settings.VagrantBoxAddSettings))
+- uid: Cake.Vagrant.Commands.VagrantBoxRunner.List
+  name: List()
+  href: api/Cake.Vagrant.Commands.VagrantBoxRunner.html#Cake_Vagrant_Commands_VagrantBoxRunner_List
+  commentId: M:Cake.Vagrant.Commands.VagrantBoxRunner.List
+  fullName: Cake.Vagrant.Commands.VagrantBoxRunner.List()
+- uid: Cake.Vagrant.Commands.VagrantBoxRunner.Outdated(System.Boolean)
+  name: Outdated(Boolean)
+  href: api/Cake.Vagrant.Commands.VagrantBoxRunner.html#Cake_Vagrant_Commands_VagrantBoxRunner_Outdated_System_Boolean_
+  commentId: M:Cake.Vagrant.Commands.VagrantBoxRunner.Outdated(System.Boolean)
+  fullName: Cake.Vagrant.Commands.VagrantBoxRunner.Outdated(System.Boolean)
+- uid: Cake.Vagrant.Commands.VagrantBoxRunner.Remove(System.String,System.Action{Cake.Vagrant.Settings.VagrantBoxRemoveSettings})
+  name: Remove(String, Action<VagrantBoxRemoveSettings>)
+  href: api/Cake.Vagrant.Commands.VagrantBoxRunner.html#Cake_Vagrant_Commands_VagrantBoxRunner_Remove_System_String_System_Action_Cake_Vagrant_Settings_VagrantBoxRemoveSettings__
+  commentId: M:Cake.Vagrant.Commands.VagrantBoxRunner.Remove(System.String,System.Action{Cake.Vagrant.Settings.VagrantBoxRemoveSettings})
+  name.vb: Remove(String, Action(Of VagrantBoxRemoveSettings))
+  fullName: Cake.Vagrant.Commands.VagrantBoxRunner.Remove(System.String, System.Action<Cake.Vagrant.Settings.VagrantBoxRemoveSettings>)
+  fullName.vb: Cake.Vagrant.Commands.VagrantBoxRunner.Remove(System.String, System.Action(Of Cake.Vagrant.Settings.VagrantBoxRemoveSettings))
+- uid: Cake.Vagrant.Commands.VagrantBoxRunner.Repackage(System.String,System.String,System.String)
+  name: Repackage(String, String, String)
+  href: api/Cake.Vagrant.Commands.VagrantBoxRunner.html#Cake_Vagrant_Commands_VagrantBoxRunner_Repackage_System_String_System_String_System_String_
+  commentId: M:Cake.Vagrant.Commands.VagrantBoxRunner.Repackage(System.String,System.String,System.String)
+  fullName: Cake.Vagrant.Commands.VagrantBoxRunner.Repackage(System.String, System.String, System.String)
+- uid: Cake.Vagrant.Commands.VagrantBoxRunner.Update(System.Action{Cake.Vagrant.Settings.VagrantBoxUpdateSettings})
+  name: Update(Action<VagrantBoxUpdateSettings>)
+  href: api/Cake.Vagrant.Commands.VagrantBoxRunner.html#Cake_Vagrant_Commands_VagrantBoxRunner_Update_System_Action_Cake_Vagrant_Settings_VagrantBoxUpdateSettings__
+  commentId: M:Cake.Vagrant.Commands.VagrantBoxRunner.Update(System.Action{Cake.Vagrant.Settings.VagrantBoxUpdateSettings})
+  name.vb: Update(Action(Of VagrantBoxUpdateSettings))
+  fullName: Cake.Vagrant.Commands.VagrantBoxRunner.Update(System.Action<Cake.Vagrant.Settings.VagrantBoxUpdateSettings>)
+  fullName.vb: Cake.Vagrant.Commands.VagrantBoxRunner.Update(System.Action(Of Cake.Vagrant.Settings.VagrantBoxUpdateSettings))
+- uid: Cake.Vagrant.Commands.VagrantCommandRunner
+  name: VagrantCommandRunner
+  href: api/Cake.Vagrant.Commands.VagrantCommandRunner.html#Cake_Vagrant_Commands_VagrantCommandRunner
+  commentId: T:Cake.Vagrant.Commands.VagrantCommandRunner
+  fullName: Cake.Vagrant.Commands.VagrantCommandRunner
+- uid: Cake.Vagrant.Commands.VagrantCommandRunner.Log
+  name: Log
+  href: api/Cake.Vagrant.Commands.VagrantCommandRunner.html#Cake_Vagrant_Commands_VagrantCommandRunner_Log
+  commentId: P:Cake.Vagrant.Commands.VagrantCommandRunner.Log
+  fullName: Cake.Vagrant.Commands.VagrantCommandRunner.Log
+- uid: Cake.Vagrant.Commands.VagrantCommandRunner.Runner
+  name: Runner
+  href: api/Cake.Vagrant.Commands.VagrantCommandRunner.html#Cake_Vagrant_Commands_VagrantCommandRunner_Runner
+  commentId: P:Cake.Vagrant.Commands.VagrantCommandRunner.Runner
+  fullName: Cake.Vagrant.Commands.VagrantCommandRunner.Runner
+- uid: Cake.Vagrant.Commands.VagrantCommandRunner.Settings
+  name: Settings
+  href: api/Cake.Vagrant.Commands.VagrantCommandRunner.html#Cake_Vagrant_Commands_VagrantCommandRunner_Settings
+  commentId: P:Cake.Vagrant.Commands.VagrantCommandRunner.Settings
+  fullName: Cake.Vagrant.Commands.VagrantCommandRunner.Settings
+- uid: Cake.Vagrant.Commands.VagrantDockerRunner
+  name: VagrantDockerRunner
+  href: api/Cake.Vagrant.Commands.VagrantDockerRunner.html#Cake_Vagrant_Commands_VagrantDockerRunner
+  commentId: T:Cake.Vagrant.Commands.VagrantDockerRunner
+  fullName: Cake.Vagrant.Commands.VagrantDockerRunner
+- uid: Cake.Vagrant.Commands.VagrantDockerRunner.#ctor(Cake.Core.Diagnostics.ICakeLog,System.Action{Cake.Vagrant.VagrantSettings,Cake.Core.IO.ProcessArgumentBuilder},Cake.Vagrant.VagrantSettings)
+  name: VagrantDockerRunner(ICakeLog, Action<VagrantSettings, ProcessArgumentBuilder>, VagrantSettings)
+  href: api/Cake.Vagrant.Commands.VagrantDockerRunner.html#Cake_Vagrant_Commands_VagrantDockerRunner__ctor_Cake_Core_Diagnostics_ICakeLog_System_Action_Cake_Vagrant_VagrantSettings_Cake_Core_IO_ProcessArgumentBuilder__Cake_Vagrant_VagrantSettings_
+  commentId: M:Cake.Vagrant.Commands.VagrantDockerRunner.#ctor(Cake.Core.Diagnostics.ICakeLog,System.Action{Cake.Vagrant.VagrantSettings,Cake.Core.IO.ProcessArgumentBuilder},Cake.Vagrant.VagrantSettings)
+  name.vb: VagrantDockerRunner(ICakeLog, Action(Of VagrantSettings, ProcessArgumentBuilder), VagrantSettings)
+  fullName: Cake.Vagrant.Commands.VagrantDockerRunner.VagrantDockerRunner(Cake.Core.Diagnostics.ICakeLog, System.Action<Cake.Vagrant.VagrantSettings, Cake.Core.IO.ProcessArgumentBuilder>, Cake.Vagrant.VagrantSettings)
+  fullName.vb: Cake.Vagrant.Commands.VagrantDockerRunner.VagrantDockerRunner(Cake.Core.Diagnostics.ICakeLog, System.Action(Of Cake.Vagrant.VagrantSettings, Cake.Core.IO.ProcessArgumentBuilder), Cake.Vagrant.VagrantSettings)
+- uid: Cake.Vagrant.Commands.VagrantDockerRunner.Exec(System.String,System.String)
+  name: Exec(String, String)
+  href: api/Cake.Vagrant.Commands.VagrantDockerRunner.html#Cake_Vagrant_Commands_VagrantDockerRunner_Exec_System_String_System_String_
+  commentId: M:Cake.Vagrant.Commands.VagrantDockerRunner.Exec(System.String,System.String)
+  fullName: Cake.Vagrant.Commands.VagrantDockerRunner.Exec(System.String, System.String)
+- uid: Cake.Vagrant.Commands.VagrantDockerRunner.Run(System.String,System.String)
+  name: Run(String, String)
+  href: api/Cake.Vagrant.Commands.VagrantDockerRunner.html#Cake_Vagrant_Commands_VagrantDockerRunner_Run_System_String_System_String_
+  commentId: M:Cake.Vagrant.Commands.VagrantDockerRunner.Run(System.String,System.String)
+  fullName: Cake.Vagrant.Commands.VagrantDockerRunner.Run(System.String, System.String)
+- uid: Cake.Vagrant.Commands.VagrantPluginRunner
+  name: VagrantPluginRunner
+  href: api/Cake.Vagrant.Commands.VagrantPluginRunner.html#Cake_Vagrant_Commands_VagrantPluginRunner
+  commentId: T:Cake.Vagrant.Commands.VagrantPluginRunner
+  fullName: Cake.Vagrant.Commands.VagrantPluginRunner
+- uid: Cake.Vagrant.Commands.VagrantPluginRunner.#ctor(Cake.Core.Diagnostics.ICakeLog,System.Action{Cake.Vagrant.VagrantSettings,Cake.Core.IO.ProcessArgumentBuilder},Cake.Vagrant.VagrantSettings)
+  name: VagrantPluginRunner(ICakeLog, Action<VagrantSettings, ProcessArgumentBuilder>, VagrantSettings)
+  href: api/Cake.Vagrant.Commands.VagrantPluginRunner.html#Cake_Vagrant_Commands_VagrantPluginRunner__ctor_Cake_Core_Diagnostics_ICakeLog_System_Action_Cake_Vagrant_VagrantSettings_Cake_Core_IO_ProcessArgumentBuilder__Cake_Vagrant_VagrantSettings_
+  commentId: M:Cake.Vagrant.Commands.VagrantPluginRunner.#ctor(Cake.Core.Diagnostics.ICakeLog,System.Action{Cake.Vagrant.VagrantSettings,Cake.Core.IO.ProcessArgumentBuilder},Cake.Vagrant.VagrantSettings)
+  name.vb: VagrantPluginRunner(ICakeLog, Action(Of VagrantSettings, ProcessArgumentBuilder), VagrantSettings)
+  fullName: Cake.Vagrant.Commands.VagrantPluginRunner.VagrantPluginRunner(Cake.Core.Diagnostics.ICakeLog, System.Action<Cake.Vagrant.VagrantSettings, Cake.Core.IO.ProcessArgumentBuilder>, Cake.Vagrant.VagrantSettings)
+  fullName.vb: Cake.Vagrant.Commands.VagrantPluginRunner.VagrantPluginRunner(Cake.Core.Diagnostics.ICakeLog, System.Action(Of Cake.Vagrant.VagrantSettings, Cake.Core.IO.ProcessArgumentBuilder), Cake.Vagrant.VagrantSettings)
+- uid: Cake.Vagrant.Commands.VagrantPluginRunner.Install(System.Collections.Generic.IEnumerable{System.String},System.Action{Cake.Vagrant.Settings.VagrantPluginInstallSettings})
+  name: Install(IEnumerable<String>, Action<VagrantPluginInstallSettings>)
+  href: api/Cake.Vagrant.Commands.VagrantPluginRunner.html#Cake_Vagrant_Commands_VagrantPluginRunner_Install_System_Collections_Generic_IEnumerable_System_String__System_Action_Cake_Vagrant_Settings_VagrantPluginInstallSettings__
+  commentId: M:Cake.Vagrant.Commands.VagrantPluginRunner.Install(System.Collections.Generic.IEnumerable{System.String},System.Action{Cake.Vagrant.Settings.VagrantPluginInstallSettings})
+  name.vb: Install(IEnumerable(Of String), Action(Of VagrantPluginInstallSettings))
+  fullName: Cake.Vagrant.Commands.VagrantPluginRunner.Install(System.Collections.Generic.IEnumerable<System.String>, System.Action<Cake.Vagrant.Settings.VagrantPluginInstallSettings>)
+  fullName.vb: Cake.Vagrant.Commands.VagrantPluginRunner.Install(System.Collections.Generic.IEnumerable(Of System.String), System.Action(Of Cake.Vagrant.Settings.VagrantPluginInstallSettings))
+- uid: Cake.Vagrant.Commands.VagrantPluginRunner.Install(System.String,System.Action{Cake.Vagrant.Settings.VagrantPluginInstallSettings})
+  name: Install(String, Action<VagrantPluginInstallSettings>)
+  href: api/Cake.Vagrant.Commands.VagrantPluginRunner.html#Cake_Vagrant_Commands_VagrantPluginRunner_Install_System_String_System_Action_Cake_Vagrant_Settings_VagrantPluginInstallSettings__
+  commentId: M:Cake.Vagrant.Commands.VagrantPluginRunner.Install(System.String,System.Action{Cake.Vagrant.Settings.VagrantPluginInstallSettings})
+  name.vb: Install(String, Action(Of VagrantPluginInstallSettings))
+  fullName: Cake.Vagrant.Commands.VagrantPluginRunner.Install(System.String, System.Action<Cake.Vagrant.Settings.VagrantPluginInstallSettings>)
+  fullName.vb: Cake.Vagrant.Commands.VagrantPluginRunner.Install(System.String, System.Action(Of Cake.Vagrant.Settings.VagrantPluginInstallSettings))
+- uid: Cake.Vagrant.Commands.VagrantPluginRunner.Uninstall(System.String[])
+  name: Uninstall(String[])
+  href: api/Cake.Vagrant.Commands.VagrantPluginRunner.html#Cake_Vagrant_Commands_VagrantPluginRunner_Uninstall_System_String___
+  commentId: M:Cake.Vagrant.Commands.VagrantPluginRunner.Uninstall(System.String[])
+  name.vb: Uninstall(String())
+  fullName: Cake.Vagrant.Commands.VagrantPluginRunner.Uninstall(System.String[])
+  fullName.vb: Cake.Vagrant.Commands.VagrantPluginRunner.Uninstall(System.String())
+- uid: Cake.Vagrant.Commands.VagrantPluginRunner.Update(System.String)
+  name: Update(String)
+  href: api/Cake.Vagrant.Commands.VagrantPluginRunner.html#Cake_Vagrant_Commands_VagrantPluginRunner_Update_System_String_
+  commentId: M:Cake.Vagrant.Commands.VagrantPluginRunner.Update(System.String)
+  fullName: Cake.Vagrant.Commands.VagrantPluginRunner.Update(System.String)
+- uid: Cake.Vagrant.Commands.VagrantSnapshotRunner
+  name: VagrantSnapshotRunner
+  href: api/Cake.Vagrant.Commands.VagrantSnapshotRunner.html#Cake_Vagrant_Commands_VagrantSnapshotRunner
+  commentId: T:Cake.Vagrant.Commands.VagrantSnapshotRunner
+  fullName: Cake.Vagrant.Commands.VagrantSnapshotRunner
+- uid: Cake.Vagrant.Commands.VagrantSnapshotRunner.#ctor(Cake.Core.Diagnostics.ICakeLog,System.Action{Cake.Vagrant.VagrantSettings,Cake.Core.IO.ProcessArgumentBuilder},Cake.Vagrant.VagrantSettings)
+  name: VagrantSnapshotRunner(ICakeLog, Action<VagrantSettings, ProcessArgumentBuilder>, VagrantSettings)
+  href: api/Cake.Vagrant.Commands.VagrantSnapshotRunner.html#Cake_Vagrant_Commands_VagrantSnapshotRunner__ctor_Cake_Core_Diagnostics_ICakeLog_System_Action_Cake_Vagrant_VagrantSettings_Cake_Core_IO_ProcessArgumentBuilder__Cake_Vagrant_VagrantSettings_
+  commentId: M:Cake.Vagrant.Commands.VagrantSnapshotRunner.#ctor(Cake.Core.Diagnostics.ICakeLog,System.Action{Cake.Vagrant.VagrantSettings,Cake.Core.IO.ProcessArgumentBuilder},Cake.Vagrant.VagrantSettings)
+  name.vb: VagrantSnapshotRunner(ICakeLog, Action(Of VagrantSettings, ProcessArgumentBuilder), VagrantSettings)
+  fullName: Cake.Vagrant.Commands.VagrantSnapshotRunner.VagrantSnapshotRunner(Cake.Core.Diagnostics.ICakeLog, System.Action<Cake.Vagrant.VagrantSettings, Cake.Core.IO.ProcessArgumentBuilder>, Cake.Vagrant.VagrantSettings)
+  fullName.vb: Cake.Vagrant.Commands.VagrantSnapshotRunner.VagrantSnapshotRunner(Cake.Core.Diagnostics.ICakeLog, System.Action(Of Cake.Vagrant.VagrantSettings, Cake.Core.IO.ProcessArgumentBuilder), Cake.Vagrant.VagrantSettings)
+- uid: Cake.Vagrant.Commands.VagrantSnapshotRunner.Delete(System.String)
+  name: Delete(String)
+  href: api/Cake.Vagrant.Commands.VagrantSnapshotRunner.html#Cake_Vagrant_Commands_VagrantSnapshotRunner_Delete_System_String_
+  commentId: M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Delete(System.String)
+  fullName: Cake.Vagrant.Commands.VagrantSnapshotRunner.Delete(System.String)
+- uid: Cake.Vagrant.Commands.VagrantSnapshotRunner.Pop(System.Action{Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings})
+  name: Pop(Action<VagrantSnapshotRestoreSettings>)
+  href: api/Cake.Vagrant.Commands.VagrantSnapshotRunner.html#Cake_Vagrant_Commands_VagrantSnapshotRunner_Pop_System_Action_Cake_Vagrant_Settings_VagrantSnapshotRestoreSettings__
+  commentId: M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Pop(System.Action{Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings})
+  name.vb: Pop(Action(Of VagrantSnapshotRestoreSettings))
+  fullName: Cake.Vagrant.Commands.VagrantSnapshotRunner.Pop(System.Action<Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings>)
+  fullName.vb: Cake.Vagrant.Commands.VagrantSnapshotRunner.Pop(System.Action(Of Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings))
+- uid: Cake.Vagrant.Commands.VagrantSnapshotRunner.Push
+  name: Push()
+  href: api/Cake.Vagrant.Commands.VagrantSnapshotRunner.html#Cake_Vagrant_Commands_VagrantSnapshotRunner_Push
+  commentId: M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Push
+  fullName: Cake.Vagrant.Commands.VagrantSnapshotRunner.Push()
+- uid: Cake.Vagrant.Commands.VagrantSnapshotRunner.Restore(System.String,System.Action{Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings})
+  name: Restore(String, Action<VagrantSnapshotRestoreSettings>)
+  href: api/Cake.Vagrant.Commands.VagrantSnapshotRunner.html#Cake_Vagrant_Commands_VagrantSnapshotRunner_Restore_System_String_System_Action_Cake_Vagrant_Settings_VagrantSnapshotRestoreSettings__
+  commentId: M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Restore(System.String,System.Action{Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings})
+  name.vb: Restore(String, Action(Of VagrantSnapshotRestoreSettings))
+  fullName: Cake.Vagrant.Commands.VagrantSnapshotRunner.Restore(System.String, System.Action<Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings>)
+  fullName.vb: Cake.Vagrant.Commands.VagrantSnapshotRunner.Restore(System.String, System.Action(Of Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings))
+- uid: Cake.Vagrant.Commands.VagrantSnapshotRunner.Save(System.String)
+  name: Save(String)
+  href: api/Cake.Vagrant.Commands.VagrantSnapshotRunner.html#Cake_Vagrant_Commands_VagrantSnapshotRunner_Save_System_String_
+  commentId: M:Cake.Vagrant.Commands.VagrantSnapshotRunner.Save(System.String)
+  fullName: Cake.Vagrant.Commands.VagrantSnapshotRunner.Save(System.String)
+- uid: Cake.Vagrant.Settings
+  name: Cake.Vagrant.Settings
+  href: api/Cake.Vagrant.Settings.html#Cake_Vagrant_Settings
+  commentId: N:Cake.Vagrant.Settings
+  fullName: Cake.Vagrant.Settings
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettings
+  name: VagrantBoxAddSettings
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettings.html#Cake_Vagrant_Settings_VagrantBoxAddSettings
+  commentId: T:Cake.Vagrant.Settings.VagrantBoxAddSettings
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettings
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettings.CACertificate
+  name: CACertificate
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettings.html#Cake_Vagrant_Settings_VagrantBoxAddSettings_CACertificate
+  commentId: P:Cake.Vagrant.Settings.VagrantBoxAddSettings.CACertificate
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettings.CACertificate
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettings.CAPath
+  name: CAPath
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettings.html#Cake_Vagrant_Settings_VagrantBoxAddSettings_CAPath
+  commentId: P:Cake.Vagrant.Settings.VagrantBoxAddSettings.CAPath
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettings.CAPath
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettings.CertificatePath
+  name: CertificatePath
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettings.html#Cake_Vagrant_Settings_VagrantBoxAddSettings_CertificatePath
+  commentId: P:Cake.Vagrant.Settings.VagrantBoxAddSettings.CertificatePath
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettings.CertificatePath
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettings.Clean
+  name: Clean
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettings.html#Cake_Vagrant_Settings_VagrantBoxAddSettings_Clean
+  commentId: P:Cake.Vagrant.Settings.VagrantBoxAddSettings.Clean
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettings.Clean
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettings.Force
+  name: Force
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettings.html#Cake_Vagrant_Settings_VagrantBoxAddSettings_Force
+  commentId: P:Cake.Vagrant.Settings.VagrantBoxAddSettings.Force
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettings.Force
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettings.GetToolArguments
+  name: GetToolArguments()
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettings.html#Cake_Vagrant_Settings_VagrantBoxAddSettings_GetToolArguments
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxAddSettings.GetToolArguments
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettings.GetToolArguments()
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettings.Insecure
+  name: Insecure
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettings.html#Cake_Vagrant_Settings_VagrantBoxAddSettings_Insecure
+  commentId: P:Cake.Vagrant.Settings.VagrantBoxAddSettings.Insecure
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettings.Insecure
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettings.Provider
+  name: Provider
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettings.html#Cake_Vagrant_Settings_VagrantBoxAddSettings_Provider
+  commentId: P:Cake.Vagrant.Settings.VagrantBoxAddSettings.Provider
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettings.Provider
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettings.Version
+  name: Version
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettings.html#Cake_Vagrant_Settings_VagrantBoxAddSettings_Version
+  commentId: P:Cake.Vagrant.Settings.VagrantBoxAddSettings.Version
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettings.Version
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions
+  name: VagrantBoxAddSettingsExtensions
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxAddSettingsExtensions
+  commentId: T:Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.AllowInsecure(Cake.Vagrant.Settings.VagrantBoxAddSettings,System.Boolean)
+  name: AllowInsecure(VagrantBoxAddSettings, Boolean)
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxAddSettingsExtensions_AllowInsecure_Cake_Vagrant_Settings_VagrantBoxAddSettings_System_Boolean_
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.AllowInsecure(Cake.Vagrant.Settings.VagrantBoxAddSettings,System.Boolean)
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.AllowInsecure(Cake.Vagrant.Settings.VagrantBoxAddSettings, System.Boolean)
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.CleanFirst(Cake.Vagrant.Settings.VagrantBoxAddSettings,System.Boolean)
+  name: CleanFirst(VagrantBoxAddSettings, Boolean)
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxAddSettingsExtensions_CleanFirst_Cake_Vagrant_Settings_VagrantBoxAddSettings_System_Boolean_
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.CleanFirst(Cake.Vagrant.Settings.VagrantBoxAddSettings,System.Boolean)
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.CleanFirst(Cake.Vagrant.Settings.VagrantBoxAddSettings, System.Boolean)
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.ConstrainVersion(Cake.Vagrant.Settings.VagrantBoxAddSettings,System.String)
+  name: ConstrainVersion(VagrantBoxAddSettings, String)
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxAddSettingsExtensions_ConstrainVersion_Cake_Vagrant_Settings_VagrantBoxAddSettings_System_String_
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.ConstrainVersion(Cake.Vagrant.Settings.VagrantBoxAddSettings,System.String)
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.ConstrainVersion(Cake.Vagrant.Settings.VagrantBoxAddSettings, System.String)
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.Force(Cake.Vagrant.Settings.VagrantBoxAddSettings,System.Boolean)
+  name: Force(VagrantBoxAddSettings, Boolean)
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxAddSettingsExtensions_Force_Cake_Vagrant_Settings_VagrantBoxAddSettings_System_Boolean_
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.Force(Cake.Vagrant.Settings.VagrantBoxAddSettings,System.Boolean)
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.Force(Cake.Vagrant.Settings.VagrantBoxAddSettings, System.Boolean)
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.UseCertificateAuthority(Cake.Vagrant.Settings.VagrantBoxAddSettings,Cake.Core.IO.FilePath)
+  name: UseCertificateAuthority(VagrantBoxAddSettings, FilePath)
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxAddSettingsExtensions_UseCertificateAuthority_Cake_Vagrant_Settings_VagrantBoxAddSettings_Cake_Core_IO_FilePath_
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.UseCertificateAuthority(Cake.Vagrant.Settings.VagrantBoxAddSettings,Cake.Core.IO.FilePath)
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.UseCertificateAuthority(Cake.Vagrant.Settings.VagrantBoxAddSettings, Cake.Core.IO.FilePath)
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.UseCertificateAuthority(Cake.Vagrant.Settings.VagrantBoxAddSettings,Cake.Core.IO.IDirectory)
+  name: UseCertificateAuthority(VagrantBoxAddSettings, IDirectory)
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxAddSettingsExtensions_UseCertificateAuthority_Cake_Vagrant_Settings_VagrantBoxAddSettings_Cake_Core_IO_IDirectory_
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.UseCertificateAuthority(Cake.Vagrant.Settings.VagrantBoxAddSettings,Cake.Core.IO.IDirectory)
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.UseCertificateAuthority(Cake.Vagrant.Settings.VagrantBoxAddSettings, Cake.Core.IO.IDirectory)
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.UseProvider(Cake.Vagrant.Settings.VagrantBoxAddSettings,System.String)
+  name: UseProvider(VagrantBoxAddSettings, String)
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxAddSettingsExtensions_UseProvider_Cake_Vagrant_Settings_VagrantBoxAddSettings_System_String_
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.UseProvider(Cake.Vagrant.Settings.VagrantBoxAddSettings,System.String)
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.UseProvider(Cake.Vagrant.Settings.VagrantBoxAddSettings, System.String)
+- uid: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.WithClientCertificate(Cake.Vagrant.Settings.VagrantBoxAddSettings,Cake.Core.IO.FilePath)
+  name: WithClientCertificate(VagrantBoxAddSettings, FilePath)
+  href: api/Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxAddSettingsExtensions_WithClientCertificate_Cake_Vagrant_Settings_VagrantBoxAddSettings_Cake_Core_IO_FilePath_
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.WithClientCertificate(Cake.Vagrant.Settings.VagrantBoxAddSettings,Cake.Core.IO.FilePath)
+  fullName: Cake.Vagrant.Settings.VagrantBoxAddSettingsExtensions.WithClientCertificate(Cake.Vagrant.Settings.VagrantBoxAddSettings, Cake.Core.IO.FilePath)
+- uid: Cake.Vagrant.Settings.VagrantBoxRemoveSettings
+  name: VagrantBoxRemoveSettings
+  href: api/Cake.Vagrant.Settings.VagrantBoxRemoveSettings.html#Cake_Vagrant_Settings_VagrantBoxRemoveSettings
+  commentId: T:Cake.Vagrant.Settings.VagrantBoxRemoveSettings
+  fullName: Cake.Vagrant.Settings.VagrantBoxRemoveSettings
+- uid: Cake.Vagrant.Settings.VagrantBoxRemoveSettings.BoxVersion
+  name: BoxVersion
+  href: api/Cake.Vagrant.Settings.VagrantBoxRemoveSettings.html#Cake_Vagrant_Settings_VagrantBoxRemoveSettings_BoxVersion
+  commentId: P:Cake.Vagrant.Settings.VagrantBoxRemoveSettings.BoxVersion
+  fullName: Cake.Vagrant.Settings.VagrantBoxRemoveSettings.BoxVersion
+- uid: Cake.Vagrant.Settings.VagrantBoxRemoveSettings.Force
+  name: Force
+  href: api/Cake.Vagrant.Settings.VagrantBoxRemoveSettings.html#Cake_Vagrant_Settings_VagrantBoxRemoveSettings_Force
+  commentId: P:Cake.Vagrant.Settings.VagrantBoxRemoveSettings.Force
+  fullName: Cake.Vagrant.Settings.VagrantBoxRemoveSettings.Force
+- uid: Cake.Vagrant.Settings.VagrantBoxRemoveSettings.GetToolArguments
+  name: GetToolArguments()
+  href: api/Cake.Vagrant.Settings.VagrantBoxRemoveSettings.html#Cake_Vagrant_Settings_VagrantBoxRemoveSettings_GetToolArguments
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxRemoveSettings.GetToolArguments
+  fullName: Cake.Vagrant.Settings.VagrantBoxRemoveSettings.GetToolArguments()
+- uid: Cake.Vagrant.Settings.VagrantBoxRemoveSettings.Provider
+  name: Provider
+  href: api/Cake.Vagrant.Settings.VagrantBoxRemoveSettings.html#Cake_Vagrant_Settings_VagrantBoxRemoveSettings_Provider
+  commentId: P:Cake.Vagrant.Settings.VagrantBoxRemoveSettings.Provider
+  fullName: Cake.Vagrant.Settings.VagrantBoxRemoveSettings.Provider
+- uid: Cake.Vagrant.Settings.VagrantBoxRemoveSettings.RemoveAll
+  name: RemoveAll
+  href: api/Cake.Vagrant.Settings.VagrantBoxRemoveSettings.html#Cake_Vagrant_Settings_VagrantBoxRemoveSettings_RemoveAll
+  commentId: P:Cake.Vagrant.Settings.VagrantBoxRemoveSettings.RemoveAll
+  fullName: Cake.Vagrant.Settings.VagrantBoxRemoveSettings.RemoveAll
+- uid: Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions
+  name: VagrantBoxRemoveSettingsExtensions
+  href: api/Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxRemoveSettingsExtensions
+  commentId: T:Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions
+  fullName: Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions
+- uid: Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.ConstrainVersion(Cake.Vagrant.Settings.VagrantBoxRemoveSettings,System.String)
+  name: ConstrainVersion(VagrantBoxRemoveSettings, String)
+  href: api/Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxRemoveSettingsExtensions_ConstrainVersion_Cake_Vagrant_Settings_VagrantBoxRemoveSettings_System_String_
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.ConstrainVersion(Cake.Vagrant.Settings.VagrantBoxRemoveSettings,System.String)
+  fullName: Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.ConstrainVersion(Cake.Vagrant.Settings.VagrantBoxRemoveSettings, System.String)
+- uid: Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.Force(Cake.Vagrant.Settings.VagrantBoxRemoveSettings,System.Boolean)
+  name: Force(VagrantBoxRemoveSettings, Boolean)
+  href: api/Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxRemoveSettingsExtensions_Force_Cake_Vagrant_Settings_VagrantBoxRemoveSettings_System_Boolean_
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.Force(Cake.Vagrant.Settings.VagrantBoxRemoveSettings,System.Boolean)
+  fullName: Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.Force(Cake.Vagrant.Settings.VagrantBoxRemoveSettings, System.Boolean)
+- uid: Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.RemoveAll(Cake.Vagrant.Settings.VagrantBoxRemoveSettings)
+  name: RemoveAll(VagrantBoxRemoveSettings)
+  href: api/Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxRemoveSettingsExtensions_RemoveAll_Cake_Vagrant_Settings_VagrantBoxRemoveSettings_
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.RemoveAll(Cake.Vagrant.Settings.VagrantBoxRemoveSettings)
+  fullName: Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.RemoveAll(Cake.Vagrant.Settings.VagrantBoxRemoveSettings)
+- uid: Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.UseProvider(Cake.Vagrant.Settings.VagrantBoxRemoveSettings,System.String)
+  name: UseProvider(VagrantBoxRemoveSettings, String)
+  href: api/Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxRemoveSettingsExtensions_UseProvider_Cake_Vagrant_Settings_VagrantBoxRemoveSettings_System_String_
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.UseProvider(Cake.Vagrant.Settings.VagrantBoxRemoveSettings,System.String)
+  fullName: Cake.Vagrant.Settings.VagrantBoxRemoveSettingsExtensions.UseProvider(Cake.Vagrant.Settings.VagrantBoxRemoveSettings, System.String)
+- uid: Cake.Vagrant.Settings.VagrantBoxUpdateSettings
+  name: VagrantBoxUpdateSettings
+  href: api/Cake.Vagrant.Settings.VagrantBoxUpdateSettings.html#Cake_Vagrant_Settings_VagrantBoxUpdateSettings
+  commentId: T:Cake.Vagrant.Settings.VagrantBoxUpdateSettings
+  fullName: Cake.Vagrant.Settings.VagrantBoxUpdateSettings
+- uid: Cake.Vagrant.Settings.VagrantBoxUpdateSettings.BoxName
+  name: BoxName
+  href: api/Cake.Vagrant.Settings.VagrantBoxUpdateSettings.html#Cake_Vagrant_Settings_VagrantBoxUpdateSettings_BoxName
+  commentId: P:Cake.Vagrant.Settings.VagrantBoxUpdateSettings.BoxName
+  fullName: Cake.Vagrant.Settings.VagrantBoxUpdateSettings.BoxName
+- uid: Cake.Vagrant.Settings.VagrantBoxUpdateSettings.GetToolArguments
+  name: GetToolArguments()
+  href: api/Cake.Vagrant.Settings.VagrantBoxUpdateSettings.html#Cake_Vagrant_Settings_VagrantBoxUpdateSettings_GetToolArguments
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxUpdateSettings.GetToolArguments
+  fullName: Cake.Vagrant.Settings.VagrantBoxUpdateSettings.GetToolArguments()
+- uid: Cake.Vagrant.Settings.VagrantBoxUpdateSettings.Provider
+  name: Provider
+  href: api/Cake.Vagrant.Settings.VagrantBoxUpdateSettings.html#Cake_Vagrant_Settings_VagrantBoxUpdateSettings_Provider
+  commentId: P:Cake.Vagrant.Settings.VagrantBoxUpdateSettings.Provider
+  fullName: Cake.Vagrant.Settings.VagrantBoxUpdateSettings.Provider
+- uid: Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions
+  name: VagrantBoxUpdateSettingsExtensions
+  href: api/Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxUpdateSettingsExtensions
+  commentId: T:Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions
+  fullName: Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions
+- uid: Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions.OnlyUpdate(Cake.Vagrant.Settings.VagrantBoxUpdateSettings,System.String)
+  name: OnlyUpdate(VagrantBoxUpdateSettings, String)
+  href: api/Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxUpdateSettingsExtensions_OnlyUpdate_Cake_Vagrant_Settings_VagrantBoxUpdateSettings_System_String_
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions.OnlyUpdate(Cake.Vagrant.Settings.VagrantBoxUpdateSettings,System.String)
+  fullName: Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions.OnlyUpdate(Cake.Vagrant.Settings.VagrantBoxUpdateSettings, System.String)
+- uid: Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions.UseProvider(Cake.Vagrant.Settings.VagrantBoxUpdateSettings,System.String)
+  name: UseProvider(VagrantBoxUpdateSettings, String)
+  href: api/Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions.html#Cake_Vagrant_Settings_VagrantBoxUpdateSettingsExtensions_UseProvider_Cake_Vagrant_Settings_VagrantBoxUpdateSettings_System_String_
+  commentId: M:Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions.UseProvider(Cake.Vagrant.Settings.VagrantBoxUpdateSettings,System.String)
+  fullName: Cake.Vagrant.Settings.VagrantBoxUpdateSettingsExtensions.UseProvider(Cake.Vagrant.Settings.VagrantBoxUpdateSettings, System.String)
+- uid: Cake.Vagrant.Settings.VagrantInitSettings
+  name: VagrantInitSettings
+  href: api/Cake.Vagrant.Settings.VagrantInitSettings.html#Cake_Vagrant_Settings_VagrantInitSettings
+  commentId: T:Cake.Vagrant.Settings.VagrantInitSettings
+  fullName: Cake.Vagrant.Settings.VagrantInitSettings
+- uid: Cake.Vagrant.Settings.VagrantInitSettings.Force
+  name: Force
+  href: api/Cake.Vagrant.Settings.VagrantInitSettings.html#Cake_Vagrant_Settings_VagrantInitSettings_Force
+  commentId: P:Cake.Vagrant.Settings.VagrantInitSettings.Force
+  fullName: Cake.Vagrant.Settings.VagrantInitSettings.Force
+- uid: Cake.Vagrant.Settings.VagrantInitSettings.GetToolArguments
+  name: GetToolArguments()
+  href: api/Cake.Vagrant.Settings.VagrantInitSettings.html#Cake_Vagrant_Settings_VagrantInitSettings_GetToolArguments
+  commentId: M:Cake.Vagrant.Settings.VagrantInitSettings.GetToolArguments
+  fullName: Cake.Vagrant.Settings.VagrantInitSettings.GetToolArguments()
+- uid: Cake.Vagrant.Settings.VagrantInitSettings.Minimal
+  name: Minimal
+  href: api/Cake.Vagrant.Settings.VagrantInitSettings.html#Cake_Vagrant_Settings_VagrantInitSettings_Minimal
+  commentId: P:Cake.Vagrant.Settings.VagrantInitSettings.Minimal
+  fullName: Cake.Vagrant.Settings.VagrantInitSettings.Minimal
+- uid: Cake.Vagrant.Settings.VagrantInitSettings.OutputFile
+  name: OutputFile
+  href: api/Cake.Vagrant.Settings.VagrantInitSettings.html#Cake_Vagrant_Settings_VagrantInitSettings_OutputFile
+  commentId: P:Cake.Vagrant.Settings.VagrantInitSettings.OutputFile
+  fullName: Cake.Vagrant.Settings.VagrantInitSettings.OutputFile
+- uid: Cake.Vagrant.Settings.VagrantInitSettings.VersionConstraint
+  name: VersionConstraint
+  href: api/Cake.Vagrant.Settings.VagrantInitSettings.html#Cake_Vagrant_Settings_VagrantInitSettings_VersionConstraint
+  commentId: P:Cake.Vagrant.Settings.VagrantInitSettings.VersionConstraint
+  fullName: Cake.Vagrant.Settings.VagrantInitSettings.VersionConstraint
+- uid: Cake.Vagrant.Settings.VagrantInitSettingsExtensions
+  name: VagrantInitSettingsExtensions
+  href: api/Cake.Vagrant.Settings.VagrantInitSettingsExtensions.html#Cake_Vagrant_Settings_VagrantInitSettingsExtensions
+  commentId: T:Cake.Vagrant.Settings.VagrantInitSettingsExtensions
+  fullName: Cake.Vagrant.Settings.VagrantInitSettingsExtensions
+- uid: Cake.Vagrant.Settings.VagrantInitSettingsExtensions.ConstrainVersion(Cake.Vagrant.Settings.VagrantInitSettings,System.String)
+  name: ConstrainVersion(VagrantInitSettings, String)
+  href: api/Cake.Vagrant.Settings.VagrantInitSettingsExtensions.html#Cake_Vagrant_Settings_VagrantInitSettingsExtensions_ConstrainVersion_Cake_Vagrant_Settings_VagrantInitSettings_System_String_
+  commentId: M:Cake.Vagrant.Settings.VagrantInitSettingsExtensions.ConstrainVersion(Cake.Vagrant.Settings.VagrantInitSettings,System.String)
+  fullName: Cake.Vagrant.Settings.VagrantInitSettingsExtensions.ConstrainVersion(Cake.Vagrant.Settings.VagrantInitSettings, System.String)
+- uid: Cake.Vagrant.Settings.VagrantInitSettingsExtensions.CreateMinimal(Cake.Vagrant.Settings.VagrantInitSettings)
+  name: CreateMinimal(VagrantInitSettings)
+  href: api/Cake.Vagrant.Settings.VagrantInitSettingsExtensions.html#Cake_Vagrant_Settings_VagrantInitSettingsExtensions_CreateMinimal_Cake_Vagrant_Settings_VagrantInitSettings_
+  commentId: M:Cake.Vagrant.Settings.VagrantInitSettingsExtensions.CreateMinimal(Cake.Vagrant.Settings.VagrantInitSettings)
+  fullName: Cake.Vagrant.Settings.VagrantInitSettingsExtensions.CreateMinimal(Cake.Vagrant.Settings.VagrantInitSettings)
+- uid: Cake.Vagrant.Settings.VagrantInitSettingsExtensions.Force(Cake.Vagrant.Settings.VagrantInitSettings,System.Boolean)
+  name: Force(VagrantInitSettings, Boolean)
+  href: api/Cake.Vagrant.Settings.VagrantInitSettingsExtensions.html#Cake_Vagrant_Settings_VagrantInitSettingsExtensions_Force_Cake_Vagrant_Settings_VagrantInitSettings_System_Boolean_
+  commentId: M:Cake.Vagrant.Settings.VagrantInitSettingsExtensions.Force(Cake.Vagrant.Settings.VagrantInitSettings,System.Boolean)
+  fullName: Cake.Vagrant.Settings.VagrantInitSettingsExtensions.Force(Cake.Vagrant.Settings.VagrantInitSettings, System.Boolean)
+- uid: Cake.Vagrant.Settings.VagrantInitSettingsExtensions.OutputToFile(Cake.Vagrant.Settings.VagrantInitSettings,Cake.Core.IO.FilePath)
+  name: OutputToFile(VagrantInitSettings, FilePath)
+  href: api/Cake.Vagrant.Settings.VagrantInitSettingsExtensions.html#Cake_Vagrant_Settings_VagrantInitSettingsExtensions_OutputToFile_Cake_Vagrant_Settings_VagrantInitSettings_Cake_Core_IO_FilePath_
+  commentId: M:Cake.Vagrant.Settings.VagrantInitSettingsExtensions.OutputToFile(Cake.Vagrant.Settings.VagrantInitSettings,Cake.Core.IO.FilePath)
+  fullName: Cake.Vagrant.Settings.VagrantInitSettingsExtensions.OutputToFile(Cake.Vagrant.Settings.VagrantInitSettings, Cake.Core.IO.FilePath)
+- uid: Cake.Vagrant.Settings.VagrantPackageSettings
+  name: VagrantPackageSettings
+  href: api/Cake.Vagrant.Settings.VagrantPackageSettings.html#Cake_Vagrant_Settings_VagrantPackageSettings
+  commentId: T:Cake.Vagrant.Settings.VagrantPackageSettings
+  fullName: Cake.Vagrant.Settings.VagrantPackageSettings
+- uid: Cake.Vagrant.Settings.VagrantPackageSettings.AdditionalFilePaths
+  name: AdditionalFilePaths
+  href: api/Cake.Vagrant.Settings.VagrantPackageSettings.html#Cake_Vagrant_Settings_VagrantPackageSettings_AdditionalFilePaths
+  commentId: P:Cake.Vagrant.Settings.VagrantPackageSettings.AdditionalFilePaths
+  fullName: Cake.Vagrant.Settings.VagrantPackageSettings.AdditionalFilePaths
+- uid: Cake.Vagrant.Settings.VagrantPackageSettings.BaseImageName
+  name: BaseImageName
+  href: api/Cake.Vagrant.Settings.VagrantPackageSettings.html#Cake_Vagrant_Settings_VagrantPackageSettings_BaseImageName
+  commentId: P:Cake.Vagrant.Settings.VagrantPackageSettings.BaseImageName
+  fullName: Cake.Vagrant.Settings.VagrantPackageSettings.BaseImageName
+- uid: Cake.Vagrant.Settings.VagrantPackageSettings.GetToolArguments
+  name: GetToolArguments()
+  href: api/Cake.Vagrant.Settings.VagrantPackageSettings.html#Cake_Vagrant_Settings_VagrantPackageSettings_GetToolArguments
+  commentId: M:Cake.Vagrant.Settings.VagrantPackageSettings.GetToolArguments
+  fullName: Cake.Vagrant.Settings.VagrantPackageSettings.GetToolArguments()
+- uid: Cake.Vagrant.Settings.VagrantPackageSettings.OutputFile
+  name: OutputFile
+  href: api/Cake.Vagrant.Settings.VagrantPackageSettings.html#Cake_Vagrant_Settings_VagrantPackageSettings_OutputFile
+  commentId: P:Cake.Vagrant.Settings.VagrantPackageSettings.OutputFile
+  fullName: Cake.Vagrant.Settings.VagrantPackageSettings.OutputFile
+- uid: Cake.Vagrant.Settings.VagrantPackageSettings.VagrantFile
+  name: VagrantFile
+  href: api/Cake.Vagrant.Settings.VagrantPackageSettings.html#Cake_Vagrant_Settings_VagrantPackageSettings_VagrantFile
+  commentId: P:Cake.Vagrant.Settings.VagrantPackageSettings.VagrantFile
+  fullName: Cake.Vagrant.Settings.VagrantPackageSettings.VagrantFile
+- uid: Cake.Vagrant.Settings.VagrantPackageSettingsExtensions
+  name: VagrantPackageSettingsExtensions
+  href: api/Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.html#Cake_Vagrant_Settings_VagrantPackageSettingsExtensions
+  commentId: T:Cake.Vagrant.Settings.VagrantPackageSettingsExtensions
+  fullName: Cake.Vagrant.Settings.VagrantPackageSettingsExtensions
+- uid: Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.IncludeInPackage(Cake.Vagrant.Settings.VagrantPackageSettings,Cake.Core.IO.FilePath[])
+  name: IncludeInPackage(VagrantPackageSettings, FilePath[])
+  href: api/Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.html#Cake_Vagrant_Settings_VagrantPackageSettingsExtensions_IncludeInPackage_Cake_Vagrant_Settings_VagrantPackageSettings_Cake_Core_IO_FilePath___
+  commentId: M:Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.IncludeInPackage(Cake.Vagrant.Settings.VagrantPackageSettings,Cake.Core.IO.FilePath[])
+  name.vb: IncludeInPackage(VagrantPackageSettings, FilePath())
+  fullName: Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.IncludeInPackage(Cake.Vagrant.Settings.VagrantPackageSettings, Cake.Core.IO.FilePath[])
+  fullName.vb: Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.IncludeInPackage(Cake.Vagrant.Settings.VagrantPackageSettings, Cake.Core.IO.FilePath())
+- uid: Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.IncludeVagrantFile(Cake.Vagrant.Settings.VagrantPackageSettings,Cake.Core.IO.FilePath)
+  name: IncludeVagrantFile(VagrantPackageSettings, FilePath)
+  href: api/Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.html#Cake_Vagrant_Settings_VagrantPackageSettingsExtensions_IncludeVagrantFile_Cake_Vagrant_Settings_VagrantPackageSettings_Cake_Core_IO_FilePath_
+  commentId: M:Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.IncludeVagrantFile(Cake.Vagrant.Settings.VagrantPackageSettings,Cake.Core.IO.FilePath)
+  fullName: Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.IncludeVagrantFile(Cake.Vagrant.Settings.VagrantPackageSettings, Cake.Core.IO.FilePath)
+- uid: Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.OutputToFile(Cake.Vagrant.Settings.VagrantPackageSettings,Cake.Core.IO.FilePath)
+  name: OutputToFile(VagrantPackageSettings, FilePath)
+  href: api/Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.html#Cake_Vagrant_Settings_VagrantPackageSettingsExtensions_OutputToFile_Cake_Vagrant_Settings_VagrantPackageSettings_Cake_Core_IO_FilePath_
+  commentId: M:Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.OutputToFile(Cake.Vagrant.Settings.VagrantPackageSettings,Cake.Core.IO.FilePath)
+  fullName: Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.OutputToFile(Cake.Vagrant.Settings.VagrantPackageSettings, Cake.Core.IO.FilePath)
+- uid: Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.UseBaseImage(Cake.Vagrant.Settings.VagrantPackageSettings,System.String)
+  name: UseBaseImage(VagrantPackageSettings, String)
+  href: api/Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.html#Cake_Vagrant_Settings_VagrantPackageSettingsExtensions_UseBaseImage_Cake_Vagrant_Settings_VagrantPackageSettings_System_String_
+  commentId: M:Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.UseBaseImage(Cake.Vagrant.Settings.VagrantPackageSettings,System.String)
+  fullName: Cake.Vagrant.Settings.VagrantPackageSettingsExtensions.UseBaseImage(Cake.Vagrant.Settings.VagrantPackageSettings, System.String)
+- uid: Cake.Vagrant.Settings.VagrantPluginInstallSettings
+  name: VagrantPluginInstallSettings
+  href: api/Cake.Vagrant.Settings.VagrantPluginInstallSettings.html#Cake_Vagrant_Settings_VagrantPluginInstallSettings
+  commentId: T:Cake.Vagrant.Settings.VagrantPluginInstallSettings
+  fullName: Cake.Vagrant.Settings.VagrantPluginInstallSettings
+- uid: Cake.Vagrant.Settings.VagrantPluginInstallSettings.CleanSources
+  name: CleanSources
+  href: api/Cake.Vagrant.Settings.VagrantPluginInstallSettings.html#Cake_Vagrant_Settings_VagrantPluginInstallSettings_CleanSources
+  commentId: P:Cake.Vagrant.Settings.VagrantPluginInstallSettings.CleanSources
+  fullName: Cake.Vagrant.Settings.VagrantPluginInstallSettings.CleanSources
+- uid: Cake.Vagrant.Settings.VagrantPluginInstallSettings.EntryPoint
+  name: EntryPoint
+  href: api/Cake.Vagrant.Settings.VagrantPluginInstallSettings.html#Cake_Vagrant_Settings_VagrantPluginInstallSettings_EntryPoint
+  commentId: P:Cake.Vagrant.Settings.VagrantPluginInstallSettings.EntryPoint
+  fullName: Cake.Vagrant.Settings.VagrantPluginInstallSettings.EntryPoint
+- uid: Cake.Vagrant.Settings.VagrantPluginInstallSettings.GetToolArguments
+  name: GetToolArguments()
+  href: api/Cake.Vagrant.Settings.VagrantPluginInstallSettings.html#Cake_Vagrant_Settings_VagrantPluginInstallSettings_GetToolArguments
+  commentId: M:Cake.Vagrant.Settings.VagrantPluginInstallSettings.GetToolArguments
+  fullName: Cake.Vagrant.Settings.VagrantPluginInstallSettings.GetToolArguments()
+- uid: Cake.Vagrant.Settings.VagrantPluginInstallSettings.Source
+  name: Source
+  href: api/Cake.Vagrant.Settings.VagrantPluginInstallSettings.html#Cake_Vagrant_Settings_VagrantPluginInstallSettings_Source
+  commentId: P:Cake.Vagrant.Settings.VagrantPluginInstallSettings.Source
+  fullName: Cake.Vagrant.Settings.VagrantPluginInstallSettings.Source
+- uid: Cake.Vagrant.Settings.VagrantPluginInstallSettings.Version
+  name: Version
+  href: api/Cake.Vagrant.Settings.VagrantPluginInstallSettings.html#Cake_Vagrant_Settings_VagrantPluginInstallSettings_Version
+  commentId: P:Cake.Vagrant.Settings.VagrantPluginInstallSettings.Version
+  fullName: Cake.Vagrant.Settings.VagrantPluginInstallSettings.Version
+- uid: Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions
+  name: VagrantPluginInstallSettingsExtensions
+  href: api/Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.html#Cake_Vagrant_Settings_VagrantPluginInstallSettingsExtensions
+  commentId: T:Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions
+  fullName: Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions
+- uid: Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.CleanFirst(Cake.Vagrant.Settings.VagrantPluginInstallSettings,System.Boolean)
+  name: CleanFirst(VagrantPluginInstallSettings, Boolean)
+  href: api/Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.html#Cake_Vagrant_Settings_VagrantPluginInstallSettingsExtensions_CleanFirst_Cake_Vagrant_Settings_VagrantPluginInstallSettings_System_Boolean_
+  commentId: M:Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.CleanFirst(Cake.Vagrant.Settings.VagrantPluginInstallSettings,System.Boolean)
+  fullName: Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.CleanFirst(Cake.Vagrant.Settings.VagrantPluginInstallSettings, System.Boolean)
+- uid: Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.ConstrainVersion(Cake.Vagrant.Settings.VagrantPluginInstallSettings,System.String)
+  name: ConstrainVersion(VagrantPluginInstallSettings, String)
+  href: api/Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.html#Cake_Vagrant_Settings_VagrantPluginInstallSettingsExtensions_ConstrainVersion_Cake_Vagrant_Settings_VagrantPluginInstallSettings_System_String_
+  commentId: M:Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.ConstrainVersion(Cake.Vagrant.Settings.VagrantPluginInstallSettings,System.String)
+  fullName: Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.ConstrainVersion(Cake.Vagrant.Settings.VagrantPluginInstallSettings, System.String)
+- uid: Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.FromSource(Cake.Vagrant.Settings.VagrantPluginInstallSettings,System.String)
+  name: FromSource(VagrantPluginInstallSettings, String)
+  href: api/Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.html#Cake_Vagrant_Settings_VagrantPluginInstallSettingsExtensions_FromSource_Cake_Vagrant_Settings_VagrantPluginInstallSettings_System_String_
+  commentId: M:Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.FromSource(Cake.Vagrant.Settings.VagrantPluginInstallSettings,System.String)
+  fullName: Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.FromSource(Cake.Vagrant.Settings.VagrantPluginInstallSettings, System.String)
+- uid: Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.SetEntryPoint(Cake.Vagrant.Settings.VagrantPluginInstallSettings,System.String)
+  name: SetEntryPoint(VagrantPluginInstallSettings, String)
+  href: api/Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.html#Cake_Vagrant_Settings_VagrantPluginInstallSettingsExtensions_SetEntryPoint_Cake_Vagrant_Settings_VagrantPluginInstallSettings_System_String_
+  commentId: M:Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.SetEntryPoint(Cake.Vagrant.Settings.VagrantPluginInstallSettings,System.String)
+  fullName: Cake.Vagrant.Settings.VagrantPluginInstallSettingsExtensions.SetEntryPoint(Cake.Vagrant.Settings.VagrantPluginInstallSettings, System.String)
+- uid: Cake.Vagrant.Settings.VagrantPowerShellSettings
+  name: VagrantPowerShellSettings
+  href: api/Cake.Vagrant.Settings.VagrantPowerShellSettings.html#Cake_Vagrant_Settings_VagrantPowerShellSettings
+  commentId: T:Cake.Vagrant.Settings.VagrantPowerShellSettings
+  fullName: Cake.Vagrant.Settings.VagrantPowerShellSettings
+- uid: Cake.Vagrant.Settings.VagrantPowerShellSettings.Command
+  name: Command
+  href: api/Cake.Vagrant.Settings.VagrantPowerShellSettings.html#Cake_Vagrant_Settings_VagrantPowerShellSettings_Command
+  commentId: P:Cake.Vagrant.Settings.VagrantPowerShellSettings.Command
+  fullName: Cake.Vagrant.Settings.VagrantPowerShellSettings.Command
+- uid: Cake.Vagrant.Settings.VagrantPowerShellSettings.GetToolArguments
+  name: GetToolArguments()
+  href: api/Cake.Vagrant.Settings.VagrantPowerShellSettings.html#Cake_Vagrant_Settings_VagrantPowerShellSettings_GetToolArguments
+  commentId: M:Cake.Vagrant.Settings.VagrantPowerShellSettings.GetToolArguments
+  fullName: Cake.Vagrant.Settings.VagrantPowerShellSettings.GetToolArguments()
+- uid: Cake.Vagrant.Settings.VagrantPowerShellSettingsExtensions
+  name: VagrantPowerShellSettingsExtensions
+  href: api/Cake.Vagrant.Settings.VagrantPowerShellSettingsExtensions.html#Cake_Vagrant_Settings_VagrantPowerShellSettingsExtensions
+  commentId: T:Cake.Vagrant.Settings.VagrantPowerShellSettingsExtensions
+  fullName: Cake.Vagrant.Settings.VagrantPowerShellSettingsExtensions
+- uid: Cake.Vagrant.Settings.VagrantPowerShellSettingsExtensions.RunCommand(Cake.Vagrant.Settings.VagrantPowerShellSettings,System.String)
+  name: RunCommand(VagrantPowerShellSettings, String)
+  href: api/Cake.Vagrant.Settings.VagrantPowerShellSettingsExtensions.html#Cake_Vagrant_Settings_VagrantPowerShellSettingsExtensions_RunCommand_Cake_Vagrant_Settings_VagrantPowerShellSettings_System_String_
+  commentId: M:Cake.Vagrant.Settings.VagrantPowerShellSettingsExtensions.RunCommand(Cake.Vagrant.Settings.VagrantPowerShellSettings,System.String)
+  fullName: Cake.Vagrant.Settings.VagrantPowerShellSettingsExtensions.RunCommand(Cake.Vagrant.Settings.VagrantPowerShellSettings, System.String)
+- uid: Cake.Vagrant.Settings.VagrantProvisionerSettings
+  name: VagrantProvisionerSettings
+  href: api/Cake.Vagrant.Settings.VagrantProvisionerSettings.html#Cake_Vagrant_Settings_VagrantProvisionerSettings
+  commentId: T:Cake.Vagrant.Settings.VagrantProvisionerSettings
+  fullName: Cake.Vagrant.Settings.VagrantProvisionerSettings
+- uid: Cake.Vagrant.Settings.VagrantProvisionerSettings.GetToolArguments
+  name: GetToolArguments()
+  href: api/Cake.Vagrant.Settings.VagrantProvisionerSettings.html#Cake_Vagrant_Settings_VagrantProvisionerSettings_GetToolArguments
+  commentId: M:Cake.Vagrant.Settings.VagrantProvisionerSettings.GetToolArguments
+  fullName: Cake.Vagrant.Settings.VagrantProvisionerSettings.GetToolArguments()
+- uid: Cake.Vagrant.Settings.VagrantProvisionerSettings.Provisioners
+  name: Provisioners
+  href: api/Cake.Vagrant.Settings.VagrantProvisionerSettings.html#Cake_Vagrant_Settings_VagrantProvisionerSettings_Provisioners
+  commentId: P:Cake.Vagrant.Settings.VagrantProvisionerSettings.Provisioners
+  fullName: Cake.Vagrant.Settings.VagrantProvisionerSettings.Provisioners
+- uid: Cake.Vagrant.Settings.VagrantProvisionerSettings.RunProvisioners
+  name: RunProvisioners
+  href: api/Cake.Vagrant.Settings.VagrantProvisionerSettings.html#Cake_Vagrant_Settings_VagrantProvisionerSettings_RunProvisioners
+  commentId: P:Cake.Vagrant.Settings.VagrantProvisionerSettings.RunProvisioners
+  fullName: Cake.Vagrant.Settings.VagrantProvisionerSettings.RunProvisioners
+- uid: Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions
+  name: VagrantProvisionerSettingsExtensions
+  href: api/Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.html#Cake_Vagrant_Settings_VagrantProvisionerSettingsExtensions
+  commentId: T:Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions
+  fullName: Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions
+- uid: Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.RunProvisioners(Cake.Vagrant.Settings.VagrantProvisionerSettings,System.Boolean)
+  name: RunProvisioners(VagrantProvisionerSettings, Boolean)
+  href: api/Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.html#Cake_Vagrant_Settings_VagrantProvisionerSettingsExtensions_RunProvisioners_Cake_Vagrant_Settings_VagrantProvisionerSettings_System_Boolean_
+  commentId: M:Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.RunProvisioners(Cake.Vagrant.Settings.VagrantProvisionerSettings,System.Boolean)
+  fullName: Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.RunProvisioners(Cake.Vagrant.Settings.VagrantProvisionerSettings, System.Boolean)
+- uid: Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantProvisionerSettings,System.Collections.Generic.IEnumerable{System.String})
+  name: WithProvisioners(VagrantProvisionerSettings, IEnumerable<String>)
+  href: api/Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.html#Cake_Vagrant_Settings_VagrantProvisionerSettingsExtensions_WithProvisioners_Cake_Vagrant_Settings_VagrantProvisionerSettings_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantProvisionerSettings,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: WithProvisioners(VagrantProvisionerSettings, IEnumerable(Of String))
+  fullName: Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantProvisionerSettings, System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantProvisionerSettings, System.Collections.Generic.IEnumerable(Of System.String))
+- uid: Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantProvisionerSettings,System.String[])
+  name: WithProvisioners(VagrantProvisionerSettings, String[])
+  href: api/Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.html#Cake_Vagrant_Settings_VagrantProvisionerSettingsExtensions_WithProvisioners_Cake_Vagrant_Settings_VagrantProvisionerSettings_System_String___
+  commentId: M:Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantProvisionerSettings,System.String[])
+  name.vb: WithProvisioners(VagrantProvisionerSettings, String())
+  fullName: Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantProvisionerSettings, System.String[])
+  fullName.vb: Cake.Vagrant.Settings.VagrantProvisionerSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantProvisionerSettings, System.String())
+- uid: Cake.Vagrant.Settings.VagrantShareSettings
+  name: VagrantShareSettings
+  href: api/Cake.Vagrant.Settings.VagrantShareSettings.html#Cake_Vagrant_Settings_VagrantShareSettings
+  commentId: T:Cake.Vagrant.Settings.VagrantShareSettings
+  fullName: Cake.Vagrant.Settings.VagrantShareSettings
+- uid: Cake.Vagrant.Settings.VagrantShareSettings.DisableHttp
+  name: DisableHttp
+  href: api/Cake.Vagrant.Settings.VagrantShareSettings.html#Cake_Vagrant_Settings_VagrantShareSettings_DisableHttp
+  commentId: P:Cake.Vagrant.Settings.VagrantShareSettings.DisableHttp
+  fullName: Cake.Vagrant.Settings.VagrantShareSettings.DisableHttp
+- uid: Cake.Vagrant.Settings.VagrantShareSettings.DisableSSHPassword
+  name: DisableSSHPassword
+  href: api/Cake.Vagrant.Settings.VagrantShareSettings.html#Cake_Vagrant_Settings_VagrantShareSettings_DisableSSHPassword
+  commentId: P:Cake.Vagrant.Settings.VagrantShareSettings.DisableSSHPassword
+  fullName: Cake.Vagrant.Settings.VagrantShareSettings.DisableSSHPassword
+- uid: Cake.Vagrant.Settings.VagrantShareSettings.EnableSSH
+  name: EnableSSH
+  href: api/Cake.Vagrant.Settings.VagrantShareSettings.html#Cake_Vagrant_Settings_VagrantShareSettings_EnableSSH
+  commentId: P:Cake.Vagrant.Settings.VagrantShareSettings.EnableSSH
+  fullName: Cake.Vagrant.Settings.VagrantShareSettings.EnableSSH
+- uid: Cake.Vagrant.Settings.VagrantShareSettings.GetToolArguments
+  name: GetToolArguments()
+  href: api/Cake.Vagrant.Settings.VagrantShareSettings.html#Cake_Vagrant_Settings_VagrantShareSettings_GetToolArguments
+  commentId: M:Cake.Vagrant.Settings.VagrantShareSettings.GetToolArguments
+  fullName: Cake.Vagrant.Settings.VagrantShareSettings.GetToolArguments()
+- uid: Cake.Vagrant.Settings.VagrantShareSettings.HttpPort
+  name: HttpPort
+  href: api/Cake.Vagrant.Settings.VagrantShareSettings.html#Cake_Vagrant_Settings_VagrantShareSettings_HttpPort
+  commentId: P:Cake.Vagrant.Settings.VagrantShareSettings.HttpPort
+  fullName: Cake.Vagrant.Settings.VagrantShareSettings.HttpPort
+- uid: Cake.Vagrant.Settings.VagrantShareSettings.HttpsPort
+  name: HttpsPort
+  href: api/Cake.Vagrant.Settings.VagrantShareSettings.html#Cake_Vagrant_Settings_VagrantShareSettings_HttpsPort
+  commentId: P:Cake.Vagrant.Settings.VagrantShareSettings.HttpsPort
+  fullName: Cake.Vagrant.Settings.VagrantShareSettings.HttpsPort
+- uid: Cake.Vagrant.Settings.VagrantShareSettings.OneTimeSSH
+  name: OneTimeSSH
+  href: api/Cake.Vagrant.Settings.VagrantShareSettings.html#Cake_Vagrant_Settings_VagrantShareSettings_OneTimeSSH
+  commentId: P:Cake.Vagrant.Settings.VagrantShareSettings.OneTimeSSH
+  fullName: Cake.Vagrant.Settings.VagrantShareSettings.OneTimeSSH
+- uid: Cake.Vagrant.Settings.VagrantShareSettings.SSHPort
+  name: SSHPort
+  href: api/Cake.Vagrant.Settings.VagrantShareSettings.html#Cake_Vagrant_Settings_VagrantShareSettings_SSHPort
+  commentId: P:Cake.Vagrant.Settings.VagrantShareSettings.SSHPort
+  fullName: Cake.Vagrant.Settings.VagrantShareSettings.SSHPort
+- uid: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings
+  name: VagrantSnapshotRestoreSettings
+  href: api/Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.html#Cake_Vagrant_Settings_VagrantSnapshotRestoreSettings
+  commentId: T:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings
+  fullName: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings
+- uid: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.#ctor(System.Boolean)
+  name: VagrantSnapshotRestoreSettings(Boolean)
+  href: api/Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.html#Cake_Vagrant_Settings_VagrantSnapshotRestoreSettings__ctor_System_Boolean_
+  commentId: M:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.#ctor(System.Boolean)
+  fullName: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.VagrantSnapshotRestoreSettings(System.Boolean)
+- uid: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.DoNotDelete
+  name: DoNotDelete
+  href: api/Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.html#Cake_Vagrant_Settings_VagrantSnapshotRestoreSettings_DoNotDelete
+  commentId: P:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.DoNotDelete
+  fullName: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.DoNotDelete
+- uid: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.GetToolArguments
+  name: GetToolArguments()
+  href: api/Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.html#Cake_Vagrant_Settings_VagrantSnapshotRestoreSettings_GetToolArguments
+  commentId: M:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.GetToolArguments
+  fullName: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.GetToolArguments()
+- uid: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.RunProvisioners
+  name: RunProvisioners
+  href: api/Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.html#Cake_Vagrant_Settings_VagrantSnapshotRestoreSettings_RunProvisioners
+  commentId: P:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.RunProvisioners
+  fullName: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings.RunProvisioners
+- uid: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions
+  name: VagrantSnapshotRestoreSettingsExtensions
+  href: api/Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.html#Cake_Vagrant_Settings_VagrantSnapshotRestoreSettingsExtensions
+  commentId: T:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions
+  fullName: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions
+- uid: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.Delete(Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings,System.Boolean)
+  name: Delete(VagrantSnapshotRestoreSettings, Boolean)
+  href: api/Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.html#Cake_Vagrant_Settings_VagrantSnapshotRestoreSettingsExtensions_Delete_Cake_Vagrant_Settings_VagrantSnapshotRestoreSettings_System_Boolean_
+  commentId: M:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.Delete(Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings,System.Boolean)
+  fullName: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.Delete(Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings, System.Boolean)
+- uid: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.DoNotDelete(Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings)
+  name: DoNotDelete(VagrantSnapshotRestoreSettings)
+  href: api/Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.html#Cake_Vagrant_Settings_VagrantSnapshotRestoreSettingsExtensions_DoNotDelete_Cake_Vagrant_Settings_VagrantSnapshotRestoreSettings_
+  commentId: M:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.DoNotDelete(Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings)
+  fullName: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.DoNotDelete(Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings)
+- uid: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.RunProvisioners(Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings,System.Boolean)
+  name: RunProvisioners(VagrantSnapshotRestoreSettings, Boolean)
+  href: api/Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.html#Cake_Vagrant_Settings_VagrantSnapshotRestoreSettingsExtensions_RunProvisioners_Cake_Vagrant_Settings_VagrantSnapshotRestoreSettings_System_Boolean_
+  commentId: M:Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.RunProvisioners(Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings,System.Boolean)
+  fullName: Cake.Vagrant.Settings.VagrantSnapshotRestoreSettingsExtensions.RunProvisioners(Cake.Vagrant.Settings.VagrantSnapshotRestoreSettings, System.Boolean)
+- uid: Cake.Vagrant.Settings.VagrantSSHSettings
+  name: VagrantSSHSettings
+  href: api/Cake.Vagrant.Settings.VagrantSSHSettings.html#Cake_Vagrant_Settings_VagrantSSHSettings
+  commentId: T:Cake.Vagrant.Settings.VagrantSSHSettings
+  fullName: Cake.Vagrant.Settings.VagrantSSHSettings
+- uid: Cake.Vagrant.Settings.VagrantSSHSettings.Command
+  name: Command
+  href: api/Cake.Vagrant.Settings.VagrantSSHSettings.html#Cake_Vagrant_Settings_VagrantSSHSettings_Command
+  commentId: P:Cake.Vagrant.Settings.VagrantSSHSettings.Command
+  fullName: Cake.Vagrant.Settings.VagrantSSHSettings.Command
+- uid: Cake.Vagrant.Settings.VagrantSSHSettings.DoNotAuthenticate
+  name: DoNotAuthenticate
+  href: api/Cake.Vagrant.Settings.VagrantSSHSettings.html#Cake_Vagrant_Settings_VagrantSSHSettings_DoNotAuthenticate
+  commentId: P:Cake.Vagrant.Settings.VagrantSSHSettings.DoNotAuthenticate
+  fullName: Cake.Vagrant.Settings.VagrantSSHSettings.DoNotAuthenticate
+- uid: Cake.Vagrant.Settings.VagrantSSHSettings.ExtraSSHArguments
+  name: ExtraSSHArguments
+  href: api/Cake.Vagrant.Settings.VagrantSSHSettings.html#Cake_Vagrant_Settings_VagrantSSHSettings_ExtraSSHArguments
+  commentId: P:Cake.Vagrant.Settings.VagrantSSHSettings.ExtraSSHArguments
+  fullName: Cake.Vagrant.Settings.VagrantSSHSettings.ExtraSSHArguments
+- uid: Cake.Vagrant.Settings.VagrantSSHSettings.GetToolArguments
+  name: GetToolArguments()
+  href: api/Cake.Vagrant.Settings.VagrantSSHSettings.html#Cake_Vagrant_Settings_VagrantSSHSettings_GetToolArguments
+  commentId: M:Cake.Vagrant.Settings.VagrantSSHSettings.GetToolArguments
+  fullName: Cake.Vagrant.Settings.VagrantSSHSettings.GetToolArguments()
+- uid: Cake.Vagrant.Settings.VagrantSSHSettingsExtensions
+  name: VagrantSSHSettingsExtensions
+  href: api/Cake.Vagrant.Settings.VagrantSSHSettingsExtensions.html#Cake_Vagrant_Settings_VagrantSSHSettingsExtensions
+  commentId: T:Cake.Vagrant.Settings.VagrantSSHSettingsExtensions
+  fullName: Cake.Vagrant.Settings.VagrantSSHSettingsExtensions
+- uid: Cake.Vagrant.Settings.VagrantSSHSettingsExtensions.RunCommand(Cake.Vagrant.Settings.VagrantSSHSettings,System.String)
+  name: RunCommand(VagrantSSHSettings, String)
+  href: api/Cake.Vagrant.Settings.VagrantSSHSettingsExtensions.html#Cake_Vagrant_Settings_VagrantSSHSettingsExtensions_RunCommand_Cake_Vagrant_Settings_VagrantSSHSettings_System_String_
+  commentId: M:Cake.Vagrant.Settings.VagrantSSHSettingsExtensions.RunCommand(Cake.Vagrant.Settings.VagrantSSHSettings,System.String)
+  fullName: Cake.Vagrant.Settings.VagrantSSHSettingsExtensions.RunCommand(Cake.Vagrant.Settings.VagrantSSHSettings, System.String)
+- uid: Cake.Vagrant.Settings.VagrantSSHSettingsExtensions.WithArguments(Cake.Vagrant.Settings.VagrantSSHSettings,System.String[])
+  name: WithArguments(VagrantSSHSettings, String[])
+  href: api/Cake.Vagrant.Settings.VagrantSSHSettingsExtensions.html#Cake_Vagrant_Settings_VagrantSSHSettingsExtensions_WithArguments_Cake_Vagrant_Settings_VagrantSSHSettings_System_String___
+  commentId: M:Cake.Vagrant.Settings.VagrantSSHSettingsExtensions.WithArguments(Cake.Vagrant.Settings.VagrantSSHSettings,System.String[])
+  name.vb: WithArguments(VagrantSSHSettings, String())
+  fullName: Cake.Vagrant.Settings.VagrantSSHSettingsExtensions.WithArguments(Cake.Vagrant.Settings.VagrantSSHSettings, System.String[])
+  fullName.vb: Cake.Vagrant.Settings.VagrantSSHSettingsExtensions.WithArguments(Cake.Vagrant.Settings.VagrantSSHSettings, System.String())
+- uid: Cake.Vagrant.Settings.VagrantUpSettings
+  name: VagrantUpSettings
+  href: api/Cake.Vagrant.Settings.VagrantUpSettings.html#Cake_Vagrant_Settings_VagrantUpSettings
+  commentId: T:Cake.Vagrant.Settings.VagrantUpSettings
+  fullName: Cake.Vagrant.Settings.VagrantUpSettings
+- uid: Cake.Vagrant.Settings.VagrantUpSettings.DestroyOnError
+  name: DestroyOnError
+  href: api/Cake.Vagrant.Settings.VagrantUpSettings.html#Cake_Vagrant_Settings_VagrantUpSettings_DestroyOnError
+  commentId: P:Cake.Vagrant.Settings.VagrantUpSettings.DestroyOnError
+  fullName: Cake.Vagrant.Settings.VagrantUpSettings.DestroyOnError
+- uid: Cake.Vagrant.Settings.VagrantUpSettings.GetToolArguments
+  name: GetToolArguments()
+  href: api/Cake.Vagrant.Settings.VagrantUpSettings.html#Cake_Vagrant_Settings_VagrantUpSettings_GetToolArguments
+  commentId: M:Cake.Vagrant.Settings.VagrantUpSettings.GetToolArguments
+  fullName: Cake.Vagrant.Settings.VagrantUpSettings.GetToolArguments()
+- uid: Cake.Vagrant.Settings.VagrantUpSettings.InstallProvider
+  name: InstallProvider
+  href: api/Cake.Vagrant.Settings.VagrantUpSettings.html#Cake_Vagrant_Settings_VagrantUpSettings_InstallProvider
+  commentId: P:Cake.Vagrant.Settings.VagrantUpSettings.InstallProvider
+  fullName: Cake.Vagrant.Settings.VagrantUpSettings.InstallProvider
+- uid: Cake.Vagrant.Settings.VagrantUpSettings.Parallel
+  name: Parallel
+  href: api/Cake.Vagrant.Settings.VagrantUpSettings.html#Cake_Vagrant_Settings_VagrantUpSettings_Parallel
+  commentId: P:Cake.Vagrant.Settings.VagrantUpSettings.Parallel
+  fullName: Cake.Vagrant.Settings.VagrantUpSettings.Parallel
+- uid: Cake.Vagrant.Settings.VagrantUpSettings.Provider
+  name: Provider
+  href: api/Cake.Vagrant.Settings.VagrantUpSettings.html#Cake_Vagrant_Settings_VagrantUpSettings_Provider
+  commentId: P:Cake.Vagrant.Settings.VagrantUpSettings.Provider
+  fullName: Cake.Vagrant.Settings.VagrantUpSettings.Provider
+- uid: Cake.Vagrant.Settings.VagrantUpSettings.Provisioners
+  name: Provisioners
+  href: api/Cake.Vagrant.Settings.VagrantUpSettings.html#Cake_Vagrant_Settings_VagrantUpSettings_Provisioners
+  commentId: P:Cake.Vagrant.Settings.VagrantUpSettings.Provisioners
+  fullName: Cake.Vagrant.Settings.VagrantUpSettings.Provisioners
+- uid: Cake.Vagrant.Settings.VagrantUpSettings.RunProvisioners
+  name: RunProvisioners
+  href: api/Cake.Vagrant.Settings.VagrantUpSettings.html#Cake_Vagrant_Settings_VagrantUpSettings_RunProvisioners
+  commentId: P:Cake.Vagrant.Settings.VagrantUpSettings.RunProvisioners
+  fullName: Cake.Vagrant.Settings.VagrantUpSettings.RunProvisioners
+- uid: Cake.Vagrant.Settings.VagrantUpSettingsExtensions
+  name: VagrantUpSettingsExtensions
+  href: api/Cake.Vagrant.Settings.VagrantUpSettingsExtensions.html#Cake_Vagrant_Settings_VagrantUpSettingsExtensions
+  commentId: T:Cake.Vagrant.Settings.VagrantUpSettingsExtensions
+  fullName: Cake.Vagrant.Settings.VagrantUpSettingsExtensions
+- uid: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.DestroyOnError(Cake.Vagrant.Settings.VagrantUpSettings,System.Boolean)
+  name: DestroyOnError(VagrantUpSettings, Boolean)
+  href: api/Cake.Vagrant.Settings.VagrantUpSettingsExtensions.html#Cake_Vagrant_Settings_VagrantUpSettingsExtensions_DestroyOnError_Cake_Vagrant_Settings_VagrantUpSettings_System_Boolean_
+  commentId: M:Cake.Vagrant.Settings.VagrantUpSettingsExtensions.DestroyOnError(Cake.Vagrant.Settings.VagrantUpSettings,System.Boolean)
+  fullName: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.DestroyOnError(Cake.Vagrant.Settings.VagrantUpSettings, System.Boolean)
+- uid: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.EnableParallel(Cake.Vagrant.Settings.VagrantUpSettings)
+  name: EnableParallel(VagrantUpSettings)
+  href: api/Cake.Vagrant.Settings.VagrantUpSettingsExtensions.html#Cake_Vagrant_Settings_VagrantUpSettingsExtensions_EnableParallel_Cake_Vagrant_Settings_VagrantUpSettings_
+  commentId: M:Cake.Vagrant.Settings.VagrantUpSettingsExtensions.EnableParallel(Cake.Vagrant.Settings.VagrantUpSettings)
+  fullName: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.EnableParallel(Cake.Vagrant.Settings.VagrantUpSettings)
+- uid: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.InstallProvider(Cake.Vagrant.Settings.VagrantUpSettings,System.Boolean)
+  name: InstallProvider(VagrantUpSettings, Boolean)
+  href: api/Cake.Vagrant.Settings.VagrantUpSettingsExtensions.html#Cake_Vagrant_Settings_VagrantUpSettingsExtensions_InstallProvider_Cake_Vagrant_Settings_VagrantUpSettings_System_Boolean_
+  commentId: M:Cake.Vagrant.Settings.VagrantUpSettingsExtensions.InstallProvider(Cake.Vagrant.Settings.VagrantUpSettings,System.Boolean)
+  fullName: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.InstallProvider(Cake.Vagrant.Settings.VagrantUpSettings, System.Boolean)
+- uid: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.RunProvisioners(Cake.Vagrant.Settings.VagrantUpSettings,System.Boolean)
+  name: RunProvisioners(VagrantUpSettings, Boolean)
+  href: api/Cake.Vagrant.Settings.VagrantUpSettingsExtensions.html#Cake_Vagrant_Settings_VagrantUpSettingsExtensions_RunProvisioners_Cake_Vagrant_Settings_VagrantUpSettings_System_Boolean_
+  commentId: M:Cake.Vagrant.Settings.VagrantUpSettingsExtensions.RunProvisioners(Cake.Vagrant.Settings.VagrantUpSettings,System.Boolean)
+  fullName: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.RunProvisioners(Cake.Vagrant.Settings.VagrantUpSettings, System.Boolean)
+- uid: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.UseProvider(Cake.Vagrant.Settings.VagrantUpSettings,System.String)
+  name: UseProvider(VagrantUpSettings, String)
+  href: api/Cake.Vagrant.Settings.VagrantUpSettingsExtensions.html#Cake_Vagrant_Settings_VagrantUpSettingsExtensions_UseProvider_Cake_Vagrant_Settings_VagrantUpSettings_System_String_
+  commentId: M:Cake.Vagrant.Settings.VagrantUpSettingsExtensions.UseProvider(Cake.Vagrant.Settings.VagrantUpSettings,System.String)
+  fullName: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.UseProvider(Cake.Vagrant.Settings.VagrantUpSettings, System.String)
+- uid: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantUpSettings,System.Collections.Generic.IEnumerable{System.String})
+  name: WithProvisioners(VagrantUpSettings, IEnumerable<String>)
+  href: api/Cake.Vagrant.Settings.VagrantUpSettingsExtensions.html#Cake_Vagrant_Settings_VagrantUpSettingsExtensions_WithProvisioners_Cake_Vagrant_Settings_VagrantUpSettings_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Cake.Vagrant.Settings.VagrantUpSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantUpSettings,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: WithProvisioners(VagrantUpSettings, IEnumerable(Of String))
+  fullName: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantUpSettings, System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantUpSettings, System.Collections.Generic.IEnumerable(Of System.String))
+- uid: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantUpSettings,System.String[])
+  name: WithProvisioners(VagrantUpSettings, String[])
+  href: api/Cake.Vagrant.Settings.VagrantUpSettingsExtensions.html#Cake_Vagrant_Settings_VagrantUpSettingsExtensions_WithProvisioners_Cake_Vagrant_Settings_VagrantUpSettings_System_String___
+  commentId: M:Cake.Vagrant.Settings.VagrantUpSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantUpSettings,System.String[])
+  name.vb: WithProvisioners(VagrantUpSettings, String())
+  fullName: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantUpSettings, System.String[])
+  fullName.vb: Cake.Vagrant.Settings.VagrantUpSettingsExtensions.WithProvisioners(Cake.Vagrant.Settings.VagrantUpSettings, System.String())
+- uid: Cake.Vagrant.VagrantAliases
+  name: VagrantAliases
+  href: api/Cake.Vagrant.VagrantAliases.html#Cake_Vagrant_VagrantAliases
+  commentId: T:Cake.Vagrant.VagrantAliases
+  fullName: Cake.Vagrant.VagrantAliases
+- uid: Cake.Vagrant.VagrantAliases.Vagrant(Cake.Core.ICakeContext)
+  name: Vagrant(ICakeContext)
+  href: api/Cake.Vagrant.VagrantAliases.html#Cake_Vagrant_VagrantAliases_Vagrant_Cake_Core_ICakeContext_
+  commentId: M:Cake.Vagrant.VagrantAliases.Vagrant(Cake.Core.ICakeContext)
+  fullName: Cake.Vagrant.VagrantAliases.Vagrant(Cake.Core.ICakeContext)
+- uid: Cake.Vagrant.VagrantRunner
+  name: VagrantRunner
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner
+  commentId: T:Cake.Vagrant.VagrantRunner
+  fullName: Cake.Vagrant.VagrantRunner
+- uid: Cake.Vagrant.VagrantRunner.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.IO.IProcessRunner,Cake.Core.Tooling.IToolLocator,Cake.Core.Diagnostics.ICakeLog)
+  name: VagrantRunner(IFileSystem, ICakeEnvironment, IProcessRunner, IToolLocator, ICakeLog)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner__ctor_Cake_Core_IO_IFileSystem_Cake_Core_ICakeEnvironment_Cake_Core_IO_IProcessRunner_Cake_Core_Tooling_IToolLocator_Cake_Core_Diagnostics_ICakeLog_
+  commentId: M:Cake.Vagrant.VagrantRunner.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.IO.IProcessRunner,Cake.Core.Tooling.IToolLocator,Cake.Core.Diagnostics.ICakeLog)
+  fullName: Cake.Vagrant.VagrantRunner.VagrantRunner(Cake.Core.IO.IFileSystem, Cake.Core.ICakeEnvironment, Cake.Core.IO.IProcessRunner, Cake.Core.Tooling.IToolLocator, Cake.Core.Diagnostics.ICakeLog)
+- uid: Cake.Vagrant.VagrantRunner.Box
+  name: Box
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Box
+  commentId: P:Cake.Vagrant.VagrantRunner.Box
+  fullName: Cake.Vagrant.VagrantRunner.Box
+- uid: Cake.Vagrant.VagrantRunner.Destroy(System.String)
+  name: Destroy(String)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Destroy_System_String_
+  commentId: M:Cake.Vagrant.VagrantRunner.Destroy(System.String)
+  fullName: Cake.Vagrant.VagrantRunner.Destroy(System.String)
+- uid: Cake.Vagrant.VagrantRunner.Docker
+  name: Docker
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Docker
+  commentId: P:Cake.Vagrant.VagrantRunner.Docker
+  fullName: Cake.Vagrant.VagrantRunner.Docker
+- uid: Cake.Vagrant.VagrantRunner.GetAlternativeToolPaths(Cake.Vagrant.VagrantSettings)
+  name: GetAlternativeToolPaths(VagrantSettings)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_GetAlternativeToolPaths_Cake_Vagrant_VagrantSettings_
+  commentId: M:Cake.Vagrant.VagrantRunner.GetAlternativeToolPaths(Cake.Vagrant.VagrantSettings)
+  fullName: Cake.Vagrant.VagrantRunner.GetAlternativeToolPaths(Cake.Vagrant.VagrantSettings)
+- uid: Cake.Vagrant.VagrantRunner.GetToolExecutableNames
+  name: GetToolExecutableNames()
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_GetToolExecutableNames
+  commentId: M:Cake.Vagrant.VagrantRunner.GetToolExecutableNames
+  fullName: Cake.Vagrant.VagrantRunner.GetToolExecutableNames()
+- uid: Cake.Vagrant.VagrantRunner.GetToolName
+  name: GetToolName()
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_GetToolName
+  commentId: M:Cake.Vagrant.VagrantRunner.GetToolName
+  fullName: Cake.Vagrant.VagrantRunner.GetToolName()
+- uid: Cake.Vagrant.VagrantRunner.Halt(System.String,System.Boolean)
+  name: Halt(String, Boolean)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Halt_System_String_System_Boolean_
+  commentId: M:Cake.Vagrant.VagrantRunner.Halt(System.String,System.Boolean)
+  fullName: Cake.Vagrant.VagrantRunner.Halt(System.String, System.Boolean)
+- uid: Cake.Vagrant.VagrantRunner.Init(System.String,System.Action{Cake.Vagrant.Settings.VagrantInitSettings})
+  name: Init(String, Action<VagrantInitSettings>)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Init_System_String_System_Action_Cake_Vagrant_Settings_VagrantInitSettings__
+  commentId: M:Cake.Vagrant.VagrantRunner.Init(System.String,System.Action{Cake.Vagrant.Settings.VagrantInitSettings})
+  name.vb: Init(String, Action(Of VagrantInitSettings))
+  fullName: Cake.Vagrant.VagrantRunner.Init(System.String, System.Action<Cake.Vagrant.Settings.VagrantInitSettings>)
+  fullName.vb: Cake.Vagrant.VagrantRunner.Init(System.String, System.Action(Of Cake.Vagrant.Settings.VagrantInitSettings))
+- uid: Cake.Vagrant.VagrantRunner.Init(System.String,System.String,System.Action{Cake.Vagrant.Settings.VagrantInitSettings})
+  name: Init(String, String, Action<VagrantInitSettings>)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Init_System_String_System_String_System_Action_Cake_Vagrant_Settings_VagrantInitSettings__
+  commentId: M:Cake.Vagrant.VagrantRunner.Init(System.String,System.String,System.Action{Cake.Vagrant.Settings.VagrantInitSettings})
+  name.vb: Init(String, String, Action(Of VagrantInitSettings))
+  fullName: Cake.Vagrant.VagrantRunner.Init(System.String, System.String, System.Action<Cake.Vagrant.Settings.VagrantInitSettings>)
+  fullName.vb: Cake.Vagrant.VagrantRunner.Init(System.String, System.String, System.Action(Of Cake.Vagrant.Settings.VagrantInitSettings))
+- uid: Cake.Vagrant.VagrantRunner.Package(System.Action{Cake.Vagrant.Settings.VagrantPackageSettings})
+  name: Package(Action<VagrantPackageSettings>)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Package_System_Action_Cake_Vagrant_Settings_VagrantPackageSettings__
+  commentId: M:Cake.Vagrant.VagrantRunner.Package(System.Action{Cake.Vagrant.Settings.VagrantPackageSettings})
+  name.vb: Package(Action(Of VagrantPackageSettings))
+  fullName: Cake.Vagrant.VagrantRunner.Package(System.Action<Cake.Vagrant.Settings.VagrantPackageSettings>)
+  fullName.vb: Cake.Vagrant.VagrantRunner.Package(System.Action(Of Cake.Vagrant.Settings.VagrantPackageSettings))
+- uid: Cake.Vagrant.VagrantRunner.Package(System.String)
+  name: Package(String)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Package_System_String_
+  commentId: M:Cake.Vagrant.VagrantRunner.Package(System.String)
+  fullName: Cake.Vagrant.VagrantRunner.Package(System.String)
+- uid: Cake.Vagrant.VagrantRunner.Package(System.String,System.Action{Cake.Vagrant.Settings.VagrantPackageSettings})
+  name: Package(String, Action<VagrantPackageSettings>)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Package_System_String_System_Action_Cake_Vagrant_Settings_VagrantPackageSettings__
+  commentId: M:Cake.Vagrant.VagrantRunner.Package(System.String,System.Action{Cake.Vagrant.Settings.VagrantPackageSettings})
+  name.vb: Package(String, Action(Of VagrantPackageSettings))
+  fullName: Cake.Vagrant.VagrantRunner.Package(System.String, System.Action<Cake.Vagrant.Settings.VagrantPackageSettings>)
+  fullName.vb: Cake.Vagrant.VagrantRunner.Package(System.String, System.Action(Of Cake.Vagrant.Settings.VagrantPackageSettings))
+- uid: Cake.Vagrant.VagrantRunner.Plugin
+  name: Plugin
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Plugin
+  commentId: P:Cake.Vagrant.VagrantRunner.Plugin
+  fullName: Cake.Vagrant.VagrantRunner.Plugin
+- uid: Cake.Vagrant.VagrantRunner.PowerShell(System.Action{Cake.Vagrant.Settings.VagrantPowerShellSettings})
+  name: PowerShell(Action<VagrantPowerShellSettings>)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_PowerShell_System_Action_Cake_Vagrant_Settings_VagrantPowerShellSettings__
+  commentId: M:Cake.Vagrant.VagrantRunner.PowerShell(System.Action{Cake.Vagrant.Settings.VagrantPowerShellSettings})
+  name.vb: PowerShell(Action(Of VagrantPowerShellSettings))
+  fullName: Cake.Vagrant.VagrantRunner.PowerShell(System.Action<Cake.Vagrant.Settings.VagrantPowerShellSettings>)
+  fullName.vb: Cake.Vagrant.VagrantRunner.PowerShell(System.Action(Of Cake.Vagrant.Settings.VagrantPowerShellSettings))
+- uid: Cake.Vagrant.VagrantRunner.PowerShell(System.String,System.Action{Cake.Vagrant.Settings.VagrantPowerShellSettings})
+  name: PowerShell(String, Action<VagrantPowerShellSettings>)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_PowerShell_System_String_System_Action_Cake_Vagrant_Settings_VagrantPowerShellSettings__
+  commentId: M:Cake.Vagrant.VagrantRunner.PowerShell(System.String,System.Action{Cake.Vagrant.Settings.VagrantPowerShellSettings})
+  name.vb: PowerShell(String, Action(Of VagrantPowerShellSettings))
+  fullName: Cake.Vagrant.VagrantRunner.PowerShell(System.String, System.Action<Cake.Vagrant.Settings.VagrantPowerShellSettings>)
+  fullName.vb: Cake.Vagrant.VagrantRunner.PowerShell(System.String, System.Action(Of Cake.Vagrant.Settings.VagrantPowerShellSettings))
+- uid: Cake.Vagrant.VagrantRunner.Reload(System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})
+  name: Reload(Action<VagrantProvisionerSettings>)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Reload_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings__
+  commentId: M:Cake.Vagrant.VagrantRunner.Reload(System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})
+  name.vb: Reload(Action(Of VagrantProvisionerSettings))
+  fullName: Cake.Vagrant.VagrantRunner.Reload(System.Action<Cake.Vagrant.Settings.VagrantProvisionerSettings>)
+  fullName.vb: Cake.Vagrant.VagrantRunner.Reload(System.Action(Of Cake.Vagrant.Settings.VagrantProvisionerSettings))
+- uid: Cake.Vagrant.VagrantRunner.Reload(System.String)
+  name: Reload(String)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Reload_System_String_
+  commentId: M:Cake.Vagrant.VagrantRunner.Reload(System.String)
+  fullName: Cake.Vagrant.VagrantRunner.Reload(System.String)
+- uid: Cake.Vagrant.VagrantRunner.Reload(System.String,System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})
+  name: Reload(String, Action<VagrantProvisionerSettings>)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Reload_System_String_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings__
+  commentId: M:Cake.Vagrant.VagrantRunner.Reload(System.String,System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})
+  name.vb: Reload(String, Action(Of VagrantProvisionerSettings))
+  fullName: Cake.Vagrant.VagrantRunner.Reload(System.String, System.Action<Cake.Vagrant.Settings.VagrantProvisionerSettings>)
+  fullName.vb: Cake.Vagrant.VagrantRunner.Reload(System.String, System.Action(Of Cake.Vagrant.Settings.VagrantProvisionerSettings))
+- uid: Cake.Vagrant.VagrantRunner.Resume(System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})
+  name: Resume(Action<VagrantProvisionerSettings>)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Resume_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings__
+  commentId: M:Cake.Vagrant.VagrantRunner.Resume(System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})
+  name.vb: Resume(Action(Of VagrantProvisionerSettings))
+  fullName: Cake.Vagrant.VagrantRunner.Resume(System.Action<Cake.Vagrant.Settings.VagrantProvisionerSettings>)
+  fullName.vb: Cake.Vagrant.VagrantRunner.Resume(System.Action(Of Cake.Vagrant.Settings.VagrantProvisionerSettings))
+- uid: Cake.Vagrant.VagrantRunner.Resume(System.String)
+  name: Resume(String)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Resume_System_String_
+  commentId: M:Cake.Vagrant.VagrantRunner.Resume(System.String)
+  fullName: Cake.Vagrant.VagrantRunner.Resume(System.String)
+- uid: Cake.Vagrant.VagrantRunner.Resume(System.String,System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})
+  name: Resume(String, Action<VagrantProvisionerSettings>)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Resume_System_String_System_Action_Cake_Vagrant_Settings_VagrantProvisionerSettings__
+  commentId: M:Cake.Vagrant.VagrantRunner.Resume(System.String,System.Action{Cake.Vagrant.Settings.VagrantProvisionerSettings})
+  name.vb: Resume(String, Action(Of VagrantProvisionerSettings))
+  fullName: Cake.Vagrant.VagrantRunner.Resume(System.String, System.Action<Cake.Vagrant.Settings.VagrantProvisionerSettings>)
+  fullName.vb: Cake.Vagrant.VagrantRunner.Resume(System.String, System.Action(Of Cake.Vagrant.Settings.VagrantProvisionerSettings))
+- uid: Cake.Vagrant.VagrantRunner.Snapshot
+  name: Snapshot
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Snapshot
+  commentId: P:Cake.Vagrant.VagrantRunner.Snapshot
+  fullName: Cake.Vagrant.VagrantRunner.Snapshot
+- uid: Cake.Vagrant.VagrantRunner.SSH(System.Action{Cake.Vagrant.Settings.VagrantSSHSettings})
+  name: SSH(Action<VagrantSSHSettings>)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_SSH_System_Action_Cake_Vagrant_Settings_VagrantSSHSettings__
+  commentId: M:Cake.Vagrant.VagrantRunner.SSH(System.Action{Cake.Vagrant.Settings.VagrantSSHSettings})
+  name.vb: SSH(Action(Of VagrantSSHSettings))
+  fullName: Cake.Vagrant.VagrantRunner.SSH(System.Action<Cake.Vagrant.Settings.VagrantSSHSettings>)
+  fullName.vb: Cake.Vagrant.VagrantRunner.SSH(System.Action(Of Cake.Vagrant.Settings.VagrantSSHSettings))
+- uid: Cake.Vagrant.VagrantRunner.SSH(System.String,System.Action{Cake.Vagrant.Settings.VagrantSSHSettings})
+  name: SSH(String, Action<VagrantSSHSettings>)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_SSH_System_String_System_Action_Cake_Vagrant_Settings_VagrantSSHSettings__
+  commentId: M:Cake.Vagrant.VagrantRunner.SSH(System.String,System.Action{Cake.Vagrant.Settings.VagrantSSHSettings})
+  name.vb: SSH(String, Action(Of VagrantSSHSettings))
+  fullName: Cake.Vagrant.VagrantRunner.SSH(System.String, System.Action<Cake.Vagrant.Settings.VagrantSSHSettings>)
+  fullName.vb: Cake.Vagrant.VagrantRunner.SSH(System.String, System.Action(Of Cake.Vagrant.Settings.VagrantSSHSettings))
+- uid: Cake.Vagrant.VagrantRunner.Suspend(System.String)
+  name: Suspend(String)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Suspend_System_String_
+  commentId: M:Cake.Vagrant.VagrantRunner.Suspend(System.String)
+  fullName: Cake.Vagrant.VagrantRunner.Suspend(System.String)
+- uid: Cake.Vagrant.VagrantRunner.Up(System.Action{Cake.Vagrant.Settings.VagrantUpSettings})
+  name: Up(Action<VagrantUpSettings>)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Up_System_Action_Cake_Vagrant_Settings_VagrantUpSettings__
+  commentId: M:Cake.Vagrant.VagrantRunner.Up(System.Action{Cake.Vagrant.Settings.VagrantUpSettings})
+  name.vb: Up(Action(Of VagrantUpSettings))
+  fullName: Cake.Vagrant.VagrantRunner.Up(System.Action<Cake.Vagrant.Settings.VagrantUpSettings>)
+  fullName.vb: Cake.Vagrant.VagrantRunner.Up(System.Action(Of Cake.Vagrant.Settings.VagrantUpSettings))
+- uid: Cake.Vagrant.VagrantRunner.Up(System.String)
+  name: Up(String)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Up_System_String_
+  commentId: M:Cake.Vagrant.VagrantRunner.Up(System.String)
+  fullName: Cake.Vagrant.VagrantRunner.Up(System.String)
+- uid: Cake.Vagrant.VagrantRunner.Up(System.String,System.Action{Cake.Vagrant.Settings.VagrantUpSettings})
+  name: Up(String, Action<VagrantUpSettings>)
+  href: api/Cake.Vagrant.VagrantRunner.html#Cake_Vagrant_VagrantRunner_Up_System_String_System_Action_Cake_Vagrant_Settings_VagrantUpSettings__
+  commentId: M:Cake.Vagrant.VagrantRunner.Up(System.String,System.Action{Cake.Vagrant.Settings.VagrantUpSettings})
+  name.vb: Up(String, Action(Of VagrantUpSettings))
+  fullName: Cake.Vagrant.VagrantRunner.Up(System.String, System.Action<Cake.Vagrant.Settings.VagrantUpSettings>)
+  fullName.vb: Cake.Vagrant.VagrantRunner.Up(System.String, System.Action(Of Cake.Vagrant.Settings.VagrantUpSettings))
+- uid: Cake.Vagrant.VagrantSettings
+  name: VagrantSettings
+  href: api/Cake.Vagrant.VagrantSettings.html#Cake_Vagrant_VagrantSettings
+  commentId: T:Cake.Vagrant.VagrantSettings
+  fullName: Cake.Vagrant.VagrantSettings
