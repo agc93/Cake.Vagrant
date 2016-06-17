@@ -47,7 +47,7 @@
             <example>
                 <code>
             <![CDATA[
-            context.Vagrant().Plugin.Install("plugin", 
+             Vagrant.Plugin.Install("plugin", 
                 s => s.CleanFirst()
                         .FromSource("http://source")
                         .SetEntryPoint("main.sh"));
@@ -999,8 +999,19 @@
         </member>
         <member name="T:Cake.Vagrant.VagrantAliases">
             <summary>
-                Gets a runner to control Vagrant through the CLI
+                Gets a runner to control Vagrant through the CLI. See the documentation on GitHub for a full API reference.
             </summary>
+            <example>
+            <code>
+            <![CDATA[
+            Vagrant.Init("hashicorp/precise64");
+            Vagrant.Up(s => s.UseProvider("virtualbox"));
+            Vagrant.Suspend();
+            Vagrant.Halt();
+            Vagrant.Destroy();
+            ]]>
+            </code>
+            </example>
             <remarks>Roughly equivalent to the <c>vagrant</c> command.</remarks>
         </member>
         <member name="M:Cake.Vagrant.VagrantAliases.Vagrant(Cake.Core.ICakeContext)">
@@ -1024,7 +1035,7 @@
             Task("Fluent-Init")
             .Does(() => {
                 
-                context.Vagrant().Init("hashicorp/precise64", settings => 
+                Vagrant.Init("hashicorp/precise64", settings => 
                     settings.ConstrainVersion("1.0.1")
                     .CreateMinimal()
                     .OutputToFile("base.box"));
@@ -1144,7 +1155,8 @@
             <example>
                 <code>
             <![CDATA[
-            SSH(s => s.RunCommand("echo echo"));]]></code>
+            Vagrant.SSH(s => s.RunCommand("echo echo"));
+            ]]></code>
             </example>
         </member>
         <member name="M:Cake.Vagrant.VagrantRunner.SSH(System.String,System.Action{Cake.Vagrant.Settings.VagrantSSHSettings})">

@@ -163,7 +163,8 @@ namespace Cake.Vagrant
         /// <example>
         ///     <code>
         /// <![CDATA[
-        /// SSH(s => s.RunCommand("echo echo"));]]></code>
+        /// Vagrant.SSH(s => s.RunCommand("echo echo"));
+        /// ]]></code>
         /// </example>
         public void SSH(Action<VagrantSSHSettings> configure)
         {
