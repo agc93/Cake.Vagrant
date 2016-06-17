@@ -99,6 +99,8 @@ Task("Post-Build")
 		var files = GetFiles(project.Path.GetDirectory() +"/bin/" +configuration +"/" +project.Name +".*");
 		CopyFiles(files, artifacts + "build/" + project.Name);
 	}
+	//Package docs
+	Zip("./docfx/_site/", artifacts + "/docfx.zip");
 });
 
 Task("Run-Unit-Tests")
