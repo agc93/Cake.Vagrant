@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>Cake.Vagrant</id>
+		<title>Cake.Vagrant</title>
+		<authors>Alistair Chapman</authors>
+		<owners>Alistair Chapman</owners>
+		<licenseUrl>https://raw.githubusercontent.com/agc93/Cake.Vagrant/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/agc93/Cake.Vagrant/</projectUrl>
+		<iconUrl>https://raw.githubusercontent.com/mitchellh/vagrant/master/website/source/assets/images/logo_large.png</iconUrl>
+		<language>en-AU</language>
+		<description>A Cake addin to configure, start, control and stop Vagrant boxes</description>
+		<tags>cake build script vagrant vm</tags>
+	</metadata>
+	<files>
+		<file src="dist\build\Cake.Vagrant\Cake.Vagrant.dll" target="lib\net45"/>
+		<file src="dist\build\Cake.Vagrant\Cake.Vagrant.xml" target="lib\net45"/>
+	</files>
+</package>
