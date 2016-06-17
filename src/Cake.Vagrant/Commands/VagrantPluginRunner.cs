@@ -33,7 +33,7 @@ namespace Cake.Vagrant.Commands
         /// <example>
         ///     <code>
         /// <![CDATA[
-        /// context.Vagrant().Plugin.Install("plugin", 
+        ///  Vagrant.Plugin.Install("plugin", 
         ///     s => s.CleanFirst()
         ///             .FromSource("http://source")
         ///             .SetEntryPoint("main.sh"));
