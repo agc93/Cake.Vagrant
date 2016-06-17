@@ -4,3 +4,6 @@
 # 0.2.1
 * Fix broken `Destroy()` alias
 * Improve documentation including usages
+
+# 0.2.2
+* Fix incorrect alias documentation
