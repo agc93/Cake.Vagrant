@@ -24,7 +24,7 @@ namespace Cake.Vagrant
         {
             if (trigger.HasValue)
             {
-                Add(args, trigger, template, enableNegation);
+                Add(args, (bool)trigger, template, enableNegation);
             }
         }
 

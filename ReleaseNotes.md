@@ -10,3 +10,6 @@
 
 # 0.2.3
 * Further fixes and improvements to documentation
+
+# 0.2.4
+* Fix fatal bug in optional arguments
