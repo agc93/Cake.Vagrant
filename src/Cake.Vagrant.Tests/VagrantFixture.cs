@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Cake.Testing;
 using Cake.Testing.Fixtures;
 
@@ -15,7 +11,7 @@ namespace Cake.Vagrant.Tests
             RunAction = runAction;
         }
 
-        private Action<VagrantRunner> RunAction { get; set; }
+        private Action<VagrantRunner> RunAction { get; }
 
         protected override void RunTool()
         {

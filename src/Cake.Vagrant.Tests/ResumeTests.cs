@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Cake.Vagrant.Settings;
+﻿using Cake.Vagrant.Settings;
 using FluentAssertions;
 using Xunit;
 
@@ -12,19 +7,19 @@ namespace Cake.Vagrant.Tests
     public class ResumeTests
     {
         [Fact]
-        public void Should_Run_With_Defaults()
-        {
-            var fixture = new VagrantFixture(r => r.Resume());
-            var result = fixture.Run();
-            result.Args.Should().Be("resume");
-        }
-
-        [Fact]
         public void Should_Include_Name_When_Set()
         {
             var fixture = new VagrantFixture(r => r.Resume("web"));
             var result = fixture.Run();
             result.Args.Should().Be("resume web");
+        }
+
+        [Fact]
+        public void Should_Run_With_Defaults()
+        {
+            var fixture = new VagrantFixture(r => r.Resume());
+            var result = fixture.Run();
+            result.Args.Should().Be("resume");
         }
 
         [Fact]

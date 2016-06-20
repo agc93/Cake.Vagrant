@@ -64,8 +64,9 @@ namespace Cake.Vagrant.Commands
         /// </example>
         public void Save(string name)
         {
+            if (!name.HasValue()) throw new ArgumentNullException(nameof(name));
             var args = new ProcessArgumentBuilder();
-            args.AppendAll("save", name);
+            args.AppendAll("snapshot", "save", name);
             Runner.Invoke(Settings, args);
         }
 
@@ -76,6 +77,7 @@ namespace Cake.Vagrant.Commands
         /// <param name="configure">Optional settings to control the restore</param>
         public void Restore(string name, Action<VagrantSnapshotRestoreSettings> configure = null)
         {
+            if (!name.HasValue()) throw new ArgumentNullException(nameof(name));
             var settings = new VagrantSnapshotRestoreSettings();
             configure?.Invoke(settings);
             var args = new ProcessArgumentBuilder();
@@ -90,6 +92,7 @@ namespace Cake.Vagrant.Commands
         /// <param name="name">Name of the snapshot to delete</param>
         public void Delete(string name)
         {
+            if (!name.HasValue()) throw new ArgumentNullException(nameof(name));
             var args = new ProcessArgumentBuilder();
             args.AppendAll("snapshot", "delete", name);
             Runner.Invoke(Settings, args);

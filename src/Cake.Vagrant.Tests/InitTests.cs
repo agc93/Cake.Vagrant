@@ -1,5 +1,4 @@
-﻿using System;
-using Cake.Vagrant.Settings;
+﻿using Cake.Vagrant.Settings;
 using FluentAssertions;
 using Xunit;
 

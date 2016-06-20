@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Xunit;
 
 namespace Cake.Vagrant.Tests
@@ -11,10 +6,18 @@ namespace Cake.Vagrant.Tests
     public class HaltTests
     {
         [Fact]
-        public void Should_Run_With_Defaults()
+        public void Should_Include_Both_When_Set()
         {
-            var fixture = new VagrantFixture(r => r.Halt());
-            fixture.Run().Args.Should().Be("halt");
+            var fixture = new VagrantFixture(r => r.Halt("db", true));
+            fixture.Run().Args.Should().Be("halt db --force");
+        }
+
+        [Fact]
+        public void Should_Include_Force_When_Set()
+        {
+            var fixture = new VagrantFixture(r => r.Halt(force: true));
+            var result = fixture.Run();
+            result.Args.Should().Be("halt --force");
         }
 
         [Fact]
@@ -26,18 +29,10 @@ namespace Cake.Vagrant.Tests
         }
 
         [Fact]
-        public void Should_Include_Force_When_Set()
+        public void Should_Run_With_Defaults()
         {
-            var fixture = new VagrantFixture(r => r.Halt(force:true));
-            var result = fixture.Run();
-            result.Args.Should().Be("halt --force");
-        }
-
-        [Fact]
-        public void Should_Include_Both_When_Set()
-        {
-            var fixture = new VagrantFixture(r => r.Halt("db", true));
-            fixture.Run().Args.Should().Be("halt db --force");
+            var fixture = new VagrantFixture(r => r.Halt());
+            fixture.Run().Args.Should().Be("halt");
         }
     }
 }

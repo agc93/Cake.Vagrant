@@ -1,24 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
 using Cake.Vagrant.Settings;
 using FluentAssertions;
+using Xunit;
 
 namespace Cake.Vagrant.Tests
 {
     public class SSHTests
     {
-        [Fact]
-        public void Should_Fail_When_Command_Not_Provided()
-        {
-            var fixture = new VagrantFixture(r => r.SSH(s => s.WithArguments("arg1")));
-            var result = Record.Exception(() => fixture.Run());
-            result.Should().BeOfType<ArgumentOutOfRangeException>();
-        }
-
         [Theory]
         [InlineData("echo echo")]
         [InlineData("cat")]
@@ -38,6 +26,14 @@ namespace Cake.Vagrant.Tests
             var fixture = new VagrantFixture(r => r.SSH(s => s.RunCommand("echo").WithArguments(args)));
             var result = fixture.Run();
             result.Args.Should().Be($"ssh --command \"echo\" -- {args}");
+        }
+
+        [Fact]
+        public void Should_Fail_When_Command_Not_Provided()
+        {
+            var fixture = new VagrantFixture(r => r.SSH(s => s.WithArguments("arg1")));
+            var result = Record.Exception(() => fixture.Run());
+            result.Should().BeOfType<ArgumentOutOfRangeException>();
         }
     }
 }
