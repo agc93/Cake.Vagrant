@@ -52,5 +52,33 @@ namespace Cake.Vagrant.Tests
             var result = fixture.Run();
             result.Args.Should().Be("up --provision --provision-with chef,shell");
         }
+
+        [Fact]
+        public void Should_Use_Parallel_When_Set()
+        {
+            var fixture = new VagrantFixture(r => r.Up(s => s.EnableParallel()));
+            var result = fixture.Run();
+            result.Args.Should().Be("up --parallel");
+        }
+
+        [Theory]
+        [InlineData(true, "--destroy-on-error")]
+        [InlineData(false, "--no-destroy-on-error")]
+        public void Should_Use_Destroy_When_Set(bool enableDestroy, string flagValue)
+        {
+            var fixture = new VagrantFixture(r => r.Up(s => s.DestroyOnError(enableDestroy)));
+            var result = fixture.Run();
+            result.Args.Should().Be($"up {flagValue}");
+        }
+
+        [Theory]
+        [InlineData(true, "--install-provider")]
+        [InlineData(false, "--no-install-provider")]
+        public void Should_Install_Provider_When_Set(bool enable, string flagValue)
+        {
+            var fixture = new VagrantFixture(r => r.Up(s => s.InstallProvider(enable)));
+            var result = fixture.Run();
+            result.Args.Should().Be($"up {flagValue}");
+        }
     }
 }
