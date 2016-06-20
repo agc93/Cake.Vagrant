@@ -13,3 +13,7 @@
 
 # 0.2.4
 * Fix fatal bug in optional arguments
+
+# 0.2.5
+* Fix minor bugs in command invocations from unit tests.
+* Refactor Docker subcommands
