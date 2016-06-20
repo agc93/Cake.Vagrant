@@ -1,4 +1,5 @@
 using System;
+using Cake.Core;
 using Cake.Core.IO;
 
 namespace Cake.Vagrant.Settings
@@ -70,7 +71,7 @@ namespace Cake.Vagrant.Settings
         {
             return args =>
             {
-                args.Add(Version, "version");
+                if (Version.HasValue()) args.AppendSwitchQuoted("--version", Version);
                 args.Add(CACertificate, "cacert");
                 args.Add(CAPath, "capath");
                 args.Add(CertificatePath, "cert");

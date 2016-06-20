@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("Cake.Vagrant")]
+[assembly: AssemblyTitle("Cake.Vagrant.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Cake.Vagrant")]
+[assembly: AssemblyProduct("Cake.Vagrant.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -22,7 +22,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("b9502257-0a00-403d-9734-910cf2c6d397")]
+[assembly: Guid("4f80cebc-459b-4182-a395-b7b77f7c100d")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -33,8 +33,7 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-// [assembly: AssemblyVersion("0.1.0.0")]
+// [assembly: AssemblyVersion("1.0.*")]
 
 [assembly: AssemblyVersion("0.2.5.0")]
 [assembly: AssemblyFileVersion("0.2.5.0")]
-[assembly: AssemblyInformationalVersion("0.1.0-unstable.15+Branch.develop.Sha.bbcb1fbf55b2c131d79234afac08688da4eb8b07")]

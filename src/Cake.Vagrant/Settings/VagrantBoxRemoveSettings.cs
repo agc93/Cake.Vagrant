@@ -1,4 +1,5 @@
 ﻿using System;
+using Cake.Core;
 using Cake.Core.IO;
 
 namespace Cake.Vagrant.Settings
@@ -43,7 +44,7 @@ namespace Cake.Vagrant.Settings
             {
                 args.Add(RemoveAll, "all");
                 args.Add(Force, "force");
-                args.Add(BoxVersion, "box-version");
+                if (BoxVersion.HasValue()) args.AppendSwitchQuoted("--box-version", BoxVersion);
                 args.Add(Provider, "provider");
             };
         }
