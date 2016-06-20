@@ -10,6 +10,6 @@
 			"workingDirectory": "../../",
 			"arguments":  "../build.cake"   
 		} 
-	},
-	"-vs-binding": { "AfterBuild": [ "build" ] }
+	}
+
 }

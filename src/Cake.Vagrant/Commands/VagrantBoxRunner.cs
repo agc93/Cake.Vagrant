@@ -23,6 +23,7 @@ namespace Cake.Vagrant.Commands
         /// <param name="configure">Optional settings to use when adding the box</param>
         public void Add(string address, Action<VagrantBoxAddSettings> configure = null)
         {
+            if (string.IsNullOrWhiteSpace(address)) throw new ArgumentNullException(nameof(address));
             var settings = new VagrantBoxAddSettings();
             configure?.Invoke(settings);
             var args = new ProcessArgumentBuilder();
@@ -69,6 +70,7 @@ namespace Cake.Vagrant.Commands
         /// <param name="configure">Optional settings for removing a box.</param>
         public void Remove(string name, Action<VagrantBoxRemoveSettings> configure = null)
         {
+            if (!name.HasValue()) throw new ArgumentNullException(nameof(name));
             var settings = new VagrantBoxRemoveSettings();
             configure?.Invoke(settings);
             var args = new ProcessArgumentBuilder();
@@ -90,6 +92,9 @@ namespace Cake.Vagrant.Commands
         /// <param name="version">Version to repackage (from <see cref="List" />)</param>
         public void Repackage(string name, string provider, string version)
         {
+            if (!name.HasValue()) throw new ArgumentNullException(nameof(name));
+            if (!provider.HasValue()) throw new ArgumentNullException(nameof(provider));
+            if (!version.HasValue()) throw new ArgumentNullException(nameof(version));
             var args = new ProcessArgumentBuilder();
             var s = new[] {"box", "repackage", name, provider, version};
             foreach (var arg in s)
