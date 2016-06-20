@@ -80,6 +80,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="AliasTests.cs" />
     <Compile Include="DestroyTests.cs" />
     <Compile Include="HaltTests.cs" />
     <Compile Include="InitTests.cs" />
