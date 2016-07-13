@@ -96,6 +96,7 @@
     <Compile Include="SuspendTests.cs" />
     <Compile Include="UpTests.cs" />
     <Compile Include="VagrantFixture.cs" />
+    <Compile Include="WorkingDirectoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
