@@ -9,6 +9,7 @@ namespace Cake.Vagrant
     /// </summary>
     public class VagrantSettings : ToolSettings
     {
+        
     }
 
     internal interface IVagrantCommandSettings

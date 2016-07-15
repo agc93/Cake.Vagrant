@@ -17,3 +17,6 @@
 # 0.2.5
 * Fix minor bugs in command invocations from unit tests.
 * Refactor Docker subcommands
+
+# 0.3.0
+* Add `FromPath()` runner method for working directory switching

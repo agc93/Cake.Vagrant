@@ -1093,6 +1093,26 @@
             <summary>Gets the possible names of the tool executable.</summary>
             <returns>The tool executable name.</returns>
         </member>
+        <member name="M:Cake.Vagrant.VagrantRunner.GetWorkingDirectory(Cake.Vagrant.VagrantSettings)">
+            <summary>
+                Gets the working directory.
+                Defaults to the currently set working directory.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns>The working directory for the tool.</returns>
+        </member>
+        <member name="M:Cake.Vagrant.VagrantRunner.FromPath(Cake.Core.IO.DirectoryPath)">
+            <summary>
+                Sets the working directory for vagrant commands
+            </summary>
+            <param name="path">The directory path to run vagrant commands from</param>
+            <returns>The command runner</returns>
+            <example>
+                <code><![CDATA[
+            Vagrant.FromPath("./path/to/dir").Up();
+            ]]></code>
+            </example>
+        </member>
         <member name="M:Cake.Vagrant.VagrantRunner.Init(System.String,System.Action{Cake.Vagrant.Settings.VagrantInitSettings})">
             <summary>
                 This initializes the current directory to be a Vagrant environment by creating an initial Vagrantfile if one does

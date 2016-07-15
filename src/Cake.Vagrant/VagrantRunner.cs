@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using Cake.Core;
 using Cake.Core.Diagnostics;
 using Cake.Core.IO;
@@ -14,6 +15,8 @@ namespace Cake.Vagrant
     /// </summary>
     public class VagrantRunner : Tool<VagrantSettings>
     {
+        private DirectoryPath _workingDirectory;
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="VagrantRunner" /> class
         /// </summary>
@@ -25,11 +28,14 @@ namespace Cake.Vagrant
         public VagrantRunner(IFileSystem fileSystem, ICakeEnvironment environment, IProcessRunner processRunner,
             IToolLocator tools, ICakeLog log) : base(fileSystem, environment, processRunner, tools)
         {
+            FileSystem = fileSystem;
             Box = new VagrantBoxRunner(log, Run, Settings);
             Snapshot = new VagrantSnapshotRunner(log, Run, Settings);
             Docker = new VagrantDockerRunner(log, Run, Settings);
             Plugin = new VagrantPluginRunner(log, Run, Settings);
         }
+
+        private IFileSystem FileSystem { get; }
 
         private VagrantSettings Settings { get; } = new VagrantSettings();
 
@@ -72,6 +78,36 @@ namespace Cake.Vagrant
         protected override IEnumerable<string> GetToolExecutableNames()
         {
             yield return "vagrant.exe";
+        }
+
+        /// <summary>
+        ///     Gets the working directory.
+        ///     Defaults to the currently set working directory.
+        /// </summary>
+        /// <param name="settings">The settings.</param>
+        /// <returns>The working directory for the tool.</returns>
+        protected override DirectoryPath GetWorkingDirectory(VagrantSettings settings)
+        {
+            if (_workingDirectory == null) return base.GetWorkingDirectory(settings);
+            if (!FileSystem.Exist(_workingDirectory))
+                throw new DirectoryNotFoundException($"Working directory path not found [{_workingDirectory.FullPath}]");
+            return _workingDirectory;
+        }
+
+        /// <summary>
+        ///     Sets the working directory for vagrant commands
+        /// </summary>
+        /// <param name="path">The directory path to run vagrant commands from</param>
+        /// <returns>The command runner</returns>
+        /// <example>
+        ///     <code><![CDATA[
+        /// Vagrant.FromPath("./path/to/dir").Up();
+        /// ]]></code>
+        /// </example>
+        public VagrantRunner FromPath(DirectoryPath path)
+        {
+            _workingDirectory = path;
+            return this;
         }
 
         /// <summary>
