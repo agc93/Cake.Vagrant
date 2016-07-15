@@ -39,3 +39,14 @@ vagrant up --destroy-on-error --install-provider --parallel --provider "hyperv" 
 ```
 
 Each settings class has full documentation as well as extension methods for complete control with the fluent API.
+
+## Directory switching
+
+To run Vagrant commands in a directory other than the current one, use the `FromPath()` method chain to switch directory:
+
+```
+Vagrant.FromPath("./path/to/directory").Up();
+Vagrant.FromPath("./path/to/other/dir").Destroy();
+```
+
+This method will switch directory only for the current command, and will not affect subsequent commands.
