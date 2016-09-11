@@ -4,7 +4,7 @@ This is very much an active project so any and all contributions are welcome, ev
 
 ## Reporting issues
 
-All issues should be tracked on [GitHub](https://github.com/agc93/Cake.Vagrant), with enough information to reproduce the issue.
+All issues should be tracked on [GitHub](https://github.com/cake-contrib/Cake.Vagrant), with enough information to reproduce the issue.
 
 ## Code Contributions
 
