@@ -4,9 +4,9 @@
 		<id>Cake.Vagrant</id>
 		<title>Cake.Vagrant</title>
 		<authors>Alistair Chapman</authors>
-		<owners>Alistair Chapman</owners>
-		<licenseUrl>https://raw.githubusercontent.com/agc93/Cake.Vagrant/master/LICENSE</licenseUrl>
-		<projectUrl>https://github.com/agc93/Cake.Vagrant/</projectUrl>
+		<owners>Alistair Chapman, cake-contrib</owners>
+		<licenseUrl>https://raw.githubusercontent.com/cake-contrib/Cake.Vagrant/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/cake-contrib/Cake.Vagrant/</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/mitchellh/vagrant/master/website/source/assets/images/logo_large.png</iconUrl>
 		<language>en-AU</language>
 		<description>A Cake addin to configure, start, control and stop Vagrant boxes</description>
