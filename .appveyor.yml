@@ -1,0 +1,33 @@
+#---------------------------------#
+#  Build Script                   #
+#---------------------------------#
+build_script:
+  - ps: .\build.ps1
+
+# Tests
+test: off
+
+#---------------------------------#
+#        Branches to build        #
+#---------------------------------#
+branches:
+  # Whitelist
+  only:
+    - develop
+    - master
+    - /release/.*/
+    - /hotfix/.*/
+
+#---------------------------------#
+#  Build Cache                    #
+#---------------------------------#
+cache:
+- Source\packages -> Source\**\packages.config
+- Tools -> build.ps1
+
+#---------------------------------#
+#  Skip builds for doc changes    #
+#---------------------------------#
+skip_commits:
+  # Regex for matching commit message
+  message: /(doc).*/
