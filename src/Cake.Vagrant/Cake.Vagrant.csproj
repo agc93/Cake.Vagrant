@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
     <Compile Include="Commands\VagrantCommandRunner.cs" />
     <Compile Include="Commands\VagrantPluginRunner.cs" />
     <Compile Include="Commands\VagrantSnapshotRunner.cs" />
