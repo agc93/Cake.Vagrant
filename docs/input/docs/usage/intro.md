@@ -1,3 +1,8 @@
+---
+Order: 10
+Title: Introduction
+---
+
 # Getting Started
 
 Make sure you have Vagrant installed *first*, as the addin (obviously) doesn't include it.
