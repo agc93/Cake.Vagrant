@@ -1,32 +1,42 @@
 # Cake.Vagrant
-Cake addin to control Vagrant through the CLI
 
-|`master`|`develop`|
-|:------:|:-------:|
-|![VSTS Build Status][vsts-badge]|![VSTS Develop Status][develop-badge]|
+A flexible Cake addin to give you full control over Vagrant, bringing fast and simple virtual machines into your build toolchain.
 
-## Getting started
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://cake-contrib.mit-license.org)
 
-You can find documentation either on [Cake's site](https://cakebuild.net/dsl/vagrant) or [here on GitHub](https://cake-contrib.github.io/Cake.Vagrant/). This should be enough to get started with Vagrant assuming you're familiar with the CLI.
+## Information
 
-You may find Vagrant's documentation helpful as well, both the [Command line](https://www.vagrantup.com/docs/cli/) and [Getting started](https://www.vagrantup.com/docs/getting-started/) guides.
+| | Stable | Pre-release |
+|---|---|---|
+|GitHub Release|-|[![GitHub release](https://img.shields.io/github/release/cake-contrib/Cake.Vagrant.svg)](https://github.com/cake-contrib/Cake.Vagrant/releases/latest)|
+|NuGet|[![NuGet](https://img.shields.io/nuget/v/Cake.Vagrant.svg)](https://www.nuget.org/packages/Cake.Vagrant)|[![NuGet](https://img.shields.io/nuget/vpre/Cake.Vagrant.svg)](https://www.nuget.org/packages/Cake.Vagrant)|
 
-## Sample script
+## Build Status
 
+|Develop|Master|
+|:--:|:--:|
+|[![Build status](https://ci.appveyor.com/api/projects/status/89emb9clgcyitwh1/branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-vagrant/branch/develop)|[![Build status](https://ci.appveyor.com/api/projects/status/89emb9clgcyitwh1/branch/develop?svg=true)](https://ci.appveyor.com/project/cakecontrib/cake-eventlog/branch/master)|
+
+## Code Coverage
+
+[![Coverage Status](https://coveralls.io/repos/github/cake-contrib/Cake.Vagrant/badge.svg?branch=develop)](https://coveralls.io/github/cake-contrib/Cake.Vagrant?branch=develop)
+
+## Quick Links
+
+- [Documentation](https://cake-contrib.github.io/Cake.Vagrant)
+
+## Chat Room
+
+Come join in the conversation about Cake.Vagrant in our Gitter Chat Room
+
+[![Join the chat at https://gitter.im/cake-contrib/Lobby](https://badges.gitter.im/cake-contrib/Lobby.svg)](https://gitter.im/cake-contrib/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+## Build
+
+To build this package we are using Cake.
+
+On Windows PowerShell run:
+
+```powershell
+./build
 ```
-Task("Usage")
-    .Does(() => {
-        Vagrant.Init("hashicorp/precise64");
-        Vagrant.Up(s => s.UseProvider("virtualbox"));
-        Vagrant.Suspend();
-    });
-
-Task("Destroy")
-    .Does(() => {
-        Vagrant.Destroy();
-        DeleteFile("Vagrantfile");
-    });
-```
-
-[vsts-badge]: https://vs01.visualstudio.com/_apis/public/build/definitions/09d675bd-0b92-45dc-8a6c-f8c4976b4ef0/18/badge
-[develop-badge]: https://vs01.visualstudio.com/_apis/public/build/definitions/09d675bd-0b92-45dc-8a6c-f8c4976b4ef0/19/badge
