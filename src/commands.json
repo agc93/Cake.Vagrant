@@ -3,12 +3,12 @@
 		"build": {
 			"fileName": "powershell.exe",
 			"workingDirectory": "..",
-			"arguments": "-ExecutionPolicy Bypass -NonInteractive -File ..\\build.ps1 -Script ..\\build.cake"
+			"arguments": "-ExecutionPolicy Bypass -NonInteractive -File ..\\build.ps1 -Script ..\\setup.cake"
 		},
 		"cake-build": {
 			"fileName": "cake",
 			"workingDirectory": "../../",
-			"arguments":  "../build.cake"   
+			"arguments":  "../setup.cake"   
 		} 
 	}
 

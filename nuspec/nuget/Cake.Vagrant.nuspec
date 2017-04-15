@@ -13,7 +13,8 @@
 		<tags>cake build script vagrant vm</tags>
 	</metadata>
 	<files>
-		<file src="dist\build\Cake.Vagrant\Cake.Vagrant.dll" target="lib\net45"/>
-		<file src="dist\build\Cake.Vagrant\Cake.Vagrant.xml" target="lib\net45"/>
+		<file src="Cake.Vagrant.dll" target="lib\net45"/>
+		<file src="Cake.Vagrant.xml" target="lib\net45"/>
+		<file src="Cake.Vagrant.pdb" target="lib\net45"/>
 	</files>
 </package>

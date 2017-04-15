@@ -29,8 +29,7 @@ namespace Cake.Vagrant.Commands
         /// <param name="command">Command to execute. This will NOT be quoted.</param>
         public void Exec(string name, string command)
         {
-            if (!name.HasValue()) throw new ArgumentNullException(nameof(name));
-            if (!command.HasValue()) throw new ArgumentNullException(nameof(command));
+            CheckParameters(name, command);
             Invoke(name, "docker-exec", command);
         }
 
@@ -52,9 +51,14 @@ namespace Cake.Vagrant.Commands
         /// <param name="command">Command to execute. This will NOT be quoted.</param>
         public void Run(string name, string command)
         {
+            CheckParameters(name, command);
+            Invoke(name, "docker-run", command);
+        }
+
+        private static void CheckParameters(string name, string command)
+        {
             if (!name.HasValue()) throw new ArgumentNullException(nameof(name));
             if (!command.HasValue()) throw new ArgumentNullException(nameof(command));
-            Invoke(name, "docker-run", command);
         }
     }
 }

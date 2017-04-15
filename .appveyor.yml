@@ -2,7 +2,7 @@
 #  Build Script                   #
 #---------------------------------#
 build_script:
-  - ps: .\build.ps1
+  - ps: .\build.ps1 -Target AppVeyor
 
 # Tests
 test: off
@@ -22,12 +22,5 @@ branches:
 #  Build Cache                    #
 #---------------------------------#
 cache:
-- Source\packages -> Source\**\packages.config
-- Tools -> build.ps1
-
-#---------------------------------#
-#  Skip builds for doc changes    #
-#---------------------------------#
-skip_commits:
-  # Regex for matching commit message
-  message: /(doc).*/
+- src\packages -> src\**\packages.config
+- tools -> setup.cake
