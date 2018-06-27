@@ -1,7 +1,10 @@
 #tool "GitVersion.CommandLine"
-#tool "xunit.runner.console"
-#addin "Cake.DocFx"
-#tool "docfx.msbuild"
+#addin nuget:?package=Cake.DocFx&version=0.7.0
+#tool nuget:?package=docfx.console&version=2.33.2
+#tool "OpenCover"
+#tool "nuget:?package=ReportGenerator"
+
+#load "helpers.cake"
 
 ///////////////////////////////////////////////////////////////////////////////
 // ARGUMENTS
@@ -9,6 +12,7 @@
 
 var target = Argument<string>("target", "Default");
 var configuration = Argument<string>("configuration", "Release");
+var framework = Argument<string>("framework", "netstandard2.0");
 
 ///////////////////////////////////////////////////////////////////////////////
 // GLOBAL VARIABLES
@@ -16,11 +20,12 @@ var configuration = Argument<string>("configuration", "Release");
 
 var solutionPath = File("./src/Cake.Vagrant.sln");
 var solution = ParseSolution(solutionPath);
-var projects = solution.Projects;
+var projects = solution.Projects.Where(p => p.Type != "{2150E333-8FDC-42A3-9474-1A3956D46DE8}");
 var projectPaths = projects.Select(p => p.Path.GetDirectory());
-var testAssemblies = projects.Where(p => p.Name.Contains(".Tests")).Select(p => p.Path.GetDirectory() + "/bin/" + configuration + "/" + p.Name + ".dll");
+var frameworks = GetFrameworks(framework);
+var testAssemblies = projects.Where(p => p.Name.Contains(".Tests"));
 var artifacts = "./dist/";
-var testResultsPath = MakeAbsolute(Directory(artifacts + "./test-results"));
+var testResultsPath = MakeAbsolute(Directory(artifacts + "./test-results/"));
 GitVersion versionInfo = null;
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -33,6 +38,7 @@ Setup(ctx =>
 	Information("Running tasks...");
 	versionInfo = GitVersion();
 	Information("Building for version {0}", versionInfo.FullSemVer);
+	Information("Building against '{0}'", framework);
 });
 
 Teardown(ctx =>
@@ -57,6 +63,7 @@ Task("Clean")
 	}
 	Information("Cleaning common files...");
 	CleanDirectory(artifacts);
+	DeleteFiles(GetFiles("./*.temp.nuspec"));
 });
 
 Task("Restore")
@@ -64,7 +71,10 @@ Task("Restore")
 {
 	// Restore all NuGet packages.
 	Information("Restoring solution...");
-	NuGetRestore(solutionPath);
+	//NuGetRestore(solutionPath);
+	foreach(var project in projects) {
+		DotNetCoreRestore(project.Path.GetDirectory() + $"/{project.Name}.csproj");
+	}
 });
 
 Task("Build")
@@ -73,31 +83,29 @@ Task("Build")
 	.Does(() =>
 {
 	Information("Building solution...");
-	MSBuild(solutionPath, settings =>
-		settings.SetPlatformTarget(PlatformTarget.MSIL)
-			.WithProperty("TreatWarningsAsErrors","true")
-			.SetVerbosity(Verbosity.Quiet)
-			.WithTarget("Build")
-			.SetConfiguration(configuration));
-});
-
-Task("Generate-Docs").Does(() => {
-	DocFx("./docfx/docfx.json");
+	CreateDirectory(artifacts + "build/");
+	foreach(var project in projects) {
+		foreach(var f in frameworks) {
+			//CreateDirectory(artifacts + "build/" + f);
+			DotNetCoreBuild(project.Path.GetDirectory().FullPath, new DotNetCoreBuildSettings {
+				//Framework = f,
+				Configuration = configuration,
+				//OutputDirectory = artifacts + "build/" + configuration + "/" + f
+			});
+		}
+	}
 });
 
 Task("Post-Build")
 	.IsDependentOn("Build")
-	.IsDependentOn("Generate-Docs")
-	.Does(() =>
-{
-	CreateDirectory(artifacts + "build");
-	foreach (var project in projects) {
-		CreateDirectory(artifacts + "build/" + project.Name);
-		CopyFiles(GetFiles(project.Path.GetDirectory() + "/" + project.Name + ".xml"), artifacts + "build/" + project.Name);
-		var files = GetFiles(project.Path.GetDirectory() +"/bin/" +configuration +"/" +project.Name +".*");
-		CopyFiles(files, artifacts + "build/" + project.Name);
-	}
-	//Package docs
+	.Does(() => {
+		foreach (var project in projects) {
+			CopyDirectory(project.Path.GetDirectory() + "/bin/" + configuration, artifacts + "build/" + project.Name);
+		}
+	});
+
+Task("Generate-Docs").Does(() => {
+	DocFxBuild("./docfx/docfx.json");
 	Zip("./docfx/_site/", artifacts + "/docfx.zip");
 });
 
@@ -105,33 +113,43 @@ Task("Run-Unit-Tests")
 	.IsDependentOn("Build")
 	.Does(() =>
 {
-	if (testAssemblies.Any()) {
-		CreateDirectory(testResultsPath);
-
-		var settings = new XUnit2Settings {
-			NoAppDomain = true,
-			XmlReport = true,
-			HtmlReport = true,
-			OutputDirectory = testResultsPath,
-		};
-		settings.ExcludeTrait("Category", "Integration");
-
-		XUnit2(testAssemblies, settings);
-	}
+	CreateDirectory(testResultsPath);
+	CreateDirectory(testResultsPath + "/coverage");
+	Action<ICakeContext> testAction = ctx => ctx.DotNetCoreTest("./src/Cake.Vagrant.Tests", new DotNetCoreTestSettings {
+		NoBuild = true,
+		Configuration = configuration,
+		ArgumentCustomization = args => args.Append("--").AppendSwitchQuoted("-xml", testResultsPath + "/test-results.xml")
+	});
+	OpenCover(testAction,
+		testResultsPath + "/coverage.xml",
+		new OpenCoverSettings {
+			ReturnTargetCodeOffset = 0,
+			Register = "User",
+			OldStyle = true,
+			ArgumentCustomization = args => args.Append("-mergeoutput"),
+		}
+		.WithFilter("+[Cake.Vagrant]*")
+		.ExcludeByAttribute("*.ExcludeFromCodeCoverage*")
+		.ExcludeByFile("*/*Designer.cs;*/*.g.cs;*/*.g.i.cs"));
+	ReportGenerator(testResultsPath + "/coverage.xml", testResultsPath + "/coverage");
 });
 
 Task("NuGet")
 	.IsDependentOn("Post-Build")
+//	.IsDependentOn("Copy-Core-Dependencies")
 	.IsDependentOn("Run-Unit-Tests")
 	.Does(() => {
 		CreateDirectory(artifacts + "package/");
 		Information("Building NuGet package");
-		var nuspecFiles = GetFiles("./**/*.nuspec");
+		var nuspecFiles = GetFiles("./*.nuspec");
 		var versionNotes = ParseAllReleaseNotes("./ReleaseNotes.md").FirstOrDefault(v => v.Version.ToString() == versionInfo.MajorMinorPatch);
+		var content = GetContent(frameworks, artifacts + "build/Cake.Vagrant/", "/Cake.Vagrant");
 		NuGetPack(nuspecFiles, new NuGetPackSettings() {
 			Version = versionInfo.NuGetVersionV2,
 			ReleaseNotes = versionNotes != null ? versionNotes.Notes.ToList() : new List<string>(),
-			OutputDirectory = artifacts + "/package"
+			OutputDirectory = artifacts + "/package",
+			Files = content,
+			//KeepTemporaryNuSpecFile = true
 			});
 	});
 
@@ -140,7 +158,8 @@ Task("NuGet")
 ///////////////////////////////////////////////////////////////////////////////
 
 Task("Default")
-	.IsDependentOn("NuGet");
+	.IsDependentOn("NuGet")
+	.IsDependentOn("Generate-Docs");
 
 ///////////////////////////////////////////////////////////////////////////////
 // EXECUTION

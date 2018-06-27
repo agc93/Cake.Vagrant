@@ -8,6 +8,7 @@ using Cake.Vagrant.Settings;
 
 namespace Cake.Vagrant
 {
+    #pragma warning disable 0649
     class Samples
     {
         private static ICakeContext context;

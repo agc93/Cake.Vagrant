@@ -1,35 +1,48 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.Vagrant", "Cake.Vagrant\Cake.Vagrant.csproj", "{B9502257-0A00-403D-9734-910CF2C6D397}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.Vagrant", "Cake.Vagrant\Cake.Vagrant.csproj", "{69B157FD-2391-4448-B0E5-5C21F2E3990C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0F95639A-11F2-4AF7-AA65-9212587532D5}"
-	ProjectSection(SolutionItems) = preProject
-		..\build.ps1 = ..\build.ps1
-		commands.json = commands.json
-		..\build.cake = ..\build.cake
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.Vagrant.Tests", "Cake.Vagrant.Tests\Cake.Vagrant.Tests.csproj", "{4F80CEBC-459B-4182-A395-B7B77F7C100D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.Vagrant.Tests", "Cake.Vagrant.Tests\Cake.Vagrant.Tests.csproj", "{420D6F98-06B8-46E2-B9EC-FD221CCEDAEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B9502257-0A00-403D-9734-910CF2C6D397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B9502257-0A00-403D-9734-910CF2C6D397}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B9502257-0A00-403D-9734-910CF2C6D397}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B9502257-0A00-403D-9734-910CF2C6D397}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F80CEBC-459B-4182-A395-B7B77F7C100D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F80CEBC-459B-4182-A395-B7B77F7C100D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F80CEBC-459B-4182-A395-B7B77F7C100D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F80CEBC-459B-4182-A395-B7B77F7C100D}.Release|Any CPU.Build.0 = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69B157FD-2391-4448-B0E5-5C21F2E3990C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69B157FD-2391-4448-B0E5-5C21F2E3990C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69B157FD-2391-4448-B0E5-5C21F2E3990C}.Debug|x64.ActiveCfg = Debug|x64
+		{69B157FD-2391-4448-B0E5-5C21F2E3990C}.Debug|x64.Build.0 = Debug|x64
+		{69B157FD-2391-4448-B0E5-5C21F2E3990C}.Debug|x86.ActiveCfg = Debug|x86
+		{69B157FD-2391-4448-B0E5-5C21F2E3990C}.Debug|x86.Build.0 = Debug|x86
+		{69B157FD-2391-4448-B0E5-5C21F2E3990C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69B157FD-2391-4448-B0E5-5C21F2E3990C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69B157FD-2391-4448-B0E5-5C21F2E3990C}.Release|x64.ActiveCfg = Release|x64
+		{69B157FD-2391-4448-B0E5-5C21F2E3990C}.Release|x64.Build.0 = Release|x64
+		{69B157FD-2391-4448-B0E5-5C21F2E3990C}.Release|x86.ActiveCfg = Release|x86
+		{69B157FD-2391-4448-B0E5-5C21F2E3990C}.Release|x86.Build.0 = Release|x86
+		{420D6F98-06B8-46E2-B9EC-FD221CCEDAEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{420D6F98-06B8-46E2-B9EC-FD221CCEDAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{420D6F98-06B8-46E2-B9EC-FD221CCEDAEA}.Debug|x64.ActiveCfg = Debug|x64
+		{420D6F98-06B8-46E2-B9EC-FD221CCEDAEA}.Debug|x64.Build.0 = Debug|x64
+		{420D6F98-06B8-46E2-B9EC-FD221CCEDAEA}.Debug|x86.ActiveCfg = Debug|x86
+		{420D6F98-06B8-46E2-B9EC-FD221CCEDAEA}.Debug|x86.Build.0 = Debug|x86
+		{420D6F98-06B8-46E2-B9EC-FD221CCEDAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{420D6F98-06B8-46E2-B9EC-FD221CCEDAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{420D6F98-06B8-46E2-B9EC-FD221CCEDAEA}.Release|x64.ActiveCfg = Release|x64
+		{420D6F98-06B8-46E2-B9EC-FD221CCEDAEA}.Release|x64.Build.0 = Release|x64
+		{420D6F98-06B8-46E2-B9EC-FD221CCEDAEA}.Release|x86.ActiveCfg = Release|x86
+		{420D6F98-06B8-46E2-B9EC-FD221CCEDAEA}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
